@@ -1,0 +1,49 @@
+<!--
+  ══════════════════════════════════════════════════════════════
+  NETLIFY FORMS — STATIC DETECTION SNIPPET
+  ══════════════════════════════════════════════════════════════
+
+  Netlify scans your HTML at BUILD TIME to find forms.
+  Because your site is a React SPA, Netlify never sees the
+  JSX form — so you MUST add this hidden static form to
+  your public/index.html (the Vite HTML entry file).
+
+  HOW TO USE:
+  1. Open your project's  public/index.html  (or root index.html)
+  2. Paste the <form> block below INSIDE the <body> tag
+     (anywhere — Netlify only reads it, users never see it)
+  3. Commit & push → Netlify will auto-detect the form
+  4. Done. The React form POSTs to "/" with form-name="contact"
+     and Netlify matches it to this registered form.
+
+  DO NOT remove netlify or data-netlify attributes.
+  DO NOT change the field names — they must match the JSX.
+  ══════════════════════════════════════════════════════════════
+-->
+
+<!-- Paste this inside <body> in your public/index.html -->
+<form
+  name="contact"
+  netlify
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  hidden
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <input name="bot-field" />
+  <input type="text"     name="name" />
+  <input type="email"    name="email" />
+  <input type="text"     name="subject" />
+  <textarea              name="message"></textarea>
+</form>
+
+<!--
+  ══════════════════════════════════════════════════════════════
+  NOTIFICATION SETUP (Optional but recommended):
+  After deploying, go to:
+  https://app.netlify.com/projects/sabinthapamagar → Forms → contact form
+  → "Form notifications" → Add email notification → your email address
+  
+  This sends you an email every time someone submits the form.
+  ══════════════════════════════════════════════════════════════
+-->
