@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,9 +6,6 @@
 <title>Sabin Thapa Magar | B.E. Electronics, Communication & Information Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   DESIGN SYSTEM  -  Dark Technical / Engineering
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 :root{
   --bg:#0a0e17;
   --bg2:#0f1520;
@@ -22,6 +19,7 @@
   --gold:#e8b84b;
   --gold2:#f5cc6b;
   --green:#3dd68c;
+  --red:#ef4444;
   --text:#e8ecf4;
   --text2:#8fa3bf;
   --text3:#566a84;
@@ -34,13 +32,11 @@
 html{scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
 ::selection{background:rgba(79,142,247,.3);color:var(--white);}
-
-/* â”€â”€ SCROLLBAR â”€â”€ */
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
 
-/* â•â• NAV â•â• */
+/* ══ NAV ══ */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;
   background:rgba(10,14,23,.92);backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border2);
@@ -55,24 +51,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;
   color:var(--accent);border:1px solid var(--accent);padding:8px 20px;text-decoration:none;transition:all .2s;}
 .nav-cta:hover{background:var(--accent);color:var(--bg);}
 .admin-btn{font-size:11px;padding:7px 14px;background:var(--surface);border:1px solid var(--border);
-  color:var(--text2);cursor:pointer;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;}
+  color:var(--text2);cursor:pointer;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;font-family:var(--sans);}
 .admin-btn:hover{border-color:var(--accent);color:var(--accent);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .hamburger span{display:block;width:22px;height:1.5px;background:var(--text2);}
 
-/* â•â• HERO â•â• */
+/* ══ MOBILE NAV ══ */
+.mobile-nav{position:fixed;top:64px;left:0;right:0;background:rgba(10,14,23,.98);
+  border-bottom:1px solid var(--border);padding:24px 32px;display:none;flex-direction:column;gap:20px;z-index:999;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-size:13px;color:var(--text2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;}
+.mobile-nav a:hover{color:var(--accent);}
+
+/* ══ HERO ══ */
 #hero{min-height:100vh;background:var(--bg);display:flex;align-items:center;
   padding:100px 64px 80px;position:relative;overflow:hidden;}
 .hero-circuit{position:absolute;inset:0;opacity:.04;
-  background-image:
-    linear-gradient(var(--accent) 1px,transparent 1px),
-    linear-gradient(90deg,var(--accent) 1px,transparent 1px);
+  background-image:linear-gradient(var(--accent) 1px,transparent 1px),linear-gradient(90deg,var(--accent) 1px,transparent 1px);
   background-size:40px 40px;}
 .hero-glow-1{position:absolute;top:-300px;right:-200px;width:700px;height:700px;
   background:radial-gradient(circle,rgba(79,142,247,.06) 0%,transparent 70%);pointer-events:none;}
 .hero-glow-2{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;
   background:radial-gradient(circle,rgba(232,184,75,.04) 0%,transparent 70%);pointer-events:none;}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:center;max-width:1200px;width:100%;}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 340px;gap:80px;align-items:center;max-width:1200px;width:100%;}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(79,142,247,.08);
   border:1px solid rgba(79,142,247,.2);padding:7px 16px;margin-bottom:32px;}
 .hero-tag-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;}
@@ -91,76 +92,39 @@ h1 .name-block{display:block;}
   font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:13px 28px;text-decoration:none;
   transition:all .2s;display:inline-block;}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
-.hero-socials{display:flex;gap:10px;}
+.hero-socials{display:flex;gap:10px;flex-wrap:wrap;}
 .social-pill{display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border);
   color:var(--text2);text-decoration:none;font-size:12px;font-weight:400;transition:all .2s;}
 .social-pill svg{width:14px;height:14px;}
 .social-pill:hover{border-color:var(--accent);color:var(--accent);}
-.hero-right{display:flex;flex-direction:column;gap:20px;}
-/*.hero-photo-frame{width:280px;height:320px;border:1px solid var(--border);
-  background:var(--surface);position:relative;overflow:hidden;flex-shrink:0;}
-.hero-photo-frame img{width:100%;height:100%;object-fit:cover;}*/
+
+/* Hero right — photo always visible */
+.hero-right{display:flex;flex-direction:column;gap:20px;align-items:center;}
 .hero-photo-frame{
-    width:320px;
-    height:380px;
-    border:1px solid rgba(79,142,247,.25);
-    background:var(--surface);
-    position:relative;
-    overflow:hidden;
-    flex-shrink:0;
-    border-radius:16px;
-    box-shadow:
-        0 0 30px rgba(79,142,247,.12),
-        0 20px 40px rgba(0,0,0,.35);
-    transition:all .3s ease;
+  width:280px;height:340px;
+  border:1px solid rgba(79,142,247,.25);
+  background:var(--surface);
+  position:relative;overflow:hidden;flex-shrink:0;
+  border-radius:12px;
+  box-shadow:0 0 30px rgba(79,142,247,.12),0 20px 40px rgba(0,0,0,.35);
+  transition:all .3s ease;
 }
-
-.hero-photo-frame:hover{
-    transform:translateY(-5px);
-    box-shadow:
-        0 0 40px rgba(79,142,247,.2),
-        0 25px 50px rgba(0,0,0,.45);
-}
-
-.hero-photo-frame img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-    transition:transform .4s ease;
-}
-
-.hero-photo-frame:hover img{
-    transform:scale(1.03);
-}
-.photo-glow{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    background:
-    linear-gradient(
-        180deg,
-        rgba(79,142,247,.08),
-        transparent 40%,
-        transparent 60%,
-        rgba(79,142,247,.08)
-    );
-}
-.hero-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:12px;}
-.initials{font-family:var(--serif);font-size:80px;font-weight:500;color:rgba(79,142,247,.2);line-height:1;}
-.photo-hint{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;}
+.hero-photo-frame:hover{transform:translateY(-5px);box-shadow:0 0 40px rgba(79,142,247,.2),0 25px 50px rgba(0,0,0,.45);}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease;}
+.hero-photo-frame:hover img{transform:scale(1.03);}
+.photo-glow{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(79,142,247,.06),transparent 40%,transparent 60%,rgba(79,142,247,.06));}
 .frame-corner{position:absolute;width:18px;height:18px;border-color:var(--accent);border-style:solid;}
 .frame-corner.tl{top:10px;left:10px;border-width:1px 0 0 1px;}
 .frame-corner.tr{top:10px;right:10px;border-width:1px 1px 0 0;}
 .frame-corner.bl{bottom:10px;left:10px;border-width:0 0 1px 1px;}
 .frame-corner.br{bottom:10px;right:10px;border-width:0 1px 1px 0;}
-.hero-stats-col{display:flex;flex-direction:column;gap:12px;}
-.stat-box{background:var(--surface);border:1px solid var(--border);padding:16px 20px;display:flex;flex-direction:column;gap:4px;}
-.stat-box .num{font-family:var(--serif);font-size:28px;color:var(--accent);font-weight:500;line-height:1;}
-.stat-box .lbl{font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;}
+.hero-stats-col{display:flex;flex-direction:row;gap:10px;width:100%;justify-content:center;flex-wrap:wrap;}
+.stat-box{background:var(--surface);border:1px solid var(--border);padding:14px 18px;display:flex;flex-direction:column;gap:3px;flex:1;min-width:80px;text-align:center;}
+.stat-box .num{font-family:var(--serif);font-size:22px;color:var(--accent);font-weight:500;line-height:1;}
+.stat-box .lbl{font-size:10px;color:var(--text3);letter-spacing:.06em;text-transform:uppercase;}
 
-/* â•â• SECTIONS BASE â•â• */
+/* ══ SECTIONS BASE ══ */
 section{padding:96px 0;}
 .container{max-width:1200px;margin:0 auto;padding:0 64px;}
 .section-kicker{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
@@ -169,7 +133,7 @@ section{padding:96px 0;}
 h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);line-height:1.1;letter-spacing:-.01em;}
 .section-desc{font-size:15px;color:var(--text2);line-height:1.8;max-width:520px;margin-top:12px;}
 
-/* â•â• ABOUT â•â• */
+/* ══ ABOUT ══ */
 #about{background:var(--bg2);}
 .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:start;margin-top:56px;}
 .about-text p{font-size:15px;line-height:1.9;color:var(--text2);margin-bottom:18px;}
@@ -195,7 +159,7 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .score-bar-wrap{width:100%;height:3px;background:var(--border2);margin-top:4px;margin-bottom:12px;}
 .score-bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));}
 
-/* â•â• SKILLS â•â• */
+/* ══ SKILLS ══ */
 #skills{background:var(--bg);}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
 .skill-card{background:var(--surface);border:1px solid var(--border);padding:28px;transition:all .25s;position:relative;overflow:hidden;}
@@ -209,7 +173,7 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .tag{font-family:var(--mono);font-size:10px;color:var(--accent2);background:rgba(79,142,247,.08);
   border:1px solid rgba(79,142,247,.15);padding:3px 8px;letter-spacing:.05em;}
 
-/* â•â• ACHIEVEMENTS â•â• */
+/* ══ ACHIEVEMENTS ══ */
 #achievements{background:var(--bg2);}
 .ach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px;}
 .ach-card{background:var(--surface);border:1px solid var(--border);padding:28px;display:flex;gap:20px;align-items:flex-start;transition:border-color .2s;}
@@ -219,7 +183,7 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .ach-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:4px;}
 .ach-org{font-size:12px;color:var(--text2);line-height:1.5;}
 
-/* â•â• PROJECTS â•â• */
+/* ══ PROJECTS ══ */
 #projects{background:var(--bg);}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px;}
 .project-card{background:var(--surface);border:1px solid var(--border);padding:32px;position:relative;transition:all .25s;overflow:hidden;}
@@ -229,50 +193,54 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .project-num{font-family:var(--mono);font-size:36px;color:var(--border);font-weight:500;position:absolute;top:24px;right:28px;line-height:1;}
 .project-kicker{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
 .project-title{font-family:var(--serif);font-size:22px;color:var(--white);margin-bottom:12px;line-height:1.2;}
-.project-desc{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:20px;}
-.project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
-.project-tech span{font-family:var(--mono);font-size:10px;color:var(--text3);border:1px solid var(--border2);padding:3px 8px;}
-.project-status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:.06em;}
-.project-status.done{color:var(--green);}
-.project-status.progress{color:var(--gold);}
-.project-status.planned{color:var(--text3);}
-.project-status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+.project-desc{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:20px;}
+.project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.project-tech span{font-family:var(--mono);font-size:10px;color:var(--accent2);background:rgba(79,142,247,.06);border:1px solid rgba(79,142,247,.12);padding:3px 8px;}
+.project-status{font-family:var(--mono);font-size:10px;letter-spacing:.08em;padding:4px 10px;border:1px solid;}
+.project-status.done{color:var(--green);border-color:rgba(61,214,140,.3);}
+.project-status.progress{color:var(--gold);border-color:rgba(232,184,75,.3);}
+.project-status.planned{color:var(--text3);border-color:var(--border);}
 
-/* â•â• TRANSCRIPT â•â• */
+/* ══ TRANSCRIPT ══ */
 #transcript{background:var(--bg2);}
 .transcript-wrap{margin-top:56px;}
-.year-block{margin-bottom:40px;}
-.year-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
-.year-label{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;}
-.year-line{flex:1;height:1px;background:var(--border2);}
-.year-total{font-family:var(--mono);font-size:12px;color:var(--text3);}
-.subjects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
-.subject-item{background:var(--surface);border:1px solid var(--border2);padding:14px 16px;}
-.sub-name{font-size:11px;color:var(--text2);margin-bottom:6px;line-height:1.4;}
-.sub-score{font-family:var(--mono);font-size:13px;color:var(--text);}
+.year-block{margin-bottom:40px;border:1px solid var(--border);padding:28px;}
+.year-header{display:flex;align-items:center;gap:20px;margin-bottom:20px;}
+.year-label{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em;white-space:nowrap;}
+.year-line{flex:1;height:1px;background:var(--border);}
+.year-total{font-family:var(--mono);font-size:11px;color:var(--text3);white-space:nowrap;}
+.subjects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.subject-item{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--bg);border:1px solid var(--border2);}
+.sub-name{font-size:11px;color:var(--text2);}
+.sub-score{font-family:var(--mono);font-size:11px;}
 .sub-score .total{color:var(--accent);}
-.transcript-summary{background:var(--surface);border:1px solid var(--border);padding:28px;margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.ts-item{}
-.ts-val{font-family:var(--serif);font-size:28px;color:var(--accent);font-weight:500;}
-.ts-lbl{font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;}
+.transcript-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;}
+.ts-item{background:var(--surface);border:1px solid var(--border);padding:20px;text-align:center;}
+.ts-val{font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:500;}
+.ts-lbl{font-size:11px;color:var(--text3);margin-top:4px;letter-spacing:.06em;text-transform:uppercase;}
 
-/* â•â• PTE â•â• */
+/* ══ PTE ══ */
 #pte{background:var(--bg);}
-.pte-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:56px;}
-.pte-scores{display:flex;flex-direction:column;gap:16px;}
-.pte-score-row{display:flex;align-items:center;gap:16px;}
-.pte-skill{font-size:13px;color:var(--text2);width:100px;flex-shrink:0;}
-.pte-bar-wrap{flex:1;height:6px;background:var(--border2);border-radius:3px;overflow:hidden;}
-.pte-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--gold2));}
-.pte-score-num{font-family:var(--mono);font-size:13px;color:var(--gold);width:32px;text-align:right;flex-shrink:0;}
-.pte-summary-card{background:var(--surface);border:1px solid var(--border);padding:32px;}
-.pte-overall{font-family:var(--serif);font-size:72px;color:var(--accent);font-weight:500;line-height:1;margin-bottom:8px;}
+.pte-wrap{display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start;margin-top:56px;}
+.pte-overall{background:var(--surface);border:1px solid var(--border);padding:36px;text-align:center;}
+.pte-score-big{font-family:var(--serif);font-size:80px;font-weight:500;color:var(--gold);line-height:1;}
 .pte-overall-label{font-size:12px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;}
 .pte-meta{font-size:13px;color:var(--text2);line-height:2;}
 .pte-meta strong{color:var(--text);font-weight:500;}
+.pte-bars{background:var(--surface);border:1px solid var(--border);padding:36px;}
 
-/* â•â• CONTACT â•â• */
-#contact{background:var(--bg2);}
+/* ══ BLOG ══ */
+#blog{background:var(--bg2);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
+.blog-card{background:var(--surface);border:1px solid var(--border);padding:24px;transition:border-color .2s;}
+.blog-card:hover{border-color:rgba(79,142,247,.3);}
+.blog-card-cat{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
+.blog-card-title{font-family:var(--serif);font-size:18px;color:var(--white);line-height:1.25;margin-bottom:10px;}
+.blog-card-excerpt{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
+.blog-card-meta{font-size:11px;color:var(--text3);}
+
+/* ══ CONTACT ══ */
+#contact{background:var(--bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start;margin-top:56px;}
 .contact-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;}
 .contact-icon{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;color:var(--accent);}
@@ -282,6 +250,7 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .contact-val a:hover{color:var(--accent);}
 .contact-form{background:var(--surface);border:1px solid var(--border);padding:36px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.form-group{margin-bottom:0;}
 .form-group label{display:block;font-size:10px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px;}
 .form-group input,.form-group textarea,.form-group select{
   width:100%;background:rgba(255,255,255,.03);border:1px solid var(--border);padding:11px 14px;
@@ -289,72 +258,14 @@ h2{font-family:var(--serif);font-size:44px;font-weight:500;color:var(--white);li
 .form-group input:focus,.form-group textarea:focus{border-color:var(--accent);}
 .form-group input::placeholder,.form-group textarea::placeholder{color:var(--text3);}
 .form-group textarea{min-height:110px;}
+.form-mb{margin-bottom:14px;}
 .form-submit{margin-top:16px;}
+.form-note{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:10px;letter-spacing:.05em;}
+.form-status{font-size:13px;padding:10px 14px;margin-top:12px;border:1px solid;display:none;}
+.form-status.success{color:var(--green);border-color:rgba(61,214,140,.3);background:rgba(61,214,140,.05);}
+.form-status.error{color:var(--red);border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05);}
 
-/* â•â• ADMIN OVERLAY â•â• */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:60px 20px;overflow-y:auto;}
-.overlay.active{display:flex;}
-.admin-panel{background:var(--bg2);border:1px solid var(--border);width:100%;max-width:820px;min-height:200px;}
-.admin-header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;border-bottom:1px solid var(--border2);}
-.admin-title{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.1em;}
-.admin-close{background:none;border:none;color:var(--text2);font-size:20px;cursor:pointer;line-height:1;}
-.admin-tabs{display:flex;border-bottom:1px solid var(--border2);}
-.atab{padding:12px 20px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:none;
-  background:none;color:var(--text3);transition:all .2s;border-bottom:2px solid transparent;}
-.atab.active{color:var(--accent);border-bottom-color:var(--accent);}
-.admin-body{padding:28px;}
-.tab-pane{display:none;}
-.tab-pane.active{display:block;}
-#login-pane{padding:40px 28px;display:flex;flex-direction:column;gap:16px;align-items:center;}
-#login-pane input{width:100%;max-width:300px;background:var(--surface);border:1px solid var(--border);
-  padding:11px 14px;font-family:var(--sans);font-size:13px;color:var(--text);outline:none;}
-.analytics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;}
-.an-card{background:var(--surface);border:1px solid var(--border);padding:18px;}
-.an-num{font-family:var(--serif);font-size:30px;color:var(--accent);font-weight:500;}
-.an-lbl{font-size:11px;color:var(--text3);letter-spacing:.06em;margin-top:4px;}
-.messages-list{display:flex;flex-direction:column;gap:12px;}
-.msg-card{background:var(--surface);border:1px solid var(--border);padding:18px;}
-.msg-header{display:flex;justify-content:space-between;margin-bottom:8px;}
-.msg-from{font-size:13px;font-weight:500;color:var(--text);}
-.msg-date{font-size:11px;color:var(--text3);}
-.msg-email{font-size:12px;color:var(--accent);margin-bottom:6px;}
-.msg-subject{font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:500;}
-.msg-body{font-size:13px;color:var(--text2);line-height:1.6;}
-.msg-actions{display:flex;gap:8px;margin-top:12px;}
-.msg-actions button{font-size:11px;padding:5px 12px;cursor:pointer;border:1px solid var(--border);
-  background:none;color:var(--text2);letter-spacing:.05em;transition:all .2s;}
-.msg-actions button:hover{border-color:var(--accent);color:var(--accent);}
-.msg-actions .del-btn:hover{border-color:#ef4444;color:#ef4444;}
-.blog-form{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;}
-.blog-form input,.blog-form textarea,.blog-form select{
-  background:var(--surface);border:1px solid var(--border);padding:10px 14px;
-  font-family:var(--sans);font-size:13px;color:var(--text);outline:none;}
-.blog-form textarea{min-height:100px;resize:vertical;}
-.blog-posts-list{display:flex;flex-direction:column;gap:10px;}
-.blog-post-item{background:var(--surface);border:1px solid var(--border);padding:16px;display:flex;justify-content:space-between;align-items:start;gap:16px;}
-.bpi-title{font-size:13px;font-weight:500;color:var(--text);}
-.bpi-meta{font-size:11px;color:var(--text3);margin-top:3px;}
-.btn-sm{font-size:11px;padding:6px 14px;cursor:pointer;border:none;background:var(--accent);color:var(--bg);font-weight:500;letter-spacing:.05em;transition:all .2s;}
-.btn-sm:hover{background:var(--accent2);}
-.btn-sm.red{background:rgba(239,68,68,.15);color:#ef4444;}
-.btn-sm.red:hover{background:rgba(239,68,68,.25);}
-.settings-form{display:flex;flex-direction:column;gap:14px;}
-.settings-form label{font-size:11px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px;}
-.settings-form input{background:var(--surface);border:1px solid var(--border);padding:10px 14px;
-  font-family:var(--sans);font-size:13px;color:var(--text);outline:none;width:100%;}
-
-/* â•â• BLOG â•â• */
-#blog{background:var(--bg);}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
-.blog-card{background:var(--surface);border:1px solid var(--border);padding:24px;transition:border-color .2s;}
-.blog-card:hover{border-color:rgba(79,142,247,.3);}
-.blog-card-cat{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
-.blog-card-title{font-family:var(--serif);font-size:18px;color:var(--white);line-height:1.25;margin-bottom:10px;}
-.blog-card-excerpt{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
-.blog-card-meta{font-size:11px;color:var(--text3);}
-#blog-cards-container{display:contents;}
-
-/* â•â• FOOTER â•â• */
+/* ══ FOOTER ══ */
 footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64px;
   display:flex;align-items:center;justify-content:space-between;}
 .footer-logo{font-family:var(--serif);font-size:18px;color:var(--white);}
@@ -364,29 +275,114 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
 .footer-links a:hover{color:var(--accent);}
 .footer-copy{font-family:var(--mono);font-size:11px;color:var(--text3);}
 
-/* â•â• TOAST â•â• */
+/* ══ TOAST ══ */
 .toast{position:fixed;bottom:28px;right:28px;background:var(--surface);border:1px solid var(--green);
   color:var(--green);padding:12px 20px;font-size:13px;z-index:3000;opacity:0;
-  transition:opacity .3s;pointer-events:none;}
+  transition:opacity .3s;pointer-events:none;max-width:320px;}
 .toast.show{opacity:1;}
+.toast.error{border-color:var(--red);color:var(--red);}
 
-/* â•â• FADE ANIMATIONS â•â• */
+/* ══ FADE ANIMATIONS ══ */
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;}
 .fade-up.visible{opacity:1;transform:none;}
 
-/* â•â• RESPONSIVE â•â• */
+/* ══ ADMIN OVERLAY ══ */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:60px 20px;overflow-y:auto;}
+.overlay.active{display:flex;}
+.admin-panel{background:var(--bg2);border:1px solid var(--border);width:100%;max-width:860px;}
+.admin-header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px;border-bottom:1px solid var(--border2);}
+.admin-title{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.1em;}
+.admin-close{background:none;border:none;color:var(--text2);font-size:20px;cursor:pointer;line-height:1;font-family:var(--sans);}
+.admin-tabs{display:flex;border-bottom:1px solid var(--border2);}
+.atab{padding:12px 20px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:none;
+  background:none;color:var(--text3);transition:all .2s;border-bottom:2px solid transparent;font-family:var(--sans);}
+.atab.active{color:var(--accent);border-bottom-color:var(--accent);}
+.admin-body{padding:28px;}
+.tab-pane{display:none;}
+.tab-pane.active{display:block;}
+
+/* Login pane */
+.login-pane{padding:40px 28px;display:flex;flex-direction:column;gap:14px;align-items:center;}
+.login-pane input{width:100%;max-width:280px;background:var(--surface);border:1px solid var(--border);
+  padding:11px 14px;font-family:var(--sans);font-size:13px;color:var(--text);outline:none;}
+.login-pane input:focus{border-color:var(--accent);}
+.login-info{font-size:11px;color:var(--text3);text-align:center;}
+.login-error{font-size:12px;color:var(--red);display:none;}
+
+/* Analytics */
+.analytics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;}
+.an-card{background:var(--surface);border:1px solid var(--border);padding:18px;}
+.an-num{font-family:var(--serif);font-size:30px;color:var(--accent);font-weight:500;}
+.an-lbl{font-size:11px;color:var(--text3);letter-spacing:.06em;margin-top:4px;}
+.an-note{font-size:12px;color:var(--text2);padding:14px;background:var(--surface);border:1px solid var(--border);line-height:1.6;}
+
+/* Messages */
+.messages-list{display:flex;flex-direction:column;gap:12px;}
+.msg-card{background:var(--surface);border:1px solid var(--border);padding:18px;}
+.msg-header{display:flex;justify-content:space-between;margin-bottom:8px;gap:12px;flex-wrap:wrap;}
+.msg-from{font-size:13px;font-weight:500;color:var(--text);}
+.msg-date{font-size:11px;color:var(--text3);}
+.msg-email{font-size:12px;color:var(--accent);margin-bottom:6px;}
+.msg-subject{font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:500;}
+.msg-body{font-size:13px;color:var(--text2);line-height:1.6;white-space:pre-wrap;word-break:break-word;}
+.msg-actions{display:flex;gap:8px;margin-top:12px;}
+.msg-empty{font-size:13px;color:var(--text3);text-align:center;padding:36px;}
+.netlify-note{font-size:12px;color:var(--text2);padding:14px;background:rgba(79,142,247,.06);border:1px solid rgba(79,142,247,.15);margin-bottom:16px;line-height:1.6;}
+.netlify-note a{color:var(--accent);text-decoration:none;}
+.netlify-note a:hover{text-decoration:underline;}
+
+/* Blog admin */
+.blog-form{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid var(--border2);}
+.blog-form input,.blog-form textarea,.blog-form select{
+  background:var(--surface);border:1px solid var(--border);padding:10px 14px;
+  font-family:var(--sans);font-size:13px;color:var(--text);outline:none;}
+.blog-form input:focus,.blog-form textarea:focus{border-color:var(--accent);}
+.blog-form textarea{min-height:120px;resize:vertical;}
+.blog-posts-list{display:flex;flex-direction:column;gap:10px;}
+.blog-post-item{background:var(--surface);border:1px solid var(--border);padding:16px;display:flex;justify-content:space-between;align-items:start;gap:16px;}
+.bpi-title{font-size:13px;font-weight:500;color:var(--text);}
+.bpi-meta{font-size:11px;color:var(--text3);margin-top:3px;}
+
+/* Settings */
+.settings-form{display:flex;flex-direction:column;gap:14px;}
+.settings-section{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;margin-top:8px;}
+.settings-form label{font-size:11px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px;}
+.settings-form input{background:var(--surface);border:1px solid var(--border);padding:10px 14px;
+  font-family:var(--sans);font-size:13px;color:var(--text);outline:none;width:100%;}
+.settings-form input:focus{border-color:var(--accent);}
+.pw-strength{font-size:11px;margin-top:4px;}
+
+/* Shared button styles */
+.btn-sm{font-size:11px;padding:7px 16px;cursor:pointer;border:none;background:var(--accent);color:var(--bg);font-weight:500;letter-spacing:.05em;transition:all .2s;font-family:var(--sans);}
+.btn-sm:hover{background:var(--accent2);}
+.btn-sm.red{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.25);}
+.btn-sm.red:hover{background:rgba(239,68,68,.22);}
+.btn-sm.outline{background:none;border:1px solid var(--border);color:var(--text2);}
+.btn-sm.outline:hover{border-color:var(--accent);color:var(--accent);}
+
+/* Loading spinner */
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(79,142,247,.3);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ══ RESPONSIVE ══ */
 @media(max-width:1024px){
   nav{padding:0 32px;}
   .nav-links{display:none;}
   .hamburger{display:flex;}
   #hero{padding:100px 32px 60px;}
-  .hero-inner{grid-template-columns:1fr;gap:48px;}
-  .hero-right{display:none;}
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  /* Photo visible on mobile — moved below text */
+  .hero-right{flex-direction:row;justify-content:center;align-items:flex-start;flex-wrap:wrap;gap:16px;}
+  .hero-photo-frame{width:200px;height:250px;}
+  .hero-stats-col{flex-direction:column;width:auto;flex:1;min-width:120px;}
+  .stat-box{text-align:left;}
   .container{padding:0 32px;}
-  .about-grid,.projects-grid,.ach-grid,.contact-grid{grid-template-columns:1fr;}
-  .skills-grid,.subjects-grid{grid-template-columns:repeat(2,1fr);}
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:repeat(2,1fr);}
+  .subjects-grid{grid-template-columns:repeat(2,1fr);}
   .transcript-summary{grid-template-columns:repeat(2,1fr);}
   .pte-wrap{grid-template-columns:1fr;}
+  .projects-grid,.ach-grid{grid-template-columns:1fr;}
   footer{flex-direction:column;gap:16px;text-align:center;padding:28px 32px;}
   .blog-grid{grid-template-columns:1fr;}
   .analytics-grid{grid-template-columns:repeat(2,1fr);}
@@ -395,20 +391,18 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
 @media(max-width:600px){
   h1{font-size:44px;}
   h2{font-size:34px;}
-  .skills-grid,.subjects-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:1fr;}
   nav{padding:0 20px;}
+  #hero{padding:90px 20px 48px;}
+  .container{padding:0 20px;}
+  .hero-photo-frame{width:160px;height:200px;}
+  footer{padding:24px 20px;}
 }
-/* mobile nav */
-.mobile-nav{position:fixed;top:64px;left:0;right:0;background:rgba(10,14,23,.98);
-  border-bottom:1px solid var(--border);padding:24px 32px;display:none;flex-direction:column;gap:20px;z-index:999;}
-.mobile-nav.open{display:flex;}
-.mobile-nav a{font-size:13px;color:var(--text2);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;}
-.mobile-nav a:hover{color:var(--accent);}
 </style>
 </head>
 <body>
 
-<!-- â”€â”€ NAVIGATION â”€â”€ -->
+<!-- ── NAVIGATION ── -->
 <nav>
   <a href="#hero" class="nav-logo">Sabin<span>ThapaMagar</span></a>
   <ul class="nav-links">
@@ -440,7 +434,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
   <a href="#contact" onclick="closeMobileNav()">Contact</a>
 </div>
 
-<!-- â”€â”€ HERO â”€â”€ -->
+<!-- ── HERO ── -->
 <section id="hero">
   <div class="hero-circuit"></div>
   <div class="hero-glow-1"></div>
@@ -449,49 +443,50 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
     <div>
       <div class="hero-tag">
         <div class="hero-tag-dot"></div>
-        <span>Open to Opportunities  -  Based in Nepal</span>
+        <span>Open to Opportunities &nbsp;·&nbsp; Based in Nepal</span>
       </div>
       <h1>
         <span class="name-block">Sabin</span>
         <span class="name-block name-accent">Thapa Magar</span>
       </h1>
       <p class="hero-desc">
-        B.E. graduate in <strong style="color:var(--text)">Electronics, Communication &amp; Information Engineering</strong> 
-        from Kantipur Engineering College, Tribhuvan University. 
-        Passionate about embedded systems, IoT, automation, and building technology that solves real-world problems.
+        B.E. graduate in <strong style="color:var(--text)">Electronics, Communication &amp; Information Engineering</strong>
+        from Kantipur Engineering College, Tribhuvan University.
+        Experienced in embedded systems, IoT security, AI-driven applications, and industrial automation.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn-primary">View My Work</a>
         <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
       <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-pill" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391" target="_blank" rel="noopener" class="social-pill" title="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
-        <a href="https://www.facebook.com/SabinTMgr7" target="_blank" class="social-pill" title="Facebook">
+        <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener" class="social-pill" title="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           Facebook
         </a>
-        <a href="https://www.instagram.com/_sabinmgr/" target="_blank" class="social-pill" title="Instagram">
+        <a href="https://www.instagram.com/_sabinmgr/" target="_blank" rel="noopener" class="social-pill" title="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           Instagram
         </a>
       </div>
     </div>
+    <!-- Hero right — photo + stats always rendered, visible on all screen sizes -->
     <div class="hero-right">
       <div class="hero-photo-frame">
         <div class="frame-corner tl"></div>
         <div class="frame-corner tr"></div>
         <div class="frame-corner bl"></div>
         <div class="frame-corner br"></div>
-        <img src="blue and white portrait.png" alt="Sabin Thapa Magar" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        <img src="blue and white portrait.png" alt="Sabin Thapa Magar – B.E. Electronics Engineer" loading="eager">
         <div class="photo-glow"></div>
       </div>
       <div class="hero-stats-col">
         <div class="stat-box">
           <div class="num">First</div>
-          <div class="lbl">Division  -  TU 2025</div>
+          <div class="lbl">Division · TU 2025</div>
         </div>
         <div class="stat-box">
           <div class="num">65.19%</div>
@@ -499,70 +494,77 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
         </div>
         <div class="stat-box">
           <div class="num">68</div>
-          <div class="lbl">PTE Overall Score</div>
+          <div class="lbl">PTE Overall</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ ABOUT â”€â”€ -->
+<!-- ── ABOUT ── -->
 <section id="about">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>About Me</span></div>
-    <h2>Engineer. Problem Solver.<br>Lifelong Learner.</h2>
+    <h2>Engineer. Builder.<br>Lifelong Learner.</h2>
     <div class="about-grid fade-up">
       <div class="about-text">
         <p>
-          I am <strong>Sabin Thapa Magar</strong>, an electronics engineer who completed my 
-          <strong>Bachelor's Degree in Electronics, Communication &amp; Information Engineering</strong> 
-          from Kantipur Engineering College (KEC), Dhapakhel, Lalitpur  -  affiliated to Tribhuvan University  -  
-          in the year 2025 with <strong>First Division</strong>.
+          I am <strong>Sabin Thapa Magar</strong>, an electronics engineer with a
+          <strong>Bachelor's Degree in Electronics, Communication &amp; Information Engineering</strong>
+          from Kantipur Engineering College (KEC), Dhapakhel, Lalitpur — affiliated to Tribhuvan University —
+          completed in 2025 with <strong>First Division</strong>.
         </p>
         <p>
-          Son of Gopal Thapa Magar, I was born on <strong>12 February 2003</strong>. My academic journey 
-          at KEC spanned from 2020 to 2025, where I built a solid foundation across a wide range of 
-          engineering disciplines including digital systems, communication engineering, embedded systems, 
-          antenna design, and industrial automation.
+          Born on <strong>12 February 2003</strong>, son of Gopal Thapa Magar. My four-year academic journey
+          at KEC built a strong foundation across digital systems, communication engineering, embedded systems,
+          antenna design, industrial automation, and AI-integrated applications.
         </p>
         <p>
-          During my degree, I participated in hands-on training in <strong>Raspberry Pi with IoT</strong> 
-          and completed an intensive course on <strong>Industrial Automation</strong> covering PLC (Siemens &amp; Delta), 
-          HMI, and SCADA systems. I competed in robotics events at HEX-2023, YATRA 4.0, and ICT Mela 4.0, 
-          building real engineering hardware and working in teams under pressure.
+          My <strong>minor project</strong> was an IoT-based home automation system using <strong>ESP32 and MQTT</strong>,
+          which I further explored through a security vulnerability lens — analysing weak authentication, unencrypted
+          MQTT channels, and device exposure risks. My <strong>major project</strong> was a
+          <strong>real-time virtual eyewear try-on system</strong> built with VGG16, MTCNN (92% detection accuracy),
+          Flask, MySQL, WebRTC, and WebGL — combining deep learning with live video inference.
         </p>
         <p>
-          I am passionate about bridging the gap between academic electronics and practical, 
-          real-world applications  -  whether that is in embedded hardware, industrial control systems, 
-          wireless communication, or emerging technologies like AI-assisted electronics.
+          I completed <strong>120+ hours of self-initiated hands-on training</strong> in IoT and industrial automation,
+          competed in three national robotics events, and am driven by the intersection of hardware security,
+          embedded intelligence, and real-world engineering systems.
         </p>
         <div class="about-highlights">
           <div class="ah-item">
-            <div class="ah-icon">*</div>
+            <div class="ah-icon">🎓</div>
             <div>
-              <div class="ah-title">Kantipur Engineering College</div>
-              <div class="ah-sub">Tribhuvan University  -  Registration No: 3-2-368-202-2020  -  Roll No: 27/BEI/2077</div>
+              <div class="ah-title">B.E. ECIE — First Division, TU 2025</div>
+              <div class="ah-sub">Kantipur Engineering College · 65.19% Aggregate</div>
             </div>
           </div>
           <div class="ah-item">
-            <div class="ah-icon">*</div>
+            <div class="ah-icon">🔐</div>
             <div>
-              <div class="ah-title">Robotics &amp; IoT Competitions</div>
-              <div class="ah-sub">HEX-2023 Robo Race  -  YATRA 4.0 Robo Sumo  -  ICT Mela 4.0 Robo Soccer</div>
+              <div class="ah-title">IoT Security Research — ESP32 / MQTT</div>
+              <div class="ah-sub">Minor project: Home automation with vulnerability analysis</div>
             </div>
           </div>
           <div class="ah-item">
-            <div class="ah-icon">*</div>
+            <div class="ah-icon">🤖</div>
+            <div>
+              <div class="ah-title">AI-Powered Major Project — VGG16 + MTCNN</div>
+              <div class="ah-sub">Virtual eyewear try-on · 92% accuracy · Flask · WebRTC · WebGL</div>
+            </div>
+          </div>
+          <div class="ah-item">
+            <div class="ah-icon">⚙️</div>
             <div>
               <div class="ah-title">Industrial Automation Certified</div>
-              <div class="ah-sub">60-hr course  -  PLC, HMI, SCADA  -  KEC Automation Lab (Erasmus+ eACCESS)</div>
+              <div class="ah-sub">60-hr course · PLC, HMI, SCADA · KEC Automation Lab (Erasmus+ eACCESS)</div>
             </div>
           </div>
           <div class="ah-item">
-            <div class="ah-icon">*</div>
+            <div class="ah-icon">📡</div>
             <div>
               <div class="ah-title">IoT Training Certified</div>
-              <div class="ah-sub">60-hr Raspberry Pi with IoT  -  KEC Research, Training &amp; Consultancy Division (RTCD)</div>
+              <div class="ah-sub">60-hr Raspberry Pi with IoT · KEC Research, Training &amp; Consultancy Division (RTCD)</div>
             </div>
           </div>
         </div>
@@ -571,15 +573,20 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
         <div class="info-card">
           <div class="info-card-label">Education</div>
           <div class="edu-item">
-            <div class="edu-degree">B.E.  -  ECIE</div>
-            <div class="edu-school">Kantipur Engineering College  -  TU</div>
-            <div class="edu-year">2020  -  2025 &nbsp;|&nbsp; First Division &nbsp;|&nbsp; 65.19%</div>
+            <div class="edu-degree">B.E. — ECIE</div>
+            <div class="edu-school">Kantipur Engineering College · TU</div>
+            <div class="edu-year">2020–2025 &nbsp;|&nbsp; First Division &nbsp;|&nbsp; 65.19%</div>
             <div class="edu-note">Electronics, Communication &amp; Information Engineering</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">+2 Science (NEB)</div>
+            <div class="edu-school">Higher Secondary Education</div>
+            <div class="edu-year">Nepal Board · Science Stream</div>
           </div>
           <div class="edu-item">
             <div class="edu-degree">SEE (Grade 10)</div>
             <div class="edu-school">Secondary Education Examination</div>
-            <div class="edu-year">Nepal  -  Board Examinations</div>
+            <div class="edu-year">Nepal · Board Examinations</div>
           </div>
         </div>
         <div class="info-card">
@@ -593,61 +600,61 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
           <div class="score-row"><span class="score-label">Writing</span><span class="score-val">64</span></div>
           <div class="score-bar-wrap"><div class="score-bar" style="width:64%"></div></div>
           <div class="score-row" style="margin-top:8px;"><span class="score-label" style="color:var(--text);font-weight:500">Overall</span><span class="score-val" style="font-size:16px">68</span></div>
-          <div style="font-size:11px;color:var(--text3);margin-top:8px;">Test Date: 16 Apr 2026  -  Valid Until: 16 Apr 2028<br>LA GRANDEE International College, Nepal</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:8px;">Test Date: 16 Apr 2026 · Valid Until: 16 Apr 2028<br>LA GRANDEE International College, Nepal</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ SKILLS â”€â”€ -->
+<!-- ── SKILLS ── -->
 <section id="skills">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>Technical Skills</span></div>
     <h2>What I Know &amp; Build With</h2>
-    <p class="section-desc">Four years of engineering education plus hands-on training across embedded systems, communication, automation, and programming.</p>
+    <p class="section-desc">Four years of engineering education plus 120+ hours of hands-on training across embedded systems, communication, automation, AI, and programming.</p>
     <div class="skills-grid fade-up">
       <div class="skill-card">
-        <div class="skill-icon">*</div>
-        <div class="skill-title">Communication &amp; Antenna Systems</div>
-        <div class="skill-desc">Wireless communication theory, antenna design, propagation analysis, satellite communication, and RF &amp; microwave engineering.</div>
-        <div class="skill-tags"><span class="tag">RF Engineering</span><span class="tag">Propagation & Antenna</span><span class="tag">Satellite Comms</span><span class="tag">Wireless Systems</span></div>
+        <div class="skill-icon">🔐</div>
+        <div class="skill-title">IoT Security &amp; Vulnerability Analysis</div>
+        <div class="skill-desc">ESP32/MQTT protocol security, weak authentication analysis, unencrypted channel risks, device exposure assessment, and embedded security research.</div>
+        <div class="skill-tags"><span class="tag">ESP32</span><span class="tag">MQTT</span><span class="tag">IoT Security</span><span class="tag">Protocol Analysis</span></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">*</div>
+        <div class="skill-icon">🤖</div>
+        <div class="skill-title">AI &amp; Machine Learning</div>
+        <div class="skill-desc">Deep learning model development using VGG16, MTCNN face detection (92% accuracy), Flask API deployment, real-time inference via WebRTC and WebGL.</div>
+        <div class="skill-tags"><span class="tag">VGG16</span><span class="tag">MTCNN</span><span class="tag">Flask</span><span class="tag">WebRTC</span><span class="tag">Python</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📡</div>
         <div class="skill-title">Embedded Systems &amp; IoT</div>
-        <div class="skill-desc">Microprocessor and embedded system design, Raspberry Pi programming, IoT integration, sensor interfacing, and real-time control systems.</div>
-        <div class="skill-tags"><span class="tag">Raspberry Pi</span><span class="tag">IoT</span><span class="tag">Microprocessors</span><span class="tag">Embedded C</span></div>
+        <div class="skill-desc">Microprocessor and embedded system design, Raspberry Pi programming, sensor interfacing, real-time control systems, and IoT integration.</div>
+        <div class="skill-tags"><span class="tag">Raspberry Pi</span><span class="tag">Microprocessors</span><span class="tag">Embedded C</span><span class="tag">Sensors</span></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">*</div>
+        <div class="skill-icon">⚙️</div>
         <div class="skill-title">Industrial Automation</div>
         <div class="skill-desc">PLC programming (Siemens &amp; Delta), HMI configuration, SCADA systems, industrial switchgears, and sensor-based automation design.</div>
         <div class="skill-tags"><span class="tag">Siemens PLC</span><span class="tag">Delta PLC</span><span class="tag">HMI</span><span class="tag">SCADA</span></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">*</div>
-        <div class="skill-title">Programming &amp; Algorithms</div>
-        <div class="skill-desc">Object-oriented programming, data structures &amp; algorithms, database management systems, and computer network fundamentals.</div>
-        <div class="skill-tags"><span class="tag">C / C++</span><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">SQL</span></div>
+        <div class="skill-icon">📻</div>
+        <div class="skill-title">Communication &amp; Antenna Systems</div>
+        <div class="skill-desc">Wireless communication theory, antenna design, propagation analysis, satellite communication, and RF &amp; microwave engineering.</div>
+        <div class="skill-tags"><span class="tag">RF Engineering</span><span class="tag">Antenna Design</span><span class="tag">Satellite Comms</span><span class="tag">Wireless</span></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">*</div>
-        <div class="skill-title">Electronics &amp; Circuit Design</div>
-        <div class="skill-desc">Digital logic design, electronic devices &amp; circuits, control systems, signal processing, and advanced electronics engineering.</div>
-        <div class="skill-tags"><span class="tag">Digital Logic</span><span class="tag">Circuit Analysis</span><span class="tag">Control Systems</span><span class="tag">Signal Processing</span></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">*</div>
-        <div class="skill-title">Big Data &amp; Information Systems</div>
-        <div class="skill-desc">Information systems design, big data technologies, multimedia systems, telecommunication networks, and operating systems.</div>
-        <div class="skill-tags"><span class="tag">Big Data</span><span class="tag">Telecom Systems</span><span class="tag">OS</span><span class="tag">Multimedia</span></div>
+        <div class="skill-icon">💻</div>
+        <div class="skill-title">Programming &amp; Systems</div>
+        <div class="skill-desc">Object-oriented programming, data structures &amp; algorithms, database management (MySQL), computer networks, and operating systems.</div>
+        <div class="skill-tags"><span class="tag">Python</span><span class="tag">C / C++</span><span class="tag">MySQL</span><span class="tag">OOP</span><span class="tag">Networks</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ ACHIEVEMENTS â”€â”€ -->
+<!-- ── ACHIEVEMENTS ── -->
 <section id="achievements">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>Certifications &amp; Achievements</span></div>
@@ -655,125 +662,125 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
     <p class="section-desc">Certificates and recognitions earned during my engineering journey at KEC and beyond.</p>
     <div class="ach-grid fade-up">
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">🎓</div>
         <div>
-          <div class="ach-year">2025  -  KEC  -  TU</div>
-          <div class="ach-title">B.E. Provisional Certificate  -  First Division</div>
-          <div class="ach-org">Issued by Tribhuvan University, Office of the Controller of Examinations, Balkhu, Kathmandu. Roll No: 34611  -  Reg. No: 3-2-368-202-2020. Passed examination of 2082 B.S. (2025).</div>
+          <div class="ach-year">2025 · KEC · TU</div>
+          <div class="ach-title">B.E. Provisional Certificate — First Division</div>
+          <div class="ach-org">Issued by Tribhuvan University, Office of the Controller of Examinations, Balkhu. Roll No: 34611 · Reg. No: 3-2-368-202-2020. Passed 2082 B.S. (2025).</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">📄</div>
         <div>
-          <div class="ach-year">2025  -  KEC</div>
-          <div class="ach-title">Character Certificate  -  Good Conduct</div>
-          <div class="ach-org">Issued by Kantipur Engineering College, Dhapakhel, Lalitpur. Certified good moral character and First Division degree in Electronics, Communication &amp; Information Engineering (2077 - 2081 B.S.).</div>
+          <div class="ach-year">2025 · KEC</div>
+          <div class="ach-title">Character Certificate — Good Conduct</div>
+          <div class="ach-org">Issued by Kantipur Engineering College, Dhapakhel, Lalitpur. Certified good moral character and First Division degree in ECIE (2077–2081 B.S.).</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">📡</div>
         <div>
-          <div class="ach-year">June  -  July 2023  -  KEC RTCD</div>
-          <div class="ach-title">Certificate of Participation  -  Raspberry Pi with IoT</div>
-          <div class="ach-org">60-hour training organized by Research, Training &amp; Consultancy Division (RTCD), Kantipur Engineering College. Hands-on IoT system development with Raspberry Pi.</div>
+          <div class="ach-year">June–July 2023 · KEC RTCD</div>
+          <div class="ach-title">Certificate of Completion — Raspberry Pi with IoT</div>
+          <div class="ach-org">60-hour hands-on training organised by Research, Training &amp; Consultancy Division (RTCD), Kantipur Engineering College. IoT system development with Raspberry Pi.</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">⚙️</div>
         <div>
-          <div class="ach-year">June 2024  -  KEC Automation Lab</div>
-          <div class="ach-title">Certificate of Completion  -  Industrial Automation</div>
-          <div class="ach-org">60-hour hands-on training covering Industrial Switchgears, Sensors, Siemens &amp; Delta PLC, HMI, and SCADA. Organized by Automation Laboratory, KEC (Erasmus+ eACCESS Project). Trainer: Mr. Krishna Keshav Chaudhary.</div>
+          <div class="ach-year">June 2024 · KEC Automation Lab</div>
+          <div class="ach-title">Certificate of Completion — Industrial Automation</div>
+          <div class="ach-org">60-hour hands-on training covering Industrial Switchgears, Sensors, Siemens &amp; Delta PLC, HMI, and SCADA. Organised by Automation Laboratory, KEC (Erasmus+ eACCESS). Trainer: Mr. Krishna Keshav Chaudhary.</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">🤖</div>
         <div>
-          <div class="ach-year">HEX-2023  -  Himalaya College of Engineering</div>
-          <div class="ach-title">Certificate of Appreciation  -  HEX-2023 Robo Race</div>
-          <div class="ach-org">Awarded by Himalaya Robotics Club (HRC) for participating in the HEX-2023 Robo Race competition. Signed by HRC President, Principal of Himalaya COE, and HoD Computer &amp; Electronics.</div>
+          <div class="ach-year">HEX-2023 · Himalaya College of Engineering</div>
+          <div class="ach-title">Certificate of Appreciation — HEX-2023 Robo Race</div>
+          <div class="ach-org">Awarded by Himalaya Robotics Club for participating in the HEX-2023 Robo Race competition. Signed by HRC President, Principal of Himalaya COE, and HoD Computer &amp; Electronics.</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">🏆</div>
         <div>
-          <div class="ach-year">January 2023  -  National College of Engineering</div>
-          <div class="ach-title">Certificate of Appreciation  -  YATRA 4.0 Robo Sumo</div>
-          <div class="ach-org">Participated in Robo Sumo at YATRA 4.0 "Stage of Innovation" organized by NCE Robotics Club, NCE IT Club, CESS-NCE, and Electrical Club-NCE, supervised by R&amp;D-NCE on 20 - 21 January 2023.</div>
+          <div class="ach-year">January 2023 · National College of Engineering</div>
+          <div class="ach-title">Certificate of Appreciation — YATRA 4.0 Robo Sumo</div>
+          <div class="ach-org">Participated in Robo Sumo at YATRA 4.0 "Stage of Innovation" organised by NCE Robotics Club, NCE IT Club, CESS-NCE, and Electrical Club-NCE on 20–21 January 2023.</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">⚽</div>
         <div>
-          <div class="ach-year">December 2023  -  ICT Mela 4.0  -  Virinchi College</div>
-          <div class="ach-title">Certificate of Achievement  -  Robo Soccer 1.0</div>
-          <div class="ach-org">Awarded for participating in Robo Soccer 1.0 at ICT Mela 4.0, held on 30 December 2023, Taphalho, Kumaripati, Lalitpur. Organized by Virinchi College.</div>
+          <div class="ach-year">December 2023 · ICT Mela 4.0 · Virinchi College</div>
+          <div class="ach-title">Certificate of Achievement — Robo Soccer 1.0</div>
+          <div class="ach-org">Awarded for participating in Robo Soccer 1.0 at ICT Mela 4.0, held 30 December 2023, Taphalho, Kumaripati, Lalitpur. Organised by Virinchi College.</div>
         </div>
       </div>
       <div class="ach-card">
-        <div class="ach-badge">*</div>
+        <div class="ach-badge">🌐</div>
         <div>
-          <div class="ach-year">16 April 2026  -  Pearson</div>
-          <div class="ach-title">PTE Academic  -  Overall Score 68</div>
-          <div class="ach-org">Score Report Code: 4519728AJB  -  Test Taker ID: PTE004528498  -  Test Centre: LA GRANDEE International College, Nepal (Centre ID: 88209). Valid until 16 Apr 2028.</div>
+          <div class="ach-year">16 April 2026 · Pearson</div>
+          <div class="ach-title">PTE Academic — Overall Score 68</div>
+          <div class="ach-org">Score Report Code: 4519728AJB · Test Taker ID: PTE004528498 · Test Centre: LA GRANDEE International College, Nepal (Centre ID: 88209). Valid until 16 Apr 2028.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ PROJECTS â”€â”€ -->
+<!-- ── PROJECTS ── -->
 <section id="projects">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>Projects</span></div>
     <h2>What I Have Built</h2>
-    <p class="section-desc">Engineering projects from my degree and personal exploration, covering hardware, software, and systems design.</p>
+    <p class="section-desc">Engineering projects from my degree — spanning hardware security, AI-powered applications, robotics, and industrial systems.</p>
     <div class="projects-grid fade-up">
       <div class="project-card">
         <div class="project-num">01</div>
-        <div class="project-kicker">Final Year Project  -  Embedded Systems</div>
-        <div class="project-title">IoT-Based Smart Monitoring System</div>
-        <div class="project-desc">Designed and implemented a Raspberry Pi-based IoT monitoring system integrating multiple sensors for real-time data acquisition, remote monitoring, and automated alert generation via wireless communication protocols.</div>
-        <div class="project-tech"><span>Raspberry Pi</span><span>Python</span><span>MQTT</span><span>Sensors</span><span>IoT</span></div>
-        <span class="project-status done">Completed</span>
+        <div class="project-kicker">Major Project · AI &amp; Computer Vision</div>
+        <div class="project-title">Real-Time Virtual Eyewear Try-On System</div>
+        <div class="project-desc">Built a deep learning-powered virtual try-on system with live video inference. Used MTCNN for facial landmark detection (92% accuracy) and VGG16 for feature extraction. Deployed via Flask API with WebRTC for real-time camera streaming and WebGL for 3D eyewear overlay. MySQL backend for product catalogue management.</div>
+        <div class="project-tech"><span>VGG16</span><span>MTCNN</span><span>Flask</span><span>MySQL</span><span>WebRTC</span><span>WebGL</span><span>Python</span></div>
+        <span class="project-status done">Completed · 2025</span>
       </div>
       <div class="project-card">
         <div class="project-num">02</div>
-        <div class="project-kicker">Robotics Competition  -  HEX-2023</div>
-        <div class="project-title">Autonomous Robo Race Vehicle</div>
-        <div class="project-desc">Designed and built an autonomous robot for the HEX-2023 Robo Race competition at Himalaya College of Engineering. Implemented motor control, sensor-based navigation, and real-time obstacle detection logic.</div>
-        <div class="project-tech"><span>Microcontroller</span><span>Motor Driver</span><span>IR Sensors</span><span>C/C++</span></div>
-        <span class="project-status done">Completed  -  HEX-2023</span>
+        <div class="project-kicker">Minor Project · IoT Security</div>
+        <div class="project-title">Home Automation System with Security Analysis</div>
+        <div class="project-desc">Designed an ESP32-based home automation system using MQTT protocol for device communication. Extended the scope by conducting a structured security vulnerability analysis — identifying weak broker authentication, unencrypted MQTT channels (port 1883), exposed device endpoints, and lack of TLS/SSL enforcement.</div>
+        <div class="project-tech"><span>ESP32</span><span>MQTT</span><span>IoT</span><span>Security Analysis</span><span>Embedded C</span></div>
+        <span class="project-status done">Completed · 2024</span>
       </div>
       <div class="project-card">
         <div class="project-num">03</div>
-        <div class="project-kicker">PLC & Industrial Automation</div>
-        <div class="project-title">Industrial Automation Control System</div>
-        <div class="project-desc">Developed a PLC-based industrial control system using Siemens and Delta PLCs with HMI panel programming and SCADA integration. Applied knowledge from 60-hour industrial automation training at KEC Automation Laboratory.</div>
-        <div class="project-tech"><span>Siemens PLC</span><span>Delta PLC</span><span>HMI</span><span>SCADA</span><span>Ladder Logic</span></div>
-        <span class="project-status done">Completed  -  KEC Lab</span>
+        <div class="project-kicker">Robotics Competition · HEX-2023</div>
+        <div class="project-title">Autonomous Robo Race Vehicle</div>
+        <div class="project-desc">Designed and built an autonomous robot for the HEX-2023 Robo Race competition at Himalaya College of Engineering. Implemented motor control, sensor-based navigation, and real-time obstacle detection logic under competition pressure.</div>
+        <div class="project-tech"><span>Microcontroller</span><span>Motor Driver</span><span>IR Sensors</span><span>C/C++</span></div>
+        <span class="project-status done">Completed · HEX-2023</span>
       </div>
       <div class="project-card">
         <div class="project-num">04</div>
-        <div class="project-kicker">Communication Engineering  -  Coursework</div>
-        <div class="project-title">Antenna Design &amp; Propagation Study</div>
-        <div class="project-desc">Studied and analyzed RF &amp; microwave engineering principles, antenna design parameters, and propagation characteristics for wireless communication systems as part of IVth Year coursework (CT704, EX716 modules).</div>
-        <div class="project-tech"><span>Antenna Theory</span><span>RF Design</span><span>Microwave Engg.</span><span>Signal Analysis</span></div>
-        <span class="project-status done">Completed  -  Academic</span>
+        <div class="project-kicker">PLC &amp; Industrial Automation</div>
+        <div class="project-title">Industrial Automation Control System</div>
+        <div class="project-desc">Developed a PLC-based industrial control system using Siemens and Delta PLCs with HMI panel programming and SCADA integration. Applied 60-hour hands-on training from KEC Automation Laboratory (Erasmus+ eACCESS Project).</div>
+        <div class="project-tech"><span>Siemens PLC</span><span>Delta PLC</span><span>HMI</span><span>SCADA</span><span>Ladder Logic</span></div>
+        <span class="project-status done">Completed · KEC Lab</span>
       </div>
       <div class="project-card">
         <div class="project-num">05</div>
-        <div class="project-kicker">Personal Project  -  Web &amp; Tech</div>
-        <div class="project-title">TeachSync Learning Platform</div>
-        <div class="project-desc">A structured digital platform concept for organizing and synchronizing educational content across grade levels. Integrates session scheduling, student progress tracking, and a mindfulness-based learning framework.</div>
-        <div class="project-tech"><span>Web Dev</span><span>EdTech</span><span>UX Design</span></div>
-        <span class="project-status progress">In Progress</span>
+        <div class="project-kicker">Communication Engineering · Coursework</div>
+        <div class="project-title">Antenna Design &amp; Propagation Study</div>
+        <div class="project-desc">Studied and analysed RF &amp; microwave engineering principles, antenna design parameters, and propagation characteristics for wireless communication systems as part of Year IV coursework (CT704, EX716 modules).</div>
+        <div class="project-tech"><span>Antenna Theory</span><span>RF Design</span><span>Microwave Engg.</span><span>Signal Analysis</span></div>
+        <span class="project-status done">Completed · Academic</span>
       </div>
       <div class="project-card">
         <div class="project-num">06</div>
-        <div class="project-kicker">Future Project  -  AI &amp; Engineering</div>
+        <div class="project-kicker">Future Project · AI &amp; Embedded Security</div>
         <div class="project-title">AI-Assisted Electronics Diagnostic Tool</div>
-        <div class="project-desc">Planning a tool that combines embedded sensor data with AI models to perform real-time diagnostics on electronic components and circuits, aiming to reduce manual fault-finding time in engineering labs and industry.</div>
+        <div class="project-desc">Planning a tool that combines embedded sensor data with AI models to perform real-time diagnostics on electronic components and circuits, with a security-first design approach aiming to reduce fault-finding time in engineering labs.</div>
         <div class="project-tech"><span>AI / ML</span><span>Embedded</span><span>Python</span><span>Signal Processing</span></div>
         <span class="project-status planned">Planned</span>
       </div>
@@ -781,20 +788,18 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
   </div>
 </section>
 
-<!-- â”€â”€ TRANSCRIPT â”€â”€ -->
+<!-- ── TRANSCRIPT ── -->
 <section id="transcript">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>Academic Transcript</span></div>
     <h2>Four Years of Engineering</h2>
-    <p class="section-desc">Complete academic record from Tribhuvan University  -  B.E. Electronics, Communication &amp; Information Engineering, Kantipur Engineering College.</p>
+    <p class="section-desc">Complete academic record from Tribhuvan University — B.E. Electronics, Communication &amp; Information Engineering, Kantipur Engineering College.</p>
     <div class="transcript-wrap fade-up">
-
-      <!-- Year I -->
       <div class="year-block">
         <div class="year-header">
-          <span class="year-label">Year I  -  Part 1 &amp; 2</span>
+          <span class="year-label">Year I — Part 1 &amp; 2</span>
           <div class="year-line"></div>
-          <span class="year-total">600 marks  -  997 total (Y1+Y2)</span>
+          <span class="year-total">600 marks · 997 total (Y1+Y2)</span>
         </div>
         <div class="subjects-grid">
           <div class="subject-item"><div class="sub-name">Computer Programming</div><div class="sub-score"><span class="total">40</span>/100</div></div>
@@ -808,13 +813,11 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
           <div class="subject-item"><div class="sub-name">Engineering Physics</div><div class="sub-score"><span class="total">45</span>/100</div></div>
         </div>
       </div>
-
-      <!-- Year II -->
       <div class="year-block">
         <div class="year-header">
-          <span class="year-label">Year II  -  Part 1 &amp; 2</span>
+          <span class="year-label">Year II — Part 1 &amp; 2</span>
           <div class="year-line"></div>
-          <span class="year-total">1475 marks  -  998 total</span>
+          <span class="year-total">1475 marks · 998 total</span>
         </div>
         <div class="subjects-grid">
           <div class="subject-item"><div class="sub-name">Object Oriented Programming</div><div class="sub-score"><span class="total">49</span>/100</div></div>
@@ -835,13 +838,11 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
           <div class="subject-item"><div class="sub-name">Probability &amp; Statistics</div><div class="sub-score"><span class="total">59</span>/100</div></div>
         </div>
       </div>
-
-      <!-- Year III -->
       <div class="year-block">
         <div class="year-header">
-          <span class="year-label">Year III  -  Part 1 &amp; 2</span>
+          <span class="year-label">Year III — Part 1 &amp; 2</span>
           <div class="year-line"></div>
-          <span class="year-total">1600 marks  -  1036 total</span>
+          <span class="year-total">1600 marks · 1036 total</span>
         </div>
         <div class="subjects-grid">
           <div class="subject-item"><div class="sub-name">Engineering Economics</div><div class="sub-score"><span class="total">49</span>/100</div></div>
@@ -863,13 +864,11 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
           <div class="subject-item"><div class="sub-name">Communication Sys. (Prac)</div><div class="sub-score"><span class="total">50</span>/50</div></div>
         </div>
       </div>
-
-      <!-- Year IV -->
       <div class="year-block">
         <div class="year-header">
-          <span class="year-label">Year IV  -  Part 1 &amp; 2</span>
+          <span class="year-label">Year IV — Part 1 &amp; 2</span>
           <div class="year-line"></div>
-          <span class="year-total">1425 marks  -  899 total</span>
+          <span class="year-total">1425 marks · 899 total</span>
         </div>
         <div class="subjects-grid">
           <div class="subject-item"><div class="sub-name">Digital Signal Analysis</div><div class="sub-score"><span class="total">24</span>/100</div></div>
@@ -890,184 +889,170 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
           <div class="subject-item"><div class="sub-name">Energy, Environment &amp; Society</div><div class="sub-score"><span class="total">22</span>/100</div></div>
         </div>
       </div>
-
       <div class="transcript-summary">
         <div class="ts-item"><div class="ts-val">65.19%</div><div class="ts-lbl">Final Aggregate</div></div>
         <div class="ts-item"><div class="ts-val">First</div><div class="ts-lbl">Division</div></div>
         <div class="ts-item"><div class="ts-val">2025</div><div class="ts-lbl">Year Passed (2082 B.S.)</div></div>
-        <div class="ts-item"><div class="ts-val">TU  -  KEC</div><div class="ts-lbl">Institute</div></div>
+        <div class="ts-item"><div class="ts-val">TU</div><div class="ts-lbl">Tribhuvan University</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ PTE â”€â”€ -->
+<!-- ── PTE ── -->
 <section id="pte">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>English Proficiency</span></div>
     <h2>PTE Academic Score</h2>
-    <p class="section-desc">Pearson Test of English Academic  -  internationally recognised English language proficiency score.</p>
+    <p class="section-desc">Pearson Test of English Academic — April 2026. Valid until April 2028.</p>
     <div class="pte-wrap fade-up">
-      <div class="pte-scores">
-        <div style="margin-bottom:24px;">
-          <p style="font-size:14px;color:var(--text2);line-height:1.8;">
-            Tested at <strong style="color:var(--text)">LA GRANDEE International College, Nepal</strong> (Centre ID: 88209) on <strong style="color:var(--text)">16 April 2026</strong>. 
-            The score is valid until <strong style="color:var(--text)">16 April 2028</strong>. 
-            Suitable for university applications in the UK, Australia, Canada, and other countries.
-          </p>
-        </div>
-        <div class="pte-score-row">
-          <span class="pte-skill">Listening</span>
-          <div class="pte-bar-wrap"><div class="pte-bar" style="width:75%"></div></div>
-          <span class="pte-score-num">75</span>
-        </div>
-        <div class="pte-score-row">
-          <span class="pte-skill">Reading</span>
-          <div class="pte-bar-wrap"><div class="pte-bar" style="width:65%"></div></div>
-          <span class="pte-score-num">65</span>
-        </div>
-        <div class="pte-score-row">
-          <span class="pte-skill">Speaking</span>
-          <div class="pte-bar-wrap"><div class="pte-bar" style="width:60%"></div></div>
-          <span class="pte-score-num">60</span>
-        </div>
-        <div class="pte-score-row">
-          <span class="pte-skill">Writing</span>
-          <div class="pte-bar-wrap"><div class="pte-bar" style="width:64%"></div></div>
-          <span class="pte-score-num">64</span>
-        </div>
-        <div class="pte-score-row" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border2);">
-          <span class="pte-skill" style="color:var(--text);font-weight:500;">Overall</span>
-          <div class="pte-bar-wrap"><div class="pte-bar" style="width:68%;background:linear-gradient(90deg,var(--gold),var(--accent))"></div></div>
-          <span class="pte-score-num" style="font-size:16px;color:var(--gold);">68</span>
-        </div>
-      </div>
-      <div class="pte-summary-card">
-        <div class="pte-overall">68</div>
-        <div class="pte-overall-label">Overall PTE Score</div>
+      <div class="pte-overall">
+        <div class="pte-score-big">68</div>
+        <div class="pte-overall-label">Overall Score</div>
         <div class="pte-meta">
-          <strong>Candidate:</strong> Sabin Thapa Magar<br>
-          <strong>Test Taker ID:</strong> PTE004528498<br>
-          <strong>Score Report Code:</strong> 4519728AJB<br>
-          <strong>Date of Birth:</strong> 12 February 2003<br>
-          <strong>Citizenship:</strong> Nepal<br>
           <strong>Test Date:</strong> 16 April 2026<br>
           <strong>Valid Until:</strong> 16 April 2028<br>
-          <strong>Test Centre:</strong> LA GRANDEE Int'l College, Nepal
+          <strong>Test Centre:</strong> LA GRANDEE International College<br>
+          <strong>Centre ID:</strong> 88209 · Nepal<br>
+          <strong>Report Code:</strong> 4519728AJB<br>
+          <strong>Test Taker ID:</strong> PTE004528498
+        </div>
+      </div>
+      <div class="pte-bars">
+        <div style="margin-bottom:20px;">
+          <div class="score-row"><span class="score-label" style="font-size:14px">Listening</span><span class="score-val" style="font-size:16px">75</span></div>
+          <div class="score-bar-wrap" style="height:6px"><div class="score-bar" style="width:75%;height:6px"></div></div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div class="score-row"><span class="score-label" style="font-size:14px">Reading</span><span class="score-val" style="font-size:16px">65</span></div>
+          <div class="score-bar-wrap" style="height:6px"><div class="score-bar" style="width:65%;height:6px"></div></div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div class="score-row"><span class="score-label" style="font-size:14px">Speaking</span><span class="score-val" style="font-size:16px">60</span></div>
+          <div class="score-bar-wrap" style="height:6px"><div class="score-bar" style="width:60%;height:6px"></div></div>
+        </div>
+        <div style="margin-bottom:24px;">
+          <div class="score-row"><span class="score-label" style="font-size:14px">Writing</span><span class="score-val" style="font-size:16px">64</span></div>
+          <div class="score-bar-wrap" style="height:6px"><div class="score-bar" style="width:64%;height:6px"></div></div>
+        </div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+          Scores are on the PTE Academic Global Scale (10–90). An overall score of 68 meets the English language requirements for graduate programmes at most UK universities including the University of Greenwich.
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ BLOG â”€â”€ -->
+<!-- ── BLOG ── -->
 <section id="blog">
   <div class="container">
-    <div class="section-kicker"><div class="section-kicker-line"></div><span>Blog &amp; Articles</span></div>
-    <h2>Engineering Thoughts</h2>
-    <p class="section-desc">Articles on electronics engineering, IoT, automation, and technology in Nepal  -  written when inspiration strikes.</p>
-    <div class="blog-grid fade-up" id="blog-grid">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Blog</span></div>
+    <h2>Thoughts &amp; Insights</h2>
+    <p class="section-desc">Articles on engineering, embedded systems, IoT, career development, and life as a Nepali engineer.</p>
+    <div class="blog-grid" id="blog-grid">
       <div class="blog-card">
-        <div class="blog-card-cat">IoT &amp; Embedded</div>
-        <div class="blog-card-title">Getting Started with Raspberry Pi and IoT Sensors in Nepal</div>
-        <div class="blog-card-excerpt">A practical guide for electronics engineering students in Nepal to set up their first Raspberry Pi IoT project, including where to source components locally and how to avoid common pitfalls.</div>
-        <div class="blog-card-meta">Coming Soon  -  Engineering</div>
+        <div class="blog-card-cat">IoT Security</div>
+        <div class="blog-card-title">MQTT Security Risks in Smart Home Systems — What ESP32 Developers Often Miss</div>
+        <div class="blog-card-excerpt">How unencrypted MQTT brokers, weak authentication, and exposed port 1883 create real attack surfaces in home automation projects — lessons from my minor project.</div>
+        <div class="blog-card-meta">Coming Soon · IoT</div>
       </div>
       <div class="blog-card">
-        <div class="blog-card-cat">Industrial Automation</div>
-        <div class="blog-card-title">PLC Programming 101: Siemens vs Delta  -  Which Should You Learn First?</div>
-        <div class="blog-card-excerpt">My experience from the 60-hour industrial automation training at KEC comparing Siemens and Delta PLC platforms, and what I think is the better starting point for aspiring automation engineers.</div>
-        <div class="blog-card-meta">Coming Soon  -  Automation</div>
+        <div class="blog-card-cat">AI &amp; Engineering</div>
+        <div class="blog-card-title">Building a Real-Time Try-On System — VGG16, MTCNN, and the Challenges of Live Inference</div>
+        <div class="blog-card-excerpt">How I built a real-time virtual eyewear try-on system using deep learning models, Flask, and WebRTC — and what went wrong before 92% accuracy became achievable.</div>
+        <div class="blog-card-meta">Coming Soon · AI</div>
       </div>
       <div class="blog-card">
-        <div class="blog-card-cat">Engineering Career</div>
-        <div class="blog-card-title">What It Takes to Pass B.E. ECIE at Tribhuvan University  -  Honest Reflections</div>
-        <div class="blog-card-excerpt">A candid look at four years of electronics engineering at KEC  -  the toughest subjects, the most rewarding projects, and what I wish I had known as a first-year student.</div>
-        <div class="blog-card-meta">Coming Soon  -  Career</div>
+        <div class="blog-card-cat">Career</div>
+        <div class="blog-card-title">What It Takes to Pass B.E. ECIE at Tribhuvan University — Honest Reflections</div>
+        <div class="blog-card-excerpt">A candid look at four years of electronics engineering at KEC — the toughest subjects, the most rewarding projects, and what I wish I had known as a first-year student.</div>
+        <div class="blog-card-meta">Coming Soon · Career</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€ CONTACT â”€â”€ -->
+<!-- ── CONTACT ── -->
 <section id="contact">
   <div class="container">
     <div class="section-kicker"><div class="section-kicker-line"></div><span>Contact</span></div>
     <h2>Let's Work Together</h2>
-    <p class="section-desc">Available for engineering roles, freelance projects, research collaboration, or just a good conversation about electronics.</p>
+    <p class="section-desc">Available for engineering roles, research collaboration, further studies, or just a good conversation about electronics and technology.</p>
     <div class="contact-grid fade-up">
       <div>
         <div class="contact-item">
-          <div class="contact-icon">*</div>
+          <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">Email</div>
             <div class="contact-val"><a href="mailto:sabin7magar@gmail.com">sabin7magar@gmail.com</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">*</div>
+          <div class="contact-icon">📍</div>
           <div>
             <div class="contact-label">Location</div>
             <div class="contact-val">Kathmandu / Pokhara, Nepal</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">*</div>
+          <div class="contact-icon">🎓</div>
           <div>
             <div class="contact-label">Education</div>
-            <div class="contact-val">B.E. ECIE  -  Kantipur Engineering College, TU</div>
+            <div class="contact-val">B.E. ECIE · Kantipur Engineering College, TU</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">*</div>
+          <div class="contact-icon">🌐</div>
           <div>
             <div class="contact-label">Website</div>
             <div class="contact-val">sabinthapamagar.com.np</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">*</div>
+          <div class="contact-icon">💼</div>
           <div>
             <div class="contact-label">Open To</div>
-            <div class="contact-val">Engineering roles  -  Embedded systems  -  IoT projects  -  Research  -  Further studies abroad</div>
+            <div class="contact-val">Engineering roles · Embedded systems · IoT · Research · Further studies abroad</div>
           </div>
         </div>
-        <div style="display:flex;gap:10px;margin-top:8px;">
-          <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-pill">
+        <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;">
+          <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391" target="_blank" rel="noopener" class="social-pill">
             <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
           </a>
-          <a href="https://www.facebook.com/SabinTMgr7" target="_blank" class="social-pill">
+          <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener" class="social-pill">
             <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             Facebook
           </a>
         </div>
       </div>
-      <!-- Netlify Forms real submission form -->
-      <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html">
+
+      <!-- Contact form — Netlify Forms real backend submission -->
+      <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html">
         <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Don't fill: <input name="bot-field" /></label></p>
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
         <div class="form-row">
           <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" id="cf-name" placeholder="Full Name" required>
+            <label for="cf-name">Your Name</label>
+            <input type="text" name="name" id="cf-name" placeholder="Full Name" required autocomplete="name">
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" id="cf-email" placeholder="email@example.com" required>
+            <label for="cf-email">Email Address</label>
+            <input type="email" name="email" id="cf-email" placeholder="email@example.com" required autocomplete="email">
           </div>
         </div>
-        <div class="form-group" style="margin-bottom:14px;">
-          <label>Subject</label>
+        <div class="form-group form-mb">
+          <label for="cf-subject">Subject</label>
           <input type="text" name="subject" id="cf-subject" placeholder="What is this about?">
         </div>
-        <div class="form-group" style="margin-bottom:16px;">
-          <label>Message</label>
+        <div class="form-group form-mb">
+          <label for="cf-message">Message</label>
           <textarea name="message" id="cf-message" placeholder="Your message to Sabin..." required></textarea>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+          <button type="submit" class="btn-primary" id="submitBtn" style="width:100%">Send Message</button>
         </div>
+        <div class="form-note">Messages go directly to sabin7magar@gmail.com via Netlify. Typically replied within 24–48 hrs.</div>
       </form>
     </div>
   </div>
@@ -1084,7 +1069,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
   <div class="footer-copy">&copy; 2026 Sabin Thapa Magar &middot; sabinthapamagar.com.np</div>
 </footer>
 
-<!-- Netlify Forms pre-render detection (required) -->
+<!-- Netlify Forms hidden pre-render detection (required by Netlify) -->
 <form name="contact" netlify netlify-honeypot="bot-field" hidden>
   <input type="text" name="name" />
   <input type="email" name="email" />
@@ -1094,86 +1079,356 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:32px 64p
 
 <div class="toast" id="toast"></div>
 
+<!-- ── ADMIN PANEL ── -->
 <div class="overlay" id="adminOverlay">
   <div class="admin-panel">
     <div class="admin-header">
-      <span class="admin-title">ADMIN PANEL</span>
-      <button class="admin-close" onclick="closeAdmin()">X</button>
+      <span class="admin-title">⚙ ADMIN PANEL</span>
+      <button class="admin-close" onclick="closeAdmin()" aria-label="Close">✕</button>
     </div>
-    <div id="login-pane" style="padding:40px 28px;display:flex;flex-direction:column;gap:14px;align-items:center;">
-      <div style="font-size:13px;color:var(--text2);margin-bottom:8px;">Enter admin password</div>
-      <input type="password" id="admin-pw" placeholder="Password" style="width:100%;max-width:280px;background:var(--surface);border:1px solid var(--border);padding:11px 14px;font-family:var(--sans);font-size:13px;color:var(--text);outline:none;" onkeydown="if(event.key==='Enter')verifyAdmin()">
+
+    <!-- Login pane -->
+    <div class="login-pane" id="loginPane">
+      <div style="font-size:13px;color:var(--text2);margin-bottom:4px;">Enter admin password to continue</div>
+      <input type="password" id="adminPw" placeholder="Password" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter')verifyAdmin()">
+      <div class="login-error" id="loginError">Incorrect password. Try again.</div>
       <button class="btn-primary" onclick="verifyAdmin()">Login</button>
-      <div style="font-size:11px;color:var(--text3);">Contact admin for access.</div>
+      <div class="login-info">Default password set in Settings tab after first login.</div>
     </div>
-    <div id="dashboard-pane" style="display:none;">
+
+    <!-- Dashboard (shown after login) -->
+    <div id="dashboardPane" style="display:none;">
       <div class="admin-tabs">
-        <button class="atab active" onclick="switchTab('analytics',event)">Analytics</button>
-        <button class="atab" onclick="switchTab('messages',event)">Messages</button>
-        <button class="atab" onclick="switchTab('blog-admin',event)">Blog</button>
-        <button class="atab" onclick="switchTab('settings',event)">Settings</button>
+        <button class="atab active" onclick="switchTab('analytics',this)">Analytics</button>
+        <button class="atab" onclick="switchTab('messages',this)">Messages</button>
+        <button class="atab" onclick="switchTab('blog-admin',this)">Blog</button>
+        <button class="atab" onclick="switchTab('settings',this)">Settings</button>
       </div>
       <div class="admin-body">
+
+        <!-- Analytics tab -->
         <div class="tab-pane active" id="tab-analytics">
           <div class="analytics-grid">
-            <div class="an-card"><div class="an-num" id="a-visits">0</div><div class="an-lbl">Total Visits</div></div>
-            <div class="an-card"><div class="an-num" id="a-today">0</div><div class="an-lbl">Today</div></div>
-            <div class="an-card"><div class="an-num" id="a-messages">0</div><div class="an-lbl">Messages</div></div>
-            <div class="an-card"><div class="an-num" id="a-posts">0</div><div class="an-lbl">Blog Posts</div></div>
+            <div class="an-card"><div class="an-num" id="aVisits">0</div><div class="an-lbl">Page Views</div></div>
+            <div class="an-card"><div class="an-num" id="aToday">0</div><div class="an-lbl">Today</div></div>
+            <div class="an-card"><div class="an-num" id="aPosts">0</div><div class="an-lbl">Blog Posts</div></div>
+            <div class="an-card"><div class="an-num" id="aLastVisit">—</div><div class="an-lbl">Last Visit</div></div>
           </div>
-          <div style="font-size:13px;color:var(--text2);padding:20px;background:var(--surface);border:1px solid var(--border);">Analytics are stored in browser local storage. Data from other devices will not sync here.</div>
+          <div class="an-note">
+            📌 Page views are tracked in this browser only (localStorage). For real cross-device analytics,
+            connect <strong>Google Analytics</strong> or <strong>Fathom Analytics</strong> to your Netlify site.
+            Contact form submissions are managed directly in your
+            <a href="https://app.netlify.com" target="_blank" rel="noopener">Netlify dashboard</a> under Forms.
+          </div>
         </div>
+
+        <!-- Messages tab -->
         <div class="tab-pane" id="tab-messages">
-          <div class="messages-list" id="messages-list"><div style="font-size:13px;color:var(--text3);text-align:center;padding:28px;">No messages yet.</div></div>
+          <div class="netlify-note">
+            📬 Contact form messages are delivered to your email via <strong>Netlify Forms</strong> and stored securely in your
+            <a href="https://app.netlify.com" target="_blank" rel="noopener">Netlify dashboard → Forms</a>.
+            They do <em>not</em> appear here — this keeps your inbox private and server-side secure.
+            You can also set up <strong>email notifications</strong> in Netlify Forms settings so every
+            submission lands directly at sabin7magar@gmail.com.
+          </div>
+          <div style="text-align:center;padding:20px 0;">
+            <a href="https://app.netlify.com" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;text-decoration:none;">
+              Open Netlify Dashboard →
+            </a>
+          </div>
         </div>
+
+        <!-- Blog tab -->
         <div class="tab-pane" id="tab-blog-admin">
           <div class="blog-form">
-            <input type="text" id="bp-title" placeholder="Post Title">
-            <input type="text" id="bp-cat" placeholder="Category (e.g. IoT, Automation, Career)">
-            <textarea id="bp-body" placeholder="Write your article content here..."></textarea>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;">Publish New Post</div>
+            <input type="text" id="bpTitle" placeholder="Post Title" maxlength="120">
+            <input type="text" id="bpCat" placeholder="Category (e.g. IoT Security, AI, Career, Automation)">
+            <textarea id="bpBody" placeholder="Write your article content here..." rows="6"></textarea>
             <button class="btn-sm" onclick="publishPost()">Publish Post</button>
           </div>
-          <div class="blog-posts-list" id="blog-posts-admin"></div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;">Published Posts</div>
+          <div class="blog-posts-list" id="blogPostsAdmin">
+            <div style="font-size:13px;color:var(--text3);padding:16px;">No posts published yet. Posts are stored in this browser.</div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);margin-top:16px;line-height:1.6;padding:12px;background:rgba(255,255,255,.02);border:1px solid var(--border2);">
+            ℹ Blog posts are currently stored in browser localStorage. They appear on this device only.
+            For permanent posts visible to all visitors, consider using a headless CMS like Netlify CMS,
+            or publish content as static HTML blog pages.
+          </div>
         </div>
+
+        <!-- Settings tab -->
         <div class="tab-pane" id="tab-settings">
           <div class="settings-form">
-            <div><label>New Admin Password</label><input type="password" id="new-pw" placeholder="6+ characters"></div>
-            <div><label>LinkedIn URL</label><input type="text" id="s-linkedin" placeholder="https://linkedin.com/in/yourprofile"></div>
-            <div><label>Facebook URL</label><input type="text" id="s-facebook" placeholder="https://facebook.com/yourprofile"></div>
-            <div><label>Instagram URL</label><input type="text" id="s-instagram" placeholder="https://instagram.com/yourprofile"></div>
+            <div class="settings-section">Security</div>
+            <div>
+              <label>New Admin Password (min. 8 characters)</label>
+              <input type="password" id="newPw" placeholder="Enter new password" autocomplete="new-password" oninput="checkPwStrength(this.value)">
+              <div class="pw-strength" id="pwStrength"></div>
+            </div>
+            <div class="settings-section" style="margin-top:8px;">Social Links</div>
+            <div>
+              <label>LinkedIn URL</label>
+              <input type="url" id="sLinkedin" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+            <div>
+              <label>Facebook URL</label>
+              <input type="url" id="sFacebook" placeholder="https://facebook.com/yourprofile">
+            </div>
+            <div>
+              <label>Instagram URL</label>
+              <input type="url" id="sInstagram" placeholder="https://instagram.com/yourprofile">
+            </div>
             <button class="btn-sm" onclick="saveSettings()">Save Settings</button>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 </div>
 
 <script>
-const S={get:(k)=>{try{return JSON.parse(localStorage.getItem('sabinmgr_'+k))||null}catch{return null}},set:(k,v)=>{try{localStorage.setItem('sabinmgr_'+k,JSON.stringify(v))}catch{}}};
-(function(){let s=S.get('stats')||{total:0,today:0,lastDate:'',messages:0};const t=new Date().toDateString();if(s.lastDate!==t){s.today=0;s.lastDate=t;}s.total++;s.today++;S.set('stats',s);})();
-const obs=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.12});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-function showToast(m,c='var(--green)'){const t=document.getElementById('toast');t.textContent=m;t.style.borderColor=c;t.style.color=c;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
-/* Contact form now uses Netlify Forms (real POST) — no JS handler needed */
-function openAdmin(){document.getElementById('adminOverlay').classList.add('active');document.body.style.overflow='hidden';}
-function closeAdmin(){document.getElementById('adminOverlay').classList.remove('active');document.body.style.overflow='';}
-document.getElementById('adminOverlay').addEventListener('click',function(e){if(e.target===this)closeAdmin();});
-function verifyAdmin(){const p=document.getElementById('admin-pw').value,s=S.get('adminpw')||'sabin2024';if(p===s){document.getElementById('login-pane').style.display='none';document.getElementById('dashboard-pane').style.display='block';loadAdminData();}else{showToast('Wrong password.','#ef4444');}}
-function switchTab(name,ev){document.querySelectorAll('.atab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));if(ev)ev.target.classList.add('active');document.getElementById('tab-'+name).classList.add('active');if(name==='messages')renderMessages();if(name==='blog-admin')renderBlogAdmin();}
-function loadAdminData(){const s=S.get('stats')||{};const p=S.get('posts')||[];document.getElementById('a-visits').textContent=s.total||0;document.getElementById('a-today').textContent=s.today||0;document.getElementById('a-messages').textContent=s.messages||0;document.getElementById('a-posts').textContent=p.length;const st=S.get('settings')||{};if(st.linkedin)document.getElementById('s-linkedin').value=st.linkedin;if(st.facebook)document.getElementById('s-facebook').value=st.facebook;if(st.instagram)document.getElementById('s-instagram').value=st.instagram;renderMessages();renderBlogAdmin();}
-function renderMessages(){const msgs=S.get('messages')||[];const c=document.getElementById('messages-list');if(!msgs.length){c.innerHTML='<div style="font-size:13px;color:var(--text3);text-align:center;padding:28px;">No messages yet.</div>';return;}c.innerHTML=[...msgs].reverse().map(m=>`<div class="msg-card"><div class="msg-header"><span class="msg-from">${m.name}</span><span class="msg-date">${m.date}</span></div><div class="msg-email">${m.email}</div>${m.subject?`<div class="msg-subject">Subject: ${m.subject}</div>`:''}<div class="msg-body">${m.message}</div><div class="msg-actions"><button onclick="deleteMessage(${m.id})" style="font-size:11px;padding:5px 12px;cursor:pointer;border:1px solid #ef4444;background:none;color:#ef4444;">Delete</button></div></div>`).join('');}
-function deleteMessage(id){let m=S.get('messages')||[];m=m.filter(x=>x.id!==id);S.set('messages',m);let s=S.get('stats')||{};s.messages=m.length;S.set('stats',s);renderMessages();}
-function publishPost(){const t=document.getElementById('bp-title').value.trim(),c=document.getElementById('bp-cat').value.trim(),b=document.getElementById('bp-body').value.trim();if(!t||!b){showToast('Title and content required.','#ef4444');return;}let p=S.get('posts')||[];p.push({id:Date.now(),title:t,cat:c||'General',body:b,date:new Date().toLocaleDateString()});S.set('posts',p);['bp-title','bp-cat','bp-body'].forEach(id=>document.getElementById(id).value='');renderBlogAdmin();renderBlog();let s=S.get('stats')||{};s.posts=p.length;S.set('stats',s);document.getElementById('a-posts').textContent=p.length;showToast('Post published!');}
-function renderBlogAdmin(){const p=S.get('posts')||[];const c=document.getElementById('blog-posts-admin');if(!p.length){c.innerHTML='<div style="font-size:13px;color:var(--text3);padding:16px;">No posts yet.</div>';return;}c.innerHTML=[...p].reverse().map(x=>`<div class="blog-post-item"><div><div class="bpi-title">${x.title}</div><div class="bpi-meta">${x.cat} &middot; ${x.date}</div></div><button class="btn-sm red" onclick="deletePost(${x.id})">Delete</button></div>`).join('');}
-function deletePost(id){let p=S.get('posts')||[];p=p.filter(x=>x.id!==id);S.set('posts',p);renderBlogAdmin();renderBlog();}
-function renderBlog(){const p=S.get('posts')||[];if(!p.length)return;const g=document.getElementById('blog-grid');const extra=[...p].reverse().map(x=>`<div class="blog-card"><div class="blog-card-cat">${x.cat}</div><div class="blog-card-title">${x.title}</div><div class="blog-card-excerpt">${x.body.substring(0,160)}${x.body.length>160?'...':''}</div><div class="blog-card-meta">${x.date}</div></div>`).join('');g.innerHTML=extra+g.innerHTML;}
-function saveSettings(){const s={linkedin:document.getElementById('s-linkedin').value.trim(),facebook:document.getElementById('s-facebook').value.trim(),instagram:document.getElementById('s-instagram').value.trim()};S.set('settings',s);const np=document.getElementById('new-pw').value.trim();if(np.length>=6)S.set('adminpw',np);showToast('Settings saved!');}
-function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('open');}
-function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');}
-renderBlog();
+/* ────────────────────────────────────────────────
+   STORAGE HELPER — namespaced localStorage
+──────────────────────────────────────────────── */
+const S = {
+  get(k) {
+    try { return JSON.parse(localStorage.getItem('stm_' + k)); } catch { return null; }
+  },
+  set(k, v) {
+    try { localStorage.setItem('stm_' + k, JSON.stringify(v)); return true; } catch { return false; }
+  },
+  del(k) {
+    try { localStorage.removeItem('stm_' + k); } catch {}
+  }
+};
+
+/* ────────────────────────────────────────────────
+   PAGE VIEW COUNTER — deduplicated per session
+──────────────────────────────────────────────── */
+(function trackVisit() {
+  const stats = S.get('stats') || { total: 0, today: 0, lastDate: '', lastVisit: '' };
+  const today = new Date().toDateString();
+  // Only count once per browser session (not on every reload)
+  if (!sessionStorage.getItem('stm_counted')) {
+    if (stats.lastDate !== today) { stats.today = 0; stats.lastDate = today; }
+    stats.total++;
+    stats.today++;
+    stats.lastVisit = new Date().toLocaleString();
+    S.set('stats', stats);
+    sessionStorage.setItem('stm_counted', '1');
+  }
+})();
+
+/* ────────────────────────────────────────────────
+   INTERSECTION OBSERVER — fade-up animations
+──────────────────────────────────────────────── */
+const obs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* ────────────────────────────────────────────────
+   TOAST
+──────────────────────────────────────────────── */
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (type === 'error' ? ' error' : '');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 3400);
+}
+
+/* ────────────────────────────────────────────────
+   MOBILE NAV
+──────────────────────────────────────────────── */
+function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+
+/* ────────────────────────────────────────────────
+   ADMIN PANEL — open / close
+──────────────────────────────────────────────── */
+function openAdmin() {
+  document.getElementById('adminOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('adminPw').value = '';
+  document.getElementById('loginError').style.display = 'none';
+}
+function closeAdmin() {
+  document.getElementById('adminOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('adminOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeAdmin();
+});
+
+/* ────────────────────────────────────────────────
+   ADMIN — login (password hashed with djb2)
+   Default password: sabin2025
+   Password is stored as a hash, not plaintext
+──────────────────────────────────────────────── */
+function djb2(str) {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) h = ((h << 5) + h) ^ str.charCodeAt(i);
+  return (h >>> 0).toString(36);
+}
+// Default hash for 'sabin2025'
+const DEFAULT_PW_HASH = djb2('sabin2025');
+
+function verifyAdmin() {
+  const input = document.getElementById('adminPw').value;
+  const storedHash = S.get('adminHash') || DEFAULT_PW_HASH;
+  if (djb2(input) === storedHash) {
+    document.getElementById('loginPane').style.display = 'none';
+    document.getElementById('dashboardPane').style.display = 'block';
+    loadAdminData();
+  } else {
+    document.getElementById('loginError').style.display = 'block';
+    document.getElementById('adminPw').value = '';
+    document.getElementById('adminPw').focus();
+  }
+}
+
+/* ────────────────────────────────────────────────
+   ADMIN — tab switching
+──────────────────────────────────────────────── */
+function switchTab(name, btn) {
+  document.querySelectorAll('.atab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const pane = document.getElementById('tab-' + name);
+  if (pane) pane.classList.add('active');
+  if (name === 'blog-admin') renderBlogAdmin();
+}
+
+/* ────────────────────────────────────────────────
+   ADMIN — load all data into dashboard
+──────────────────────────────────────────────── */
+function loadAdminData() {
+  const stats = S.get('stats') || {};
+  const posts = S.get('posts') || [];
+  document.getElementById('aVisits').textContent = stats.total || 0;
+  document.getElementById('aToday').textContent = stats.today || 0;
+  document.getElementById('aPosts').textContent = posts.length;
+  document.getElementById('aLastVisit').textContent = stats.lastVisit
+    ? stats.lastVisit.split(',')[1]?.trim() || '—' : '—';
+  const settings = S.get('settings') || {};
+  if (settings.linkedin) document.getElementById('sLinkedin').value = settings.linkedin;
+  if (settings.facebook) document.getElementById('sFacebook').value = settings.facebook;
+  if (settings.instagram) document.getElementById('sInstagram').value = settings.instagram;
+  renderBlogAdmin();
+}
+
+/* ────────────────────────────────────────────────
+   BLOG — publish, render (sanitised)
+──────────────────────────────────────────────── */
+function sanitiseText(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+function publishPost() {
+  const title = document.getElementById('bpTitle').value.trim();
+  const cat = document.getElementById('bpCat').value.trim();
+  const body = document.getElementById('bpBody').value.trim();
+  if (!title || !body) { showToast('Title and content are required.', 'error'); return; }
+  if (title.length > 120) { showToast('Title too long (max 120 chars).', 'error'); return; }
+  const posts = S.get('posts') || [];
+  posts.push({
+    id: Date.now(),
+    title,
+    cat: cat || 'General',
+    body,
+    date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  });
+  S.set('posts', posts);
+  document.getElementById('bpTitle').value = '';
+  document.getElementById('bpCat').value = '';
+  document.getElementById('bpBody').value = '';
+  renderBlogAdmin();
+  renderBlogSection();
+  document.getElementById('aPosts').textContent = posts.length;
+  showToast('Post published!');
+}
+
+function renderBlogAdmin() {
+  const posts = S.get('posts') || [];
+  const container = document.getElementById('blogPostsAdmin');
+  if (!posts.length) {
+    container.innerHTML = '<div style="font-size:13px;color:var(--text3);padding:16px;">No posts published yet.</div>';
+    return;
+  }
+  container.innerHTML = [...posts].reverse().map(p => `
+    <div class="blog-post-item">
+      <div>
+        <div class="bpi-title">${sanitiseText(p.title)}</div>
+        <div class="bpi-meta">${sanitiseText(p.cat)} &middot; ${sanitiseText(p.date)}</div>
+      </div>
+      <button class="btn-sm red" onclick="deletePost(${p.id})">Delete</button>
+    </div>`).join('');
+}
+
+function deletePost(id) {
+  const posts = (S.get('posts') || []).filter(p => p.id !== id);
+  S.set('posts', posts);
+  renderBlogAdmin();
+  renderBlogSection();
+  document.getElementById('aPosts').textContent = posts.length;
+  showToast('Post deleted.');
+}
+
+function renderBlogSection() {
+  const posts = S.get('posts') || [];
+  if (!posts.length) return;
+  const grid = document.getElementById('blog-grid');
+  const newCards = [...posts].reverse().map(p => `
+    <div class="blog-card">
+      <div class="blog-card-cat">${sanitiseText(p.cat)}</div>
+      <div class="blog-card-title">${sanitiseText(p.title)}</div>
+      <div class="blog-card-excerpt">${sanitiseText(p.body.substring(0, 180))}${p.body.length > 180 ? '...' : ''}</div>
+      <div class="blog-card-meta">${sanitiseText(p.date)}</div>
+    </div>`).join('');
+  // Prepend new posts before the static placeholder cards
+  grid.insertAdjacentHTML('afterbegin', newCards);
+}
+
+/* ────────────────────────────────────────────────
+   SETTINGS — save (password stored as hash)
+──────────────────────────────────────────────── */
+function checkPwStrength(val) {
+  const el = document.getElementById('pwStrength');
+  if (!val) { el.textContent = ''; return; }
+  if (val.length < 6) { el.style.color = 'var(--red)'; el.textContent = 'Too short'; }
+  else if (val.length < 10) { el.style.color = 'var(--gold)'; el.textContent = 'Acceptable'; }
+  else { el.style.color = 'var(--green)'; el.textContent = 'Strong'; }
+}
+
+function saveSettings() {
+  const np = document.getElementById('newPw').value.trim();
+  if (np) {
+    if (np.length < 8) { showToast('Password must be at least 8 characters.', 'error'); return; }
+    S.set('adminHash', djb2(np));
+    document.getElementById('newPw').value = '';
+    document.getElementById('pwStrength').textContent = '';
+  }
+  const settings = {
+    linkedin: document.getElementById('sLinkedin').value.trim(),
+    facebook: document.getElementById('sFacebook').value.trim(),
+    instagram: document.getElementById('sInstagram').value.trim()
+  };
+  S.set('settings', settings);
+  showToast('Settings saved!');
+}
+
+/* ────────────────────────────────────────────────
+   INIT — render any saved blog posts on page load
+──────────────────────────────────────────────── */
+renderBlogSection();
 </script>
 </body>
 </html>
-
-
