@@ -3,19 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabin Thapa Magar | B.E. Electronics, Communication & Information Engineer</title>
-<meta name="description" content="Portfolio of Sabin Thapa Magar — B.E. Electronics, Communication & Information Engineering graduate from Kantipur Engineering College, Tribhuvan University. IoT, Embedded Systems, Industrial Automation.">
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico">
+<meta name="description" content="Sabin Thapa Magar — B.E. Electronics, Communication & Information Engineer. IoT, Embedded Systems, AR/Computer Vision. Kantipur Engineering College, Tribhuvan University, Nepal.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#040810">
+<meta name="author" content="Sabin Thapa Magar">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Security -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
-<!-- ═══ Netlify Forms: static form for bot detection at build time ═══ -->
+<!-- Open Graph -->
+<meta property="og:title" content="Sabin Thapa Magar | Electronics & IoT Engineer">
+<meta property="og:description" content="B.E. graduate in Electronics, Communication & Information Engineering. Builder of IoT systems, AR applications, and embedded hardware.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sabinthapamagar.com.np">
+<meta property="og:image" content="https://sabinthapamagar.com.np/android-chrome-512x512.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sabin Thapa Magar | Electronics & IoT Engineer">
+<meta name="twitter:description" content="B.E. Electronics, Communication & Information Engineering — KEC, Tribhuvan University.">
+
+<!-- Favicons / Tab Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Netlify Forms detection -->
 <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" hidden>
   <input type="hidden" name="form-name" value="contact">
   <input name="bot-field">
@@ -25,915 +42,880 @@
   <textarea name="message"></textarea>
 </form>
 
+<title id="pageTitle">Sabin Thapa Magar | Electronics Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
-/* ═══ RESET & TOKENS ═══ */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-:root{
-  --bg:#040810;--bg2:#060b14;--bg3:#0a1120;
-  --surface:#0d1525;--surface2:#111a2e;
-  --border:rgba(59,130,246,.15);--border2:rgba(59,130,246,.07);
-  --accent:#3b82f6;--accent2:#60a5fa;
-  --gold:#f59e0b;--gold2:#fbbf24;
-  --green:#10b981;
-  --text:#e2e8f0;--text2:#94a3b8;--text3:#475569;
-  --serif:'Cormorant Garamond',serif;
-  --sans:'Outfit',sans-serif;
-  --mono:'JetBrains Mono',monospace;
+/* ══════════════════════════ TOKENS ══════════════════════════ */
+:root {
+  --bg0:#020609; --bg1:#050c14; --bg2:#070f1a;
+  --surface:#0c1624; --surface2:#101e30;
+  --border:rgba(56,139,253,.14); --border2:rgba(56,139,253,.07);
+  --accent:#388bfd; --accent-h:#58a6ff;
+  --gold:#d4a017; --gold2:#e8b84b; --green:#3fb950;
+  --text:#cdd9e5; --text2:#768390; --text3:#444c56;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --mono:'JetBrains Mono','Courier New',monospace;
+  --max:1160px; --r:2px;
 }
-body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
-::selection{background:rgba(59,130,246,.3);color:#fff;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
-a{text-decoration:none;color:inherit;}
+
+/* ══════════════════════════ RESET ══════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;}
+body{font-family:var(--sans);background:var(--bg0);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
+ul,ol{list-style:none;}
+button{font-family:inherit;cursor:pointer;}
+::selection{background:rgba(56,139,253,.25);color:#fff;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg0);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
 
-/* ═══ FADE-UP ANIMATION ═══ */
-.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
-.fade-up.visible{opacity:1;transform:translateY(0);}
-.fade-up.d1{transition-delay:.07s;}
-.fade-up.d2{transition-delay:.14s;}
-.fade-up.d3{transition-delay:.21s;}
-.fade-up.d4{transition-delay:.28s;}
-.fade-up.d5{transition-delay:.35s;}
-.fade-up.d6{transition-delay:.42s;}
+/* ══════════════════════════ LAYOUT ══════════════════════════ */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 48px;}
+@media(max-width:768px){.wrap{padding:0 20px;}}
 
-/* ═══ LAYOUT ═══ */
-section{padding:96px 0;}
-.container{max-width:1200px;margin:0 auto;padding:0 64px;}
-@media(max-width:768px){.container{padding:0 24px;}section{padding:64px 0;}}
+/* ══════════════════════════ PAGE SYSTEM ══════════════════════════ */
+.page {
+  display: none;
+  min-height: 100vh;
+  padding-top: 60px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.page.active {
+  display: block;
+}
+.page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Hero has no top padding offset needed */
+#page-home { padding-top: 0; }
 
-/* ═══ KICKER ═══ */
-.kicker{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
-.kicker-line{width:28px;height:1px;background:var(--accent);}
-.kicker span{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;}
-h2.section-title{font-family:var(--serif);font-size:44px;font-weight:500;color:#fff;line-height:1.1;letter-spacing:-.01em;margin-bottom:10px;}
-.section-desc{font-size:15px;color:var(--text2);line-height:1.8;max-width:520px;margin-bottom:56px;}
-@media(max-width:768px){h2.section-title{font-size:32px;}}
+/* ══════════════════════════ TYPOGRAPHY ══════════════════════════ */
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--accent);}
+.eyebrow span{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;}
+.display{font-family:var(--serif);font-weight:500;color:#e8edf2;line-height:1.08;letter-spacing:-.01em;}
+.display.xl{font-size:clamp(44px,7vw,72px);}
+.display.lg{font-size:clamp(32px,5vw,52px);}
+.lead{font-size:15px;color:var(--text2);line-height:1.85;max-width:540px;}
+.mono-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.14em;text-transform:uppercase;}
 
-/* ═══ TAGS ═══ */
-.tag{font-family:var(--mono);font-size:10px;color:var(--accent2);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);padding:3px 8px;}
-.tags{display:flex;flex-wrap:wrap;gap:6px;}
+/* ══════════════════════════ COMPONENTS ══════════════════════════ */
+.tag{font-family:var(--mono);font-size:10px;color:var(--accent-h);background:rgba(56,139,253,.08);border:1px solid rgba(56,139,253,.18);padding:2px 8px;border-radius:var(--r);}
+.tags{display:flex;flex-wrap:wrap;gap:5px;}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;}
+.status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+.status.done{color:var(--green);}
+.status.prog{color:var(--gold2);}
+.dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse 2.2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(63,185,80,.4);}50%{opacity:.75;box-shadow:0 0 0 6px rgba(63,185,80,0);}}
+.btn{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;border-radius:var(--r);transition:all .2s;cursor:pointer;border:none;}
+.btn-fill{background:var(--accent);color:var(--bg0);}
+.btn-fill:hover{background:var(--accent-h);transform:translateY(-1px);}
+.btn-line{background:transparent;color:var(--text);border:1px solid var(--border);}
+.btn-line:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost{background:transparent;color:var(--text3);border:1px solid rgba(68,76,86,.5);}
+.btn-ghost:hover{color:var(--text2);border-color:var(--text3);}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:6px 14px;font-size:12px;color:var(--text2);}
+.ext::after{content:' ↗';font-size:.85em;opacity:.5;}
+.kec-link{color:var(--accent);transition:color .2s;}
+.kec-link:hover{color:var(--accent-h);}
+.divider{height:1px;background:var(--border2);margin:20px 0;}
+.section-pad{padding:80px 0;}
+@media(max-width:768px){.section-pad{padding:52px 0;}}
 
-/* ═══ NAV ═══ */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 64px;transition:all .3s;}
-nav.scrolled{background:rgba(4,8,16,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);box-shadow:0 4px 24px rgba(0,0,0,.3);}
-.nav-logo{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;}
-.nav-logo span{color:var(--accent);}
-.nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);transition:color .2s;}
-.nav-links a:hover,.nav-links a.active{color:var(--accent);}
-.nav-cta{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:8px 20px;transition:all .2s;}
-.nav-cta:hover{background:var(--accent);color:var(--bg);}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
-.hamburger span{display:block;width:22px;height:1.5px;background:var(--text2);transition:all .3s;}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,5px);}
-.hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px);}
-.mobile-nav{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(4,8,16,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border2);z-index:999;padding:16px 0;}
-.mobile-nav.open{display:block;}
-.mobile-nav a{display:block;padding:12px 32px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);transition:color .2s;}
-.mobile-nav a:hover{color:var(--accent);}
-@media(max-width:768px){.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}.nav{padding:0 24px;}}
+/* ══════════════════════════ NAV ══════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;height:60px;
+  display:flex;align-items:center;justify-content:space-between;padding:0 48px;
+  background:rgba(2,6,9,.94);backdrop-filter:blur(24px) saturate(180%);
+  border-bottom:1px solid var(--border2);box-shadow:0 1px 20px rgba(0,0,0,.4);
+}
+.nav-logo{font-family:var(--serif);font-size:19px;font-weight:600;color:#e8edf2;}
+.nav-logo em{color:var(--accent);font-style:normal;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text2);transition:color .2s;font-weight:400;
+  padding:4px 0; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s;
+}
+.nav-links a:hover{color:var(--accent);}
+.nav-links a.active{color:var(--accent); border-bottom-color: var(--accent);}
+.nav-hire{
+  font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);border:1px solid rgba(56,139,253,.4);padding:7px 18px;
+  transition:all .2s;
+}
+.nav-hire:hover{background:var(--accent);color:var(--bg0);border-color:var(--accent);}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
+.ham span{display:block;width:20px;height:1.5px;background:var(--text2);transition:all .3s;}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px);}
+.mob-menu{
+  position:fixed;top:60px;left:0;right:0;z-index:999;
+  background:rgba(2,6,9,.97);backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border2);padding:12px 0;display:none;
+}
+.mob-menu.open{display:block;}
+.mob-menu a{display:block;padding:11px 28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);transition:color .2s;}
+.mob-menu a:hover,.mob-menu a.active{color:var(--accent);}
+@media(max-width:820px){.nav-links,.nav-hire{display:none;}.ham{display:flex;}#nav{padding:0 20px;}}
 
-/* ═══ HERO ═══ */
-#hero{min-height:100vh;display:flex;align-items:center;padding:100px 64px 80px;position:relative;overflow:hidden;background:linear-gradient(160deg,#020508 0%,#050c1a 50%,#020508 100%);}
-.hero-grid{position:absolute;inset:0;opacity:.035;background-image:linear-gradient(rgba(59,130,246,1) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,1) 1px,transparent 1px);background-size:44px 44px;}
-.hero-glow1{position:absolute;top:0;right:0;width:700px;height:700px;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%);transform:translate(30%,-30%);pointer-events:none;}
-.hero-glow2{position:absolute;bottom:0;left:0;width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,.04) 0%,transparent 65%);transform:translate(-30%,30%);pointer-events:none;}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 300px;gap:80px;align-items:center;max-width:1200px;width:100%;margin:0 auto;}
-.hero-available{display:inline-flex;align-items:center;gap:10px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);padding:7px 16px;margin-bottom:28px;}
-.hero-available .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.4);}}
-.hero-available span{font-family:var(--mono);font-size:11px;color:var(--accent2);letter-spacing:.12em;text-transform:uppercase;}
-h1.hero-name{font-family:var(--serif);font-size:60px;font-weight:500;line-height:1.05;color:#fff;margin-bottom:16px;letter-spacing:-.01em;}
-h1.hero-name .accent{color:var(--accent);}
-.hero-typed{height:28px;margin-bottom:20px;}
-.hero-typed-text{font-family:var(--mono);font-size:15px;color:var(--text2);}
-.cursor{color:var(--accent);animation:blink .7s infinite;}
+/* ══════════════════════════ HOME / HERO ══════════════════════════ */
+#page-home{
+  min-height:100vh;display:flex;align-items:center;
+  padding:80px 48px 60px;position:relative;overflow:hidden;
+  background:linear-gradient(155deg,#020609 0%,#04091a 55%,#020609 100%);
+}
+.hero-grid-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(56,139,253,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(56,139,253,.04) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.hero-glow{position:absolute;pointer-events:none;border-radius:50%;}
+.hero-glow-1{width:800px;height:800px;background:radial-gradient(circle,rgba(56,139,253,.055) 0%,transparent 65%);top:-20%;right:-15%;}
+.hero-glow-2{width:600px;height:600px;background:radial-gradient(circle,rgba(212,160,23,.035) 0%,transparent 65%);bottom:-20%;left:-10%;}
+.hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 280px;gap:80px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(56,139,253,.07);border:1px solid rgba(56,139,253,.2);padding:7px 14px;margin-bottom:28px;}
+.hero-badge span{font-family:var(--mono);font-size:10px;color:var(--accent-h);letter-spacing:.14em;text-transform:uppercase;}
+.hero-typewriter{height:26px;margin-bottom:22px;}
+.typed-text{font-family:var(--mono);font-size:14px;color:var(--text2);}
+.cursor{color:var(--accent);animation:blink .75s step-end infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-.hero-desc{font-size:15px;font-weight:300;color:var(--text2);line-height:1.85;max-width:480px;margin-bottom:36px;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
-.btn-primary{background:var(--accent);color:var(--bg);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;transition:all .2s;display:inline-block;border:none;cursor:pointer;}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);}
-.btn-outline{border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;transition:all .2s;display:inline-block;}
-.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
-.btn-ghost{border:1px solid rgba(71,85,105,.4);color:var(--text3);font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;transition:all .2s;display:inline-block;}
-.btn-ghost:hover{border-color:var(--text3);color:var(--text2);}
-.hero-pills{display:flex;flex-wrap:wrap;gap:8px;}
-.hero-pill{display:flex;align-items:center;gap:8px;border:1px solid var(--border);padding:7px 14px;font-size:12px;color:var(--text2);}
-.hero-right{display:flex;flex-direction:column;gap:16px;}
-.hero-card{border:1px solid var(--border);background:rgba(13,21,37,.6);padding:24px;position:relative;}
-.hero-card-initials{font-family:var(--serif);font-size:64px;color:rgba(59,130,246,.12);text-align:center;line-height:1;padding:24px 0;font-weight:500;}
-.hero-card-name{font-family:var(--mono);font-size:10px;color:var(--text3);text-align:center;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;}
-.frame-corner{position:absolute;width:16px;height:16px;border-color:rgba(59,130,246,.5);border-style:solid;}
-.frame-corner.tl{top:8px;left:8px;border-width:1px 0 0 1px;}
-.frame-corner.tr{top:8px;right:8px;border-width:1px 1px 0 0;}
-.frame-corner.bl{bottom:8px;left:8px;border-width:0 0 1px 1px;}
-.frame-corner.br{bottom:8px;right:8px;border-width:0 1px 1px 0;}
-.hero-stats{display:flex;flex-direction:column;gap:8px;}
-.hero-stat{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border2);background:rgba(13,21,37,.4);padding:10px 16px;}
-.hero-stat-num{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500;}
-.hero-stat-lbl{font-size:11px;color:var(--text3);}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-right{display:none;}#hero{padding:100px 24px 60px;}}
+.hero-desc{margin-bottom:36px;font-weight:300;}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.hero-social{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.hero-social-link{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:11px;color:var(--text3);border:1px solid var(--border2);
+  padding:6px 14px;transition:all .2s;letter-spacing:.04em;
+}
+.hero-social-link:hover{border-color:var(--accent);color:var(--accent);}
+.hero-social-link svg{width:13px;height:13px;fill:currentColor;flex-shrink:0;}
 
-/* ═══ ABOUT ═══ */
-#about{background:var(--bg2);}
-.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:start;}
-.about-text p{font-size:15px;line-height:1.9;color:var(--text2);margin-bottom:18px;}
-.about-text p strong{color:var(--text);font-weight:500;}
-.about-highlights{margin-top:28px;display:flex;flex-direction:column;gap:14px;}
-.ah-item{display:flex;gap:14px;align-items:flex-start;}
-.ah-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);font-size:15px;}
-.ah-title{font-size:13px;font-weight:500;color:var(--text);}
-.ah-sub{font-size:12px;color:var(--text3);margin-top:2px;line-height:1.5;}
-.about-sidebar{display:flex;flex-direction:column;gap:16px;}
-.info-card{border:1px solid var(--border);background:rgba(13,21,37,.5);padding:24px;}
-.info-card-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--border2);padding-bottom:12px;margin-bottom:18px;}
-.edu-item{margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border2);}
-.edu-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.edu-degree{font-family:var(--serif);font-size:15px;color:#fff;margin-bottom:4px;}
+/* Hero card */
+.hero-card-wrap{}
+.hero-card{background:var(--surface);border:1px solid var(--border);padding:0;position:relative;overflow:hidden;}
+.hero-card-corner{position:absolute;width:14px;height:14px;border-color:rgba(56,139,253,.5);border-style:solid;}
+.tl{top:6px;left:6px;border-width:1px 0 0 1px;}
+.tr{top:6px;right:6px;border-width:1px 1px 0 0;}
+.bl{bottom:6px;left:6px;border-width:0 0 1px 1px;}
+.br{bottom:6px;right:6px;border-width:0 1px 1px 0;}
+.hero-photo{width:100%;height:220px;object-fit:cover;object-position:center top;display:block;filter:grayscale(15%) contrast(1.05);transition:filter .4s;}
+.hero-photo:hover{filter:grayscale(0%) contrast(1.1);}
+.hero-photo-overlay{position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(transparent,var(--surface));}
+.hero-name-small{font-family:var(--mono);font-size:9px;color:var(--text3);text-align:center;letter-spacing:.16em;text-transform:uppercase;padding:10px 16px 4px;}
+.hero-stats{display:flex;flex-direction:column;gap:7px;margin-top:0;padding:0 0 6px;}
+.hero-stat{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border2);padding:8px 16px;}
+.stat-val{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500;}
+.stat-lbl{font-size:11px;color:var(--text3);}
+@media(max-width:820px){
+  #page-home{padding:90px 20px 56px;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-card-wrap{display:none;}
+}
+
+/* ══════════════════════════ ABOUT ══════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:72px;align-items:start;margin-top:48px;}
+.about-body p{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:16px;}
+.about-body p strong{color:var(--text);font-weight:500;}
+.about-links{margin-top:28px;display:flex;flex-direction:column;gap:12px;}
+.ab-item{display:flex;gap:12px;align-items:flex-start;}
+.ab-icon{width:34px;height:34px;flex-shrink:0;background:rgba(56,139,253,.07);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;}
+.ab-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.ab-sub{font-size:12px;color:var(--text2);line-height:1.5;}
+.about-sidebar{display:flex;flex-direction:column;gap:14px;}
+.info-panel{border:1px solid var(--border);background:rgba(12,22,36,.5);padding:22px;}
+.panel-label{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--border2);padding-bottom:12px;margin-bottom:18px;}
+.edu-row{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border2);}
+.edu-row:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.edu-deg{font-family:var(--serif);font-size:15px;color:#e8edf2;margin-bottom:3px;}
 .edu-school{font-size:12px;color:var(--accent);margin-bottom:2px;}
-.edu-year{font-family:var(--mono);font-size:11px;color:var(--text3);}
-.score-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
-.score-label{font-size:12px;color:var(--text2);}
-.score-val{font-family:var(--mono);font-size:12px;color:var(--gold);}
-.score-bar-wrap{height:3px;background:var(--border2);margin-bottom:12px;overflow:hidden;}
-.score-bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold));transition:width 1.2s ease;}
-.score-overall{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border2);padding-top:12px;margin-top:4px;}
-.score-overall .score-label{color:var(--text);font-weight:500;}
-.score-overall .score-val{font-size:18px;}
-@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px;}}
+.edu-meta{font-family:var(--mono);font-size:11px;color:var(--text3);}
+.pte-row{margin-bottom:12px;}
+.pte-rh{display:flex;justify-content:space-between;margin-bottom:5px;}
+.pte-skill{font-size:12px;color:var(--text2);}
+.pte-score{font-family:var(--mono);font-size:12px;color:var(--gold2);}
+.bar-track{height:3px;background:var(--border2);overflow:hidden;}
+.bar-fill{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold2));width:0;transition:width 1.2s ease;}
+.pte-total{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border2);padding-top:12px;}
+.pte-total-label{font-size:13px;font-weight:500;color:var(--text);}
+.pte-total-score{font-family:var(--mono);font-size:21px;color:var(--gold2);font-weight:500;}
+.pte-note{font-size:11px;color:var(--text3);margin-top:10px;line-height:1.6;}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px;}}
 
-/* ═══ SKILLS ═══ */
-#skills{background:var(--bg);}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.skill-card{border:1px solid var(--border);background:rgba(13,21,37,.4);padding:28px;position:relative;overflow:hidden;transition:all .3s;}
-.skill-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s;}
-.skill-card:hover{border-color:rgba(59,130,246,.35);transform:translateY(-3px);}
-.skill-card:hover::before{opacity:1;}
-.skill-icon{font-size:24px;margin-bottom:14px;}
-.skill-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
-.skill-desc{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
+/* ══════════════════════════ SKILLS ══════════════════════════ */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px;}
+.skill-card{border:1px solid var(--border);background:rgba(12,22,36,.4);padding:26px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;}
+.skill-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s;}
+.skill-card:hover{border-color:rgba(56,139,253,.35);transform:translateY(-3px);}
+.skill-card:hover::after{opacity:1;}
+.skill-icon{font-size:22px;margin-bottom:12px;}
+.skill-title{font-size:13px;font-weight:600;color:#e8edf2;margin-bottom:6px;}
+.skill-desc{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px;}
 @media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.skills-grid{grid-template-columns:1fr;}}
 
-/* ═══ ACHIEVEMENTS ═══ */
-#achievements{background:var(--bg2);}
-.ach-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.ach-card{display:flex;gap:16px;border:1px solid var(--border);background:rgba(13,21,37,.3);padding:22px;transition:border-color .2s;}
-.ach-card:hover{border-color:rgba(59,130,246,.3);}
-.ach-badge{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.15);font-size:18px;}
-.ach-year{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:.1em;margin-bottom:6px;}
-.ach-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:4px;}
-.ach-org{font-size:12px;color:var(--text3);line-height:1.5;}
-@media(max-width:768px){.ach-grid{grid-template-columns:1fr;}}
-
-/* ═══ PROJECTS ═══ */
-#projects{background:var(--bg);}
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-.project-card{border:1px solid var(--border);background:rgba(13,21,37,.4);padding:32px;position:relative;overflow:hidden;transition:all .3s;}
-.project-card:hover{border-color:rgba(59,130,246,.35);transform:translateY(-4px);}
-.project-card:hover .project-border{opacity:.25;}
-.project-border{position:absolute;inset:0;border:1px solid var(--accent);opacity:0;transition:opacity .3s;pointer-events:none;}
-.project-num{font-family:var(--mono);font-size:36px;color:rgba(59,130,246,.08);font-weight:500;position:absolute;top:20px;right:24px;line-height:1;pointer-events:none;}
-.project-kicker{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;}
-.project-title{font-family:var(--serif);font-size:21px;color:#fff;margin-bottom:10px;line-height:1.25;}
-.project-desc{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:18px;}
-.project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
-.project-tech span{font-family:var(--mono);font-size:10px;color:var(--text3);border:1px solid var(--border2);padding:3px 8px;}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:.06em;}
-.status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
-.status.done{color:var(--green);}
-.status.progress{color:var(--gold);}
+/* ══════════════════════════ PROJECTS ══════════════════════════ */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px;}
+.project-card{border:1px solid var(--border);background:rgba(12,22,36,.4);padding:30px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;}
+.project-card:hover{border-color:rgba(56,139,253,.35);transform:translateY(-4px);}
+.project-card:hover .proj-glow{opacity:1;}
+.proj-glow{position:absolute;inset:0;border:1px solid rgba(56,139,253,.18);pointer-events:none;opacity:0;transition:opacity .3s;}
+.proj-num{font-family:var(--mono);font-size:38px;font-weight:500;color:rgba(56,139,253,.07);position:absolute;top:16px;right:20px;line-height:1;user-select:none;}
+.proj-type{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.proj-title{font-family:var(--serif);font-size:20px;color:#e8edf2;margin-bottom:8px;line-height:1.3;}
+.proj-desc{font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:16px;}
+.proj-tech{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;}
+.proj-tech span{font-family:var(--mono);font-size:10px;color:var(--text3);border:1px solid var(--border2);padding:2px 8px;}
+.proj-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+.proj-year{font-family:var(--mono);font-size:10px;color:var(--text3);}
 @media(max-width:768px){.projects-grid{grid-template-columns:1fr;}}
 
-/* ═══ TRANSCRIPT ═══ */
-#transcript{background:var(--bg2);}
-.transcript-accordion{display:flex;flex-direction:column;gap:8px;margin-bottom:32px;}
-.accordion-item{border:1px solid var(--border);overflow:hidden;}
-.accordion-btn{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:rgba(13,21,37,.5);border:none;cursor:pointer;color:var(--text);transition:background .2s;}
-.accordion-btn:hover{background:rgba(13,21,37,.8);}
-.accordion-btn-left{display:flex;align-items:center;gap:20px;}
-.accordion-year{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;}
-.accordion-total{font-size:12px;color:var(--text3);}
-.accordion-icon{font-family:var(--mono);font-size:16px;color:var(--text3);transition:transform .3s;}
-.accordion-icon.open{transform:rotate(45deg);}
-.accordion-body{display:none;padding:16px 24px 24px;}
-.accordion-body.open{display:block;}
-.subjects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
-.subject-item{border:1px solid var(--border2);background:rgba(13,21,37,.3);padding:12px 14px;}
-.sub-name{font-size:11px;color:var(--text2);line-height:1.4;margin-bottom:6px;}
-.sub-score{font-family:var(--mono);font-size:12px;color:var(--accent);}
-.transcript-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-.ts-item{border:1px solid var(--border);background:rgba(13,21,37,.4);padding:20px;text-align:center;}
-.ts-val{font-family:var(--serif);font-size:24px;color:var(--accent);font-weight:500;margin-bottom:4px;}
-.ts-lbl{font-size:11px;color:var(--text3);letter-spacing:.06em;}
-@media(max-width:768px){.subjects-grid{grid-template-columns:repeat(2,1fr);}.transcript-summary{grid-template-columns:repeat(2,1fr);}}
+/* ══════════════════════════ CERTS ══════════════════════════ */
+.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:48px;}
+.cert-card{display:flex;gap:14px;border:1px solid var(--border);background:rgba(12,22,36,.3);padding:20px;transition:border-color .2s;}
+.cert-card:hover{border-color:rgba(56,139,253,.3);}
+.cert-icon{width:40px;height:40px;flex-shrink:0;background:rgba(56,139,253,.07);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;}
+.cert-year{font-family:var(--mono);font-size:10px;color:var(--gold2);letter-spacing:.1em;margin-bottom:4px;}
+.cert-title{font-size:13px;font-weight:600;color:#e8edf2;margin-bottom:3px;line-height:1.4;}
+.cert-body{font-size:11px;color:var(--text3);line-height:1.55;}
+@media(max-width:768px){.certs-grid{grid-template-columns:1fr;}}
 
-/* ═══ PTE ═══ */
-#pte{background:var(--bg);}
-.pte-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.pte-card{border:1px solid var(--border);background:rgba(13,21,37,.4);padding:32px;}
-.pte-score-row{margin-bottom:16px;}
-.pte-skill-label{display:flex;justify-content:space-between;margin-bottom:6px;}
-.pte-skill-name{font-size:13px;color:var(--text2);}
-.pte-skill-val{font-family:var(--mono);font-size:13px;color:var(--gold);}
-.pte-bar-wrap{height:5px;background:var(--border2);border-radius:99px;overflow:hidden;}
-.pte-bar{height:5px;border-radius:99px;background:linear-gradient(90deg,var(--accent),#6366f1);transition:width 1.2s ease;}
-.pte-overall{border-top:1px solid var(--border2);padding-top:16px;margin-top:16px;display:flex;justify-content:space-between;align-items:center;}
-.pte-overall-label{font-size:14px;font-weight:500;color:var(--text);}
-.pte-overall-val{font-family:var(--mono);font-size:22px;color:var(--gold);font-weight:500;}
-.pte-detail-row{display:flex;gap:12px;margin-bottom:10px;}
-.pte-detail-key{font-size:12px;color:var(--text3);width:90px;flex-shrink:0;}
-.pte-detail-val{font-size:12px;color:var(--text2);}
-.pte-notice{border:1px solid rgba(16,185,129,.2);background:rgba(16,185,129,.05);padding:16px;font-size:12px;color:rgba(16,185,129,.8);line-height:1.7;margin-top:16px;}
-@media(max-width:768px){.pte-grid{grid-template-columns:1fr;}}
+/* ══════════════════════════ EDUCATION ══════════════════════════ */
+.edu-summary-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;margin-top:48px;align-items:start;}
+.edu-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px;}
+.edu-stat{border:1px solid var(--border);background:rgba(12,22,36,.4);padding:18px;text-align:center;}
+.edu-stat-val{font-family:var(--serif);font-size:28px;color:var(--accent);font-weight:500;margin-bottom:4px;}
+.edu-stat-lbl{font-size:11px;color:var(--text3);letter-spacing:.06em;}
+.edu-note{border:1px solid var(--border2);background:rgba(12,22,36,.3);padding:18px;font-size:13px;color:var(--text2);line-height:1.7;}
+.edu-note a{color:var(--accent);transition:color .2s;}
+.edu-note a:hover{color:var(--accent-h);}
+.edu-courses{display:flex;flex-direction:column;gap:10px;}
+.course-group{border:1px solid var(--border2);background:rgba(12,22,36,.3);padding:16px;}
+.cg-title{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.course-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.course-tag{font-size:11px;color:var(--text2);background:rgba(12,22,36,.6);border:1px solid var(--border2);padding:3px 8px;}
+@media(max-width:900px){.edu-summary-grid{grid-template-columns:1fr;gap:28px;}}
 
-/* ═══ CONTACT ═══ */
-#contact{background:var(--bg2);}
-.contact-grid{display:grid;grid-template-columns:1fr 340px;gap:40px;}
-.contact-form-wrap{border:1px solid var(--border);background:rgba(13,21,37,.3);padding:32px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
-.form-group{margin-bottom:16px;}
-.form-label{display:block;font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
-.form-input,.form-textarea{width:100%;background:rgba(13,21,37,.7);border:1px solid var(--border);padding:12px 16px;font-family:var(--sans);font-size:13px;color:var(--text);outline:none;transition:border-color .2s;}
+/* ══════════════════════════ CONTACT ══════════════════════════ */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;margin-top:48px;}
+.form-wrap{border:1px solid var(--border);background:rgba(12,22,36,.3);padding:32px;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-field{margin-bottom:14px;}
+.form-label{display:block;font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:7px;}
+.form-input,.form-textarea{width:100%;background:rgba(5,12,20,.7);border:1px solid var(--border2);padding:11px 14px;font-family:var(--sans);font-size:13px;color:var(--text);outline:none;transition:border-color .2s;border-radius:var(--r);}
 .form-input:focus,.form-textarea:focus{border-color:var(--accent);}
 .form-input::placeholder,.form-textarea::placeholder{color:var(--text3);}
-.form-textarea{resize:vertical;min-height:120px;}
-.form-status{padding:12px 16px;font-size:13px;border;margin-bottom:16px;display:none;}
-.form-status.success{display:block;color:var(--green);border:1px solid rgba(16,185,129,.2);background:rgba(16,185,129,.05);}
-.form-status.error{display:block;color:#ef4444;border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.05);}
-.btn-submit{width:100%;background:var(--accent);color:var(--bg);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:14px;border:none;cursor:pointer;transition:all .2s;}
-.btn-submit:hover{background:var(--accent2);}
+.form-textarea{resize:vertical;min-height:115px;}
+.form-msg{padding:11px 14px;font-size:13px;border-radius:var(--r);display:none;margin-bottom:12px;}
+.form-msg.ok{display:block;color:var(--green);background:rgba(63,185,80,.06);border:1px solid rgba(63,185,80,.2);}
+.form-msg.err{display:block;color:#f47067;background:rgba(244,112,103,.06);border:1px solid rgba(244,112,103,.2);}
+.btn-submit{width:100%;background:var(--accent);color:var(--bg0);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px;border:none;cursor:pointer;border-radius:var(--r);transition:background .2s;}
+.btn-submit:hover{background:var(--accent-h);}
 .btn-submit:disabled{background:var(--surface2);color:var(--text3);cursor:not-allowed;}
-.contact-info{display:flex;flex-direction:column;gap:12px;}
-.contact-info-item{display:flex;gap:14px;border:1px solid var(--border);background:rgba(13,21,37,.2);padding:18px;}
-.ci-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
-.ci-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;}
-.ci-val{font-size:13px;color:var(--text2);}
-.social-links-wrap{border:1px solid var(--border);background:rgba(13,21,37,.2);padding:18px;}
-.social-links-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;}
-.social-links{display:flex;flex-wrap:wrap;gap:8px;}
-.social-link{font-size:11px;color:var(--text3);border:1px solid var(--border);padding:6px 14px;letter-spacing:.06em;transition:all .2s;}
+.contact-aside{display:flex;flex-direction:column;gap:10px;}
+.aside-item{display:flex;gap:12px;border:1px solid var(--border2);background:rgba(12,22,36,.2);padding:16px;transition:border-color .2s;}
+.aside-item:hover{border-color:var(--border);}
+.aside-icon{font-size:15px;flex-shrink:0;margin-top:1px;}
+.aside-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px;}
+.aside-val{font-size:13px;color:var(--text2);line-height:1.4;}
+.aside-val a{color:var(--accent);}
+.social-block{border:1px solid var(--border2);background:rgba(12,22,36,.2);padding:16px;}
+.social-label{font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.social-links-row{display:flex;flex-wrap:wrap;gap:7px;}
+.social-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;color:var(--text3);border:1px solid var(--border2);
+  padding:6px 12px;letter-spacing:.04em;transition:all .2s;
+}
 .social-link:hover{border-color:var(--accent);color:var(--accent);}
-@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
+.social-link svg{width:12px;height:12px;fill:currentColor;flex-shrink:0;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}.form-row-2{grid-template-columns:1fr;}}
 
-/* ═══ FOOTER ═══ */
-footer{border-top:1px solid var(--border2);padding:28px 64px;display:flex;align-items:center;justify-content:space-between;background:var(--bg);}
-.footer-logo{font-family:var(--serif);font-size:18px;font-weight:500;color:#fff;}
-.footer-logo span{color:var(--accent);}
+/* ══════════════════════════ FOOTER ══════════════════════════ */
+footer{border-top:1px solid var(--border2);padding:24px 48px;display:flex;align-items:center;justify-content:space-between;background:var(--bg0);}
+.footer-logo{font-family:var(--serif);font-size:17px;font-weight:500;color:#e8edf2;}
+.footer-logo em{color:var(--accent);font-style:normal;}
 .footer-copy{font-family:var(--mono);font-size:11px;color:var(--text3);}
-.footer-links{display:flex;gap:24px;}
-.footer-links a{font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;transition:color .2s;}
-.footer-links a:hover{color:var(--text2);}
-@media(max-width:768px){footer{flex-direction:column;gap:16px;padding:24px;text-align:center;}.footer-links{gap:16px;}}
+.footer-nav{display:flex;gap:20px;}
+.footer-nav a{font-size:11px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;transition:color .2s;}
+.footer-nav a:hover{color:var(--text2);}
+@media(max-width:768px){footer{flex-direction:column;gap:14px;padding:20px;text-align:center;}.footer-nav{gap:14px;}}
+
+/* ══════════════════════════ FADE-IN elements within pages ══════════════════════════ */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;}
+.fi.in{opacity:1;transform:none;}
+.fi.d1{transition-delay:.08s;}.fi.d2{transition-delay:.16s;}.fi.d3{transition-delay:.24s;}
+.fi.d4{transition-delay:.32s;}.fi.d5{transition-delay:.40s;}.fi.d6{transition-delay:.48s;}
 </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">Sabin<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#transcript">Transcript</a></li>
-    <li><a href="#contact">Contact</a></li>
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#home" class="nav-logo" onclick="navigate('home',event)">Sabin<em>.</em></a>
+  <ul class="nav-links" role="list">
+    <li><a href="#home"          onclick="navigate('home',event)">Home</a></li>
+    <li><a href="#about"         onclick="navigate('about',event)">About</a></li>
+    <li><a href="#skills"        onclick="navigate('skills',event)">Skills</a></li>
+    <li><a href="#projects"      onclick="navigate('projects',event)">Projects</a></li>
+    <li><a href="#certifications" onclick="navigate('certifications',event)">Certifications</a></li>
+    <li><a href="#education"     onclick="navigate('education',event)">Education</a></li>
+    <li><a href="#contact"       onclick="navigate('contact',event)">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Hire Me</a>
-  <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
+  <a href="#contact" class="nav-hire" onclick="navigate('contact',event)">Hire Me</a>
+  <button class="ham" id="ham" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mobile-nav" id="mobileNav">
-  <a href="#about" onclick="closeMobileNav()">About</a>
-  <a href="#skills" onclick="closeMobileNav()">Skills</a>
-  <a href="#projects" onclick="closeMobileNav()">Projects</a>
-  <a href="#achievements" onclick="closeMobileNav()">Achievements</a>
-  <a href="#transcript" onclick="closeMobileNav()">Transcript</a>
-  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+<div class="mob-menu" id="mobMenu">
+  <a href="#home"          onclick="navigate('home',event);closeNav()">Home</a>
+  <a href="#about"         onclick="navigate('about',event);closeNav()">About</a>
+  <a href="#skills"        onclick="navigate('skills',event);closeNav()">Skills</a>
+  <a href="#projects"      onclick="navigate('projects',event);closeNav()">Projects</a>
+  <a href="#certifications" onclick="navigate('certifications',event);closeNav()">Certifications</a>
+  <a href="#education"     onclick="navigate('education',event);closeNav()">Education</a>
+  <a href="#contact"       onclick="navigate('contact',event);closeNav()">Contact</a>
 </div>
 
-<!-- ═══ HERO ═══ -->
-<section id="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow1"></div>
-  <div class="hero-glow2"></div>
+<!-- ══════════════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════════════ -->
+<div id="page-home" class="page" role="main" aria-label="Home">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="fade-up">
-        <div class="hero-available">
-          <div class="dot"></div>
-          <span>Available for opportunities</span>
-        </div>
+      <div class="hero-badge">
+        <div class="dot-live" aria-hidden="true"></div>
+        <span>Available for opportunities</span>
       </div>
-      <div class="fade-up d1">
-        <h1 class="hero-name">Sabin<br><span class="accent">Thapa Magar</span></h1>
+      <h1 class="display xl" style="margin-bottom:16px;">
+        Sabin<br><span style="color:var(--accent);">Thapa Magar</span>
+      </h1>
+      <div class="hero-typewriter" aria-live="polite">
+        <span class="typed-text" id="typedEl"></span><span class="cursor" aria-hidden="true">|</span>
       </div>
-      <div class="fade-up d2">
-        <div class="hero-typed">
-          <span class="hero-typed-text" id="typedText"></span><span class="cursor">|</span>
-        </div>
+      <p class="lead hero-desc">
+        B.E. graduate in Electronics, Communication &amp; Information Engineering from
+        <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">Kantipur Engineering College</a>,
+        Tribhuvan University. I build real hardware — from AR-powered computer vision to IoT home automation — and care about the security of the devices we connect to the world.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-fill" onclick="navigate('projects',event)">View Projects</a>
+        <a href="#about"    class="btn btn-line" onclick="navigate('about',event)">About Me</a>
+        <a href="#contact"  class="btn btn-ghost" onclick="navigate('contact',event)">Contact</a>
       </div>
-      <div class="fade-up d3">
-        <p class="hero-desc">B.E. graduate in Electronics, Communication &amp; Information Engineering from Kantipur Engineering College, Tribhuvan University. Building real hardware systems — from IoT monitoring to industrial automation — with a focus on embedded security.</p>
+      <div class="hero-pills">
+        <div class="pill">🎓 TU · First Division · 2025</div>
+        <div class="pill">🏆 3× Robotics Competitions</div>
+        <div class="pill">📜 PTE Academic · 68</div>
       </div>
-      <div class="fade-up d4">
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">View Projects</a>
-          <a href="#contact" class="btn-outline">Get in Touch</a>
-          <a href="#transcript" class="btn-ghost">Transcript</a>
-        </div>
-      </div>
-      <div class="fade-up d5">
-        <div class="hero-pills">
-          <div class="hero-pill">🎓 TU · First Division</div>
-          <div class="hero-pill">🏆 3× Robo Competitions</div>
-          <div class="hero-pill">📜 PTE 68 · 2026</div>
-        </div>
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/_sabinmgr/" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+        <a href="mailto:sabin7magar@gmail.com" class="hero-social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
       </div>
     </div>
-    <div class="hero-right fade-up d2">
+    <div class="hero-card-wrap" aria-hidden="true">
       <div class="hero-card">
-        <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
-        <div class="frame-corner bl"></div><div class="frame-corner br"></div>
-        <div class="hero-card-initials">STM</div>
-        <div class="hero-card-name">Sabin Thapa Magar</div>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><span class="hero-stat-num">65.19%</span><span class="hero-stat-lbl">Final Aggregate</span></div>
-        <div class="hero-stat"><span class="hero-stat-num">First</span><span class="hero-stat-lbl">Division</span></div>
-        <div class="hero-stat"><span class="hero-stat-num">2025</span><span class="hero-stat-lbl">Year of Pass</span></div>
-        <div class="hero-stat"><span class="hero-stat-num">PTE 68</span><span class="hero-stat-lbl">English Score</span></div>
+        <div class="hero-card-corner tl"></div><div class="hero-card-corner tr"></div>
+        <div class="hero-card-corner bl"></div><div class="hero-card-corner br"></div>
+        <div style="position:relative;">
+          <img src="blue%20and%20white%20portrait.png" alt="Sabin Thapa Magar" class="hero-photo" width="280" height="220" loading="eager">
+          <div class="hero-photo-overlay"></div>
+        </div>
+        <div class="hero-name-small">Sabin Thapa Magar · KEC · TU</div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="stat-val">65.19%</span><span class="stat-lbl">Aggregate</span></div>
+          <div class="hero-stat"><span class="stat-val">First</span><span class="stat-lbl">Division</span></div>
+          <div class="hero-stat"><span class="stat-val">2025</span><span class="stat-lbl">Year Passed</span></div>
+          <div class="hero-stat"><span class="stat-val">PTE 68</span><span class="stat-lbl">English</span></div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ═══ ABOUT ═══ -->
-<section id="about">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>About</span></div>
-    <h2 class="section-title fade-up d1">Engineer. Builder. Curious.</h2>
+<!-- ══════════════════════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════════════════════ -->
+<div id="page-about" class="page" style="background:var(--bg1);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>About</span></div>
+    <h2 class="display lg fi d1">Engineer. Builder. Curious.</h2>
     <div class="about-grid">
-      <div class="fade-up d2">
-        <div class="about-text">
-          <p>I am a B.E. graduate in Electronics, Communication and Information Engineering from <strong>Kantipur Engineering College, Tribhuvan University</strong>. My engineering education covered digital and embedded systems, signal processing, computer networks, RF/microwave engineering, telecommunications, and AI/ML.</p>
-          <p>What I value most is building real hardware that works under real constraints — from a Raspberry Pi sensor network to an autonomous competition robot. I find the intersection of hardware and security particularly compelling: understanding how physical systems can be exploited is something my hands-on embedded work has made concrete, not theoretical.</p>
-          <p>I am passionate about bridging academic electronics with practical real-world applications — embedded hardware, industrial control systems, wireless communication, and the emerging challenge of securing the devices we build.</p>
+      <div class="fi d2">
+        <div class="about-body">
+          <p>I am a B.E. graduate in Electronics, Communication and Information Engineering from <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link ext"><strong>Kantipur Engineering College</strong></a>, affiliated to Tribhuvan University, Dhapakhel, Lalitpur.</p>
+          <p>My four-year programme covered digital and embedded systems, RF &amp; microwave engineering, wireless communication, satellite communication, signal processing, computer networks, industrial automation, AI, and telecommunications — taught through both theory and extensive lab work.</p>
+          <p>What I value most is building hardware that works under real constraints. My final year Major Project — a web-based Augmented Reality eyewear try-on system using MTCNN and VGG-16 — achieved 92% face shape classification accuracy. My Minor Project brought IoT home automation to life using an ESP32, RFID, PIR sensors, and Arduino IoT Cloud monitoring. Both showed me that the most interesting engineering problems sit at the boundary of hardware and software.</p>
+          <p>I am motivated by the security implications of the devices we build. Embedded systems deployed at scale — in homes, factories, healthcare — are an increasingly critical attack surface, and that intersection of hardware engineering and cybersecurity is where I want to grow.</p>
         </div>
-        <div class="about-highlights">
-          <div class="ah-item">
-            <div class="ah-icon">🏫</div>
-            <div><div class="ah-title">Kantipur Engineering College · Tribhuvan University</div><div class="ah-sub">Reg. No: 3-2-368-202-2020 · Roll No: 27/BEI/2077</div></div>
+        <div class="about-links">
+          <div class="ab-item">
+            <div class="ab-icon">🏫</div>
+            <div>
+              <div class="ab-title"><a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link ext">Kantipur Engineering College</a></div>
+              <div class="ab-sub">Dhapakhel, Lalitpur, Nepal · Affiliated to Tribhuvan University</div>
+            </div>
           </div>
-          <div class="ah-item">
-            <div class="ah-icon">🤖</div>
-            <div><div class="ah-title">Robotics &amp; IoT Competitions</div><div class="ah-sub">HEX-2023 Robo Race · YATRA 4.0 Robo Sumo · ICT Mela 4.0 Robo Soccer</div></div>
+          <div class="ab-item">
+            <div class="ab-icon">🤖</div>
+            <div>
+              <div class="ab-title">Robotics &amp; Competition Experience</div>
+              <div class="ab-sub">HEX-2023 Robo Race · YATRA 4.0 Robo Sumo · ICT Mela 4.0 Robo Soccer</div>
+            </div>
           </div>
-          <div class="ah-item">
-            <div class="ah-icon">🏭</div>
-            <div><div class="ah-title">Industrial Automation Certified</div><div class="ah-sub">60-hr PLC, HMI, SCADA · KEC Automation Lab (Erasmus+ eACCESS)</div></div>
+          <div class="ab-item">
+            <div class="ab-icon">🏭</div>
+            <div>
+              <div class="ab-title">Industrial Automation — 60-hour Certified</div>
+              <div class="ab-sub">Siemens &amp; Delta PLC, HMI, SCADA · KEC Automation Lab (Erasmus+ eACCESS)</div>
+            </div>
           </div>
-          <div class="ah-item">
-            <div class="ah-icon">🔌</div>
-            <div><div class="ah-title">IoT Training Certified</div><div class="ah-sub">60-hr Raspberry Pi with IoT · KEC Research, Training &amp; Consultancy Division</div></div>
+          <div class="ab-item">
+            <div class="ab-icon">🔌</div>
+            <div>
+              <div class="ab-title">IoT with Raspberry Pi — 60-hour Certified</div>
+              <div class="ab-sub">Research, Training &amp; Consultancy Division, KEC</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="fade-up d3">
+      <div class="fi d3">
         <div class="about-sidebar">
-          <div class="info-card">
-            <div class="info-card-label">Education</div>
-            <div class="edu-item">
-              <div class="edu-degree">B.E. · Electronics, Communication &amp; Information Engineering</div>
-              <div class="edu-school">Kantipur Engineering College · TU</div>
-              <div class="edu-year">2020–2025 · First Division · 65.19%</div>
+          <div class="info-panel">
+            <div class="panel-label">Education</div>
+            <div class="edu-row">
+              <div class="edu-deg">B.E. Electronics, Communication &amp; Information Engineering</div>
+              <div class="edu-school"><a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">Kantipur Engineering College · TU</a></div>
+              <div class="edu-meta">2020–2025 · First Division · 65.19%</div>
             </div>
-            <div class="edu-item">
-              <div class="edu-degree">SEE (Grade 10)</div>
-              <div class="edu-school">Secondary Education Examination</div>
-              <div class="edu-year">Nepal · Board Examinations</div>
+            <div class="edu-row">
+              <div class="edu-deg">SEE — Secondary Education Examination</div>
+              <div class="edu-school">Nepal · Board Examinations</div>
+              <div class="edu-meta">Grade 10 · Nepal</div>
             </div>
           </div>
-          <div class="info-card">
-            <div class="info-card-label">PTE Academic Score</div>
-            <div class="score-row"><span class="score-label">Listening</span><span class="score-val">75</span></div>
-            <div class="score-bar-wrap"><div class="score-bar" data-width="75"></div></div>
-            <div class="score-row"><span class="score-label">Reading</span><span class="score-val">65</span></div>
-            <div class="score-bar-wrap"><div class="score-bar" data-width="65"></div></div>
-            <div class="score-row"><span class="score-label">Writing</span><span class="score-val">64</span></div>
-            <div class="score-bar-wrap"><div class="score-bar" data-width="64"></div></div>
-            <div class="score-row"><span class="score-label">Speaking</span><span class="score-val">60</span></div>
-            <div class="score-bar-wrap"><div class="score-bar" data-width="60"></div></div>
-            <div class="score-overall"><span class="score-label">Overall</span><span class="score-val">68</span></div>
-            <div style="font-size:11px;color:var(--text3);margin-top:10px;line-height:1.6;">16 Apr 2026 · Valid until 16 Apr 2028<br>LA GRANDEE International College, Nepal</div>
+          <div class="info-panel">
+            <div class="panel-label">PTE Academic · Pearson</div>
+            <div class="pte-row"><div class="pte-rh"><span class="pte-skill">Listening</span><span class="pte-score">75</span></div><div class="bar-track"><div class="bar-fill" data-w="75"></div></div></div>
+            <div class="pte-row"><div class="pte-rh"><span class="pte-skill">Reading</span><span class="pte-score">65</span></div><div class="bar-track"><div class="bar-fill" data-w="65"></div></div></div>
+            <div class="pte-row"><div class="pte-rh"><span class="pte-skill">Writing</span><span class="pte-score">64</span></div><div class="bar-track"><div class="bar-fill" data-w="64"></div></div></div>
+            <div class="pte-row"><div class="pte-rh"><span class="pte-skill">Speaking</span><span class="pte-score">60</span></div><div class="bar-track"><div class="bar-fill" data-w="60"></div></div></div>
+            <div class="pte-total"><span class="pte-total-label">Overall Score</span><span class="pte-total-score">68</span></div>
+            <p class="pte-note">16 April 2026 · Valid until 16 April 2028<br>LA GRANDEE International College, Nepal</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#projects" onclick="navigate('projects',event)">Projects</a><a href="#contact" onclick="navigate('contact',event)">Contact</a></nav></footer>
+</div>
 
-<!-- ═══ SKILLS ═══ -->
-<section id="skills">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>Technical Skills</span></div>
-    <h2 class="section-title fade-up d1">What I Know &amp; Build With</h2>
-    <p class="section-desc fade-up d2">Four years of engineering education plus hands-on training across embedded systems, communication, automation, and programming.</p>
+<!-- ══════════════════════════════════════════════
+     PAGE: SKILLS
+══════════════════════════════════════════════ -->
+<div id="page-skills" class="page" style="background:var(--bg0);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>Technical Skills</span></div>
+    <h2 class="display lg fi d1">What I Know &amp; Build With</h2>
+    <p class="lead fi d2" style="margin-bottom:48px;">Four years of engineering across embedded systems, communications, automation, and programming — plus hands-on certified training and real project delivery.</p>
     <div class="skills-grid">
-      <div class="skill-card fade-up d1">
-        <div class="skill-icon">📡</div>
-        <div class="skill-title">Communication &amp; Antenna Systems</div>
-        <div class="skill-desc">Wireless communication theory, antenna design, propagation analysis, satellite communication, and RF &amp; microwave engineering.</div>
-        <div class="tags"><span class="tag">RF Engineering</span><span class="tag">Propagation &amp; Antenna</span><span class="tag">Satellite Comms</span><span class="tag">Wireless Systems</span></div>
-      </div>
-      <div class="skill-card fade-up d2">
-        <div class="skill-icon">🔌</div>
-        <div class="skill-title">Embedded Systems &amp; IoT</div>
-        <div class="skill-desc">Microprocessor and embedded system design, Raspberry Pi programming, IoT integration, sensor interfacing, and real-time control systems.</div>
-        <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">IoT</span><span class="tag">Microprocessors</span><span class="tag">Embedded C</span></div>
-      </div>
-      <div class="skill-card fade-up d3">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-title">Industrial Automation</div>
-        <div class="skill-desc">PLC programming (Siemens &amp; Delta), HMI configuration, SCADA systems, industrial switchgears, and sensor-based automation design.</div>
-        <div class="tags"><span class="tag">Siemens PLC</span><span class="tag">Delta PLC</span><span class="tag">HMI</span><span class="tag">SCADA</span></div>
-      </div>
-      <div class="skill-card fade-up d4">
-        <div class="skill-icon">💻</div>
-        <div class="skill-title">Programming &amp; Algorithms</div>
-        <div class="skill-desc">Object-oriented programming, data structures &amp; algorithms, database management, and computer network fundamentals.</div>
-        <div class="tags"><span class="tag">C / C++</span><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">SQL</span></div>
-      </div>
-      <div class="skill-card fade-up d5">
-        <div class="skill-icon">🔬</div>
-        <div class="skill-title">Electronics &amp; Circuit Design</div>
-        <div class="skill-desc">Digital logic design, electronic devices &amp; circuits, control systems, signal processing, and advanced electronics engineering.</div>
-        <div class="tags"><span class="tag">Digital Logic</span><span class="tag">Circuit Analysis</span><span class="tag">Control Systems</span><span class="tag">Signal Processing</span></div>
-      </div>
-      <div class="skill-card fade-up d6">
-        <div class="skill-icon">📊</div>
-        <div class="skill-title">Big Data &amp; Information Systems</div>
-        <div class="skill-desc">Information systems design, big data technologies, multimedia systems, telecommunication networks, and operating systems.</div>
-        <div class="tags"><span class="tag">Big Data</span><span class="tag">Telecom Systems</span><span class="tag">OS</span><span class="tag">Multimedia</span></div>
-      </div>
+      <div class="skill-card fi d1"><div class="skill-icon">📡</div><div class="skill-title">Communication &amp; Antenna Systems</div><div class="skill-desc">Wireless communication theory, antenna design, RF &amp; microwave engineering, satellite communication, signal propagation, and filter design.</div><div class="tags"><span class="tag">RF Engineering</span><span class="tag">Antenna Design</span><span class="tag">Satellite Comms</span><span class="tag">Filter Design</span></div></div>
+      <div class="skill-card fi d2"><div class="skill-icon">🔌</div><div class="skill-title">Embedded Systems &amp; IoT</div><div class="skill-desc">ESP32, Raspberry Pi, microprocessor architecture, sensor interfacing (RFID, PIR, LDR, MQ2), real-time monitoring, and Arduino IoT Cloud integration.</div><div class="tags"><span class="tag">ESP32</span><span class="tag">Raspberry Pi</span><span class="tag">RFID</span><span class="tag">Arduino IoT</span><span class="tag">MicroPython</span></div></div>
+      <div class="skill-card fi d3"><div class="skill-icon">⚙️</div><div class="skill-title">Industrial Automation</div><div class="skill-desc">PLC programming (Siemens S7 &amp; Delta), HMI panel configuration, SCADA systems, industrial sensors, switchgears, and ladder logic. 60-hour certified training at KEC.</div><div class="tags"><span class="tag">Siemens PLC</span><span class="tag">Delta PLC</span><span class="tag">HMI</span><span class="tag">SCADA</span><span class="tag">Ladder Logic</span></div></div>
+      <div class="skill-card fi d4"><div class="skill-icon">💻</div><div class="skill-title">Programming</div><div class="skill-desc">Python (ML libraries), C/C++ for embedded, OOP, data structures &amp; algorithms, database management, and computer networks.</div><div class="tags"><span class="tag">Python</span><span class="tag">C / C++</span><span class="tag">SQL / MySQL</span><span class="tag">Flask</span><span class="tag">Proteus</span></div></div>
+      <div class="skill-card fi d5"><div class="skill-icon">🧠</div><div class="skill-title">Computer Vision &amp; AI</div><div class="skill-desc">Deep learning with MTCNN and VGG-16 for face detection/classification, MediaPipe for 468-point facial landmark localization, Three.js for 3D AR rendering.</div><div class="tags"><span class="tag">MTCNN</span><span class="tag">VGG-16</span><span class="tag">MediaPipe</span><span class="tag">Three.js</span><span class="tag">CNN</span></div></div>
+      <div class="skill-card fi d6"><div class="skill-icon">🔬</div><div class="skill-title">Electronics &amp; Circuit Design</div><div class="skill-desc">Digital logic design, electronic devices &amp; circuits, control systems, signal processing, and Proteus circuit simulation.</div><div class="tags"><span class="tag">Digital Logic</span><span class="tag">Circuit Analysis</span><span class="tag">Control Systems</span><span class="tag">Signal Processing</span></div></div>
     </div>
   </div>
-</section>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#projects" onclick="navigate('projects',event)">Projects</a><a href="#contact" onclick="navigate('contact',event)">Contact</a></nav></footer>
+</div>
 
-<!-- ═══ ACHIEVEMENTS ═══ -->
-<section id="achievements">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>Certifications &amp; Achievements</span></div>
-    <h2 class="section-title fade-up d1">Real Competitions. Real Training.</h2>
-    <p class="section-desc fade-up d2">Certificates and recognitions earned during my engineering journey at KEC and beyond.</p>
-    <div class="ach-grid">
-      <div class="ach-card fade-up d1">
-        <div class="ach-badge">🏅</div>
-        <div><div class="ach-year">2025 · KEC · TU</div><div class="ach-title">B.E. Provisional Certificate — First Division</div><div class="ach-org">Tribhuvan University, Office of the Controller of Examinations, Balkhu. Roll No: 34611 · Reg. No: 3-2-368-202-2020.</div></div>
-      </div>
-      <div class="ach-card fade-up d2">
-        <div class="ach-badge">🏅</div>
-        <div><div class="ach-year">2025 · KEC</div><div class="ach-title">Character Certificate — Good Conduct</div><div class="ach-org">Kantipur Engineering College, Dhapakhel, Lalitpur. First Division in ECIE (2077–2081 B.S.).</div></div>
-      </div>
-      <div class="ach-card fade-up d3">
-        <div class="ach-badge">🏅</div>
-        <div><div class="ach-year">June–July 2023 · KEC RTCD</div><div class="ach-title">Certificate — Raspberry Pi with IoT</div><div class="ach-org">60-hour training by Research, Training &amp; Consultancy Division, Kantipur Engineering College.</div></div>
-      </div>
-      <div class="ach-card fade-up d4">
-        <div class="ach-badge">🏅</div>
-        <div><div class="ach-year">June 2024 · KEC Automation Lab</div><div class="ach-title">Certificate — Industrial Automation</div><div class="ach-org">60-hour course: Industrial Switchgears, Sensors, Siemens &amp; Delta PLC, HMI, SCADA (Erasmus+ eACCESS).</div></div>
-      </div>
-      <div class="ach-card fade-up d1">
-        <div class="ach-badge">🤖</div>
-        <div><div class="ach-year">HEX-2023 · Himalaya COE</div><div class="ach-title">Certificate of Appreciation — Robo Race</div><div class="ach-org">Awarded by Himalaya Robotics Club for participating in the HEX-2023 Robo Race competition.</div></div>
-      </div>
-      <div class="ach-card fade-up d2">
-        <div class="ach-badge">🤖</div>
-        <div><div class="ach-year">January 2023 · NCE</div><div class="ach-title">Certificate of Appreciation — YATRA 4.0 Robo Sumo</div><div class="ach-org">Robo Sumo at YATRA 4.0 "Stage of Innovation", NCE Robotics Club, 20–21 January 2023.</div></div>
-      </div>
-      <div class="ach-card fade-up d3">
-        <div class="ach-badge">🤖</div>
-        <div><div class="ach-year">December 2023 · ICT Mela 4.0</div><div class="ach-title">Certificate of Achievement — Robo Soccer 1.0</div><div class="ach-org">Robo Soccer 1.0 at ICT Mela 4.0, Kumaripati, Lalitpur. Organized by Virinchi College.</div></div>
-      </div>
-      <div class="ach-card fade-up d4">
-        <div class="ach-badge">📜</div>
-        <div><div class="ach-year">16 April 2026 · Pearson</div><div class="ach-title">PTE Academic — Overall Score 68</div><div class="ach-org">Score Code: 4519728AJB · LA GRANDEE International College, Nepal (Centre ID: 88209). Valid until 16 Apr 2028.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROJECTS ═══ -->
-<section id="projects">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>Projects</span></div>
-    <h2 class="section-title fade-up d1">What I Have Built</h2>
-    <p class="section-desc fade-up d2">Engineering projects from my degree and personal exploration, covering hardware, software, and systems design.</p>
+<!-- ══════════════════════════════════════════════
+     PAGE: PROJECTS
+══════════════════════════════════════════════ -->
+<div id="page-projects" class="page" style="background:var(--bg1);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>Projects</span></div>
+    <h2 class="display lg fi d1">What I Have Built</h2>
+    <p class="lead fi d2" style="margin-bottom:0;">Engineering projects from my degree at <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">KEC</a> — each solving a real problem with hardware, software, or both.</p>
     <div class="projects-grid">
-      <div class="project-card fade-up d1">
-        <div class="project-border"></div>
-        <div class="project-num">01</div>
-        <div class="project-kicker">Final Year Project · Embedded Systems</div>
-        <div class="project-title">IoT-Based Smart Monitoring System</div>
-        <div class="project-desc">Raspberry Pi-based IoT system integrating multiple sensors for real-time data acquisition, remote monitoring, and automated alert generation via wireless communication protocols.</div>
-        <div class="project-tech"><span>Raspberry Pi</span><span>Python</span><span>MQTT</span><span>Sensors</span><span>IoT</span></div>
-        <span class="status done">Completed</span>
+      <div class="project-card fi d1" style="border-top:2px solid var(--accent);">
+        <div class="proj-glow"></div>
+        <div class="proj-num">01</div>
+        <div class="proj-type">Major Project · EX755 · March 2025</div>
+        <h3 class="proj-title">Virtual Eyewear Try-On System</h3>
+        <p class="proj-desc">A web-based AR platform that analyses face shape and overlays eyewear frames in real time. MTCNN detects facial regions; VGG-16 classifies face shape into 5 categories (oval, round, square, heart, oblong); MediaPipe localises 468 landmarks for pupil distance calculation and frame alignment; Three.js renders 3D glasses on a live webcam feed. Achieved <strong style="color:var(--text);">92% face shape classification accuracy</strong> and a <strong style="color:var(--text);">&lt;5% AR overlay width error margin</strong>.</p>
+        <div class="proj-tech"><span>MTCNN</span><span>VGG-16</span><span>MediaPipe</span><span>Three.js</span><span>Flask</span><span>MySQL</span><span>WebRTC</span><span>Python</span></div>
+        <div class="proj-footer"><span class="status done">Completed · March 2025</span><span class="proj-year">Supervised by Er. Sachin Shrestha · KEC</span></div>
       </div>
-      <div class="project-card fade-up d2">
-        <div class="project-border"></div>
-        <div class="project-num">02</div>
-        <div class="project-kicker">Robotics Competition · HEX-2023</div>
-        <div class="project-title">Autonomous Robo Race Vehicle</div>
-        <div class="project-desc">Designed and built an autonomous robot for the HEX-2023 Robo Race at Himalaya College of Engineering. Motor control, sensor-based navigation, and real-time obstacle detection.</div>
-        <div class="project-tech"><span>Microcontroller</span><span>Motor Driver</span><span>IR Sensors</span><span>C/C++</span></div>
-        <span class="status done">Completed · HEX-2023</span>
+      <div class="project-card fi d2">
+        <div class="proj-glow"></div>
+        <div class="proj-num">02</div>
+        <div class="proj-type">Minor Project · EX 654 · February 2024</div>
+        <h3 class="proj-title">IoT Home Automation System</h3>
+        <p class="proj-desc">An ESP32-based smart home system integrating multiple sensors for autonomous appliance control and cloud monitoring. PIR &amp; LDR sensors manage automatic lighting; RFID authentication secures door locks; MQ2 gas sensor provides kitchen fire detection; water level sensors manage tank pump automation. All sensor data streams to <strong style="color:var(--text);">Arduino IoT Cloud</strong> for real-time remote control. Simulated in Proteus before hardware deployment.</p>
+        <div class="proj-tech"><span>ESP32</span><span>RFID</span><span>PIR Sensor</span><span>LDR</span><span>MQ2</span><span>Water Level Sensor</span><span>Arduino IoT Cloud</span><span>Proteus</span></div>
+        <div class="proj-footer"><span class="status done">Completed · February 2024</span><span class="proj-year">KEC · Dept. of Computer &amp; Electronics Eng.</span></div>
       </div>
-      <div class="project-card fade-up d3">
-        <div class="project-border"></div>
-        <div class="project-num">03</div>
-        <div class="project-kicker">PLC &amp; Industrial Automation</div>
-        <div class="project-title">Industrial Automation Control System</div>
-        <div class="project-desc">PLC-based industrial control system using Siemens and Delta PLCs with HMI panel programming and SCADA integration, applied from 60-hour KEC Automation Lab training.</div>
-        <div class="project-tech"><span>Siemens PLC</span><span>Delta PLC</span><span>HMI</span><span>SCADA</span><span>Ladder Logic</span></div>
-        <span class="status done">Completed · KEC Lab</span>
+      <div class="project-card fi d3">
+        <div class="proj-glow"></div>
+        <div class="proj-num">03</div>
+        <div class="proj-type">Competition Project · HEX-2023</div>
+        <h3 class="proj-title">Autonomous Robo Race Vehicle</h3>
+        <p class="proj-desc">Designed and built an autonomous robot for the HEX-2023 Robo Race at Himalaya College of Engineering. IR sensor arrays for line tracking, microcontroller for real-time path decision logic, and H-bridge motor drivers for differential steering. Received Certificate of Appreciation from Himalaya Robotics Club.</p>
+        <div class="proj-tech"><span>Microcontroller</span><span>IR Sensors</span><span>Motor Driver</span><span>H-Bridge</span><span>C/C++</span></div>
+        <div class="proj-footer"><span class="status done">Competed · HEX-2023</span><span class="proj-year">Himalaya College of Engineering</span></div>
       </div>
-      <div class="project-card fade-up d4">
-        <div class="project-border"></div>
-        <div class="project-num">04</div>
-        <div class="project-kicker">Personal Project · IoT Security</div>
-        <div class="project-title">ESP32 RFID Access Control System</div>
-        <div class="project-desc">ESP32-based RFID authentication system with real-time monitoring dashboard, exposing and addressing vulnerabilities in low-cost access control deployments.</div>
-        <div class="project-tech"><span>ESP32</span><span>RFID</span><span>MicroPython</span><span>Firebase</span></div>
-        <span class="status progress">In Progress</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TRANSCRIPT ═══ -->
-<section id="transcript">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>Academic Transcript</span></div>
-    <h2 class="section-title fade-up d1">Subject-by-Subject Record</h2>
-    <p class="section-desc fade-up d2">Complete marks record across all four years at Kantipur Engineering College, Tribhuvan University.</p>
-    <div class="transcript-accordion fade-up d3">
-      <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          <div class="accordion-btn-left">
-            <span class="accordion-year">Year I — Part 1 &amp; 2</span>
-            <span class="accordion-total">1500 marks · 949 total</span>
-          </div>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-body">
-          <div class="subjects-grid">
-            <div class="subject-item"><div class="sub-name">Engineering Mathematics I</div><div class="sub-score">59/100</div></div>
-            <div class="subject-item"><div class="sub-name">Engineering Physics</div><div class="sub-score">50/100</div></div>
-            <div class="subject-item"><div class="sub-name">Physics Lab</div><div class="sub-score">21/50</div></div>
-            <div class="subject-item"><div class="sub-name">Engineering Drawing I</div><div class="sub-score">82/100</div></div>
-            <div class="subject-item"><div class="sub-name">Drawing Lab</div><div class="sub-score">35/50</div></div>
-            <div class="subject-item"><div class="sub-name">Workshop Technology</div><div class="sub-score">21/50</div></div>
-            <div class="subject-item"><div class="sub-name">Computer Programming</div><div class="sub-score">58/100</div></div>
-            <div class="subject-item"><div class="sub-name">Programming Lab</div><div class="sub-score">35/50</div></div>
-            <div class="subject-item"><div class="sub-name">Engineering Mathematics II</div><div class="sub-score">52/100</div></div>
-            <div class="subject-item"><div class="sub-name">Engineering Chemistry</div><div class="sub-score">60/100</div></div>
-            <div class="subject-item"><div class="sub-name">Chemistry Lab</div><div class="sub-score">22/50</div></div>
-            <div class="subject-item"><div class="sub-name">Drawing II</div><div class="sub-score">71/100</div></div>
-            <div class="subject-item"><div class="sub-name">Electrical Circuit</div><div class="sub-score">75/100</div></div>
-            <div class="subject-item"><div class="sub-name">Circuit Lab</div><div class="sub-score">22/50</div></div>
-            <div class="subject-item"><div class="sub-name">Applied Mechanics</div><div class="sub-score">60/100</div></div>
-            <div class="subject-item"><div class="sub-name">Engineering Mathematics III</div><div class="sub-score">52/100</div></div>
-            <div class="subject-item"><div class="sub-name">Probability &amp; Statistics</div><div class="sub-score">59/100</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          <div class="accordion-btn-left">
-            <span class="accordion-year">Year III — Part 1 &amp; 2</span>
-            <span class="accordion-total">1600 marks · 1036 total</span>
-          </div>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-body">
-          <div class="subjects-grid">
-            <div class="subject-item"><div class="sub-name">Engineering Economics</div><div class="sub-score">49/100</div></div>
-            <div class="subject-item"><div class="sub-name">Comp. Organisation &amp; Arch.</div><div class="sub-score">55/100</div></div>
-            <div class="subject-item"><div class="sub-name">Computer Org. (Prac)</div><div class="sub-score">21/50</div></div>
-            <div class="subject-item"><div class="sub-name">Database Management Systems</div><div class="sub-score">65/100</div></div>
-            <div class="subject-item"><div class="sub-name">Database (Prac)</div><div class="sub-score">46/50</div></div>
-            <div class="subject-item"><div class="sub-name">Operating Systems</div><div class="sub-score">46/100</div></div>
-            <div class="subject-item"><div class="sub-name">OS (Prac)</div><div class="sub-score">23/50</div></div>
-            <div class="subject-item"><div class="sub-name">Computer Network</div><div class="sub-score">58/100</div></div>
-            <div class="subject-item"><div class="sub-name">Filter Design</div><div class="sub-score">50/100</div></div>
-            <div class="subject-item"><div class="sub-name">Filter Design (Prac)</div><div class="sub-score">62/50</div></div>
-            <div class="subject-item"><div class="sub-name">Embedded System</div><div class="sub-score">53/100</div></div>
-            <div class="subject-item"><div class="sub-name">Embedded System (Prac)</div><div class="sub-score">23/50</div></div>
-            <div class="subject-item"><div class="sub-name">Project Management</div><div class="sub-score">46/100</div></div>
-            <div class="subject-item"><div class="sub-name">OOSE Engineering</div><div class="sub-score">50/100</div></div>
-            <div class="subject-item"><div class="sub-name">Propagation &amp; Antenna</div><div class="sub-score">69/100</div></div>
-            <div class="subject-item"><div class="sub-name">Communication Systems</div><div class="sub-score">47/100</div></div>
-            <div class="subject-item"><div class="sub-name">Communication Sys. (Prac)</div><div class="sub-score">50/50</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          <div class="accordion-btn-left">
-            <span class="accordion-year">Year IV — Part 1 &amp; 2</span>
-            <span class="accordion-total">1425 marks · 899 total</span>
-          </div>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-body">
-          <div class="subjects-grid">
-            <div class="subject-item"><div class="sub-name">Digital Signal Analysis</div><div class="sub-score">24/100</div></div>
-            <div class="subject-item"><div class="sub-name">Artificial Intelligence</div><div class="sub-score">52/100</div></div>
-            <div class="subject-item"><div class="sub-name">AI (Prac)</div><div class="sub-score">23/50</div></div>
-            <div class="subject-item"><div class="sub-name">Project I</div><div class="sub-score">45/50</div></div>
-            <div class="subject-item"><div class="sub-name">Wireless Communication</div><div class="sub-score">47/100</div></div>
-            <div class="subject-item"><div class="sub-name">RF &amp; Microwave Engineering</div><div class="sub-score">51/100</div></div>
-            <div class="subject-item"><div class="sub-name">Satellite Communication</div><div class="sub-score">20/100</div></div>
-            <div class="subject-item"><div class="sub-name">Satellite Comms (Prac)</div><div class="sub-score">46/50</div></div>
-            <div class="subject-item"><div class="sub-name">Information Systems</div><div class="sub-score">35/100</div></div>
-            <div class="subject-item"><div class="sub-name">Big Data Technologies</div><div class="sub-score">50/100</div></div>
-            <div class="subject-item"><div class="sub-name">Multimedia System</div><div class="sub-score">67/100</div></div>
-            <div class="subject-item"><div class="sub-name">Multimedia (Prac)</div><div class="sub-score">23/50</div></div>
-            <div class="subject-item"><div class="sub-name">Telecommunications</div><div class="sub-score">92/100</div></div>
-            <div class="subject-item"><div class="sub-name">Telecommunications (Prac)</div><div class="sub-score">45/50</div></div>
-            <div class="subject-item"><div class="sub-name">Project II</div><div class="sub-score">51/50</div></div>
-            <div class="subject-item"><div class="sub-name">Energy, Environment &amp; Society</div><div class="sub-score">22/100</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="transcript-summary fade-up d4">
-      <div class="ts-item"><div class="ts-val">65.19%</div><div class="ts-lbl">Final Aggregate</div></div>
-      <div class="ts-item"><div class="ts-val">First</div><div class="ts-lbl">Division</div></div>
-      <div class="ts-item"><div class="ts-val">2025</div><div class="ts-lbl">Year Passed (2082 B.S.)</div></div>
-      <div class="ts-item"><div class="ts-val">TU · KEC</div><div class="ts-lbl">Institute</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PTE ═══ -->
-<section id="pte">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>English Proficiency</span></div>
-    <h2 class="section-title fade-up d1">PTE Academic Score</h2>
-    <p class="section-desc fade-up d2">Pearson Test of English Academic — internationally recognised English language proficiency score.</p>
-    <div class="pte-grid fade-up d3">
-      <div class="pte-card">
-        <div class="info-card-label" style="margin-bottom:24px;">Score Breakdown</div>
-        <div class="pte-score-row">
-          <div class="pte-skill-label"><span class="pte-skill-name">Listening</span><span class="pte-skill-val">75</span></div>
-          <div class="pte-bar-wrap"><div class="pte-bar" data-width="75"></div></div>
-        </div>
-        <div class="pte-score-row">
-          <div class="pte-skill-label"><span class="pte-skill-name">Reading</span><span class="pte-skill-val">65</span></div>
-          <div class="pte-bar-wrap"><div class="pte-bar" data-width="65"></div></div>
-        </div>
-        <div class="pte-score-row">
-          <div class="pte-skill-label"><span class="pte-skill-name">Writing</span><span class="pte-skill-val">64</span></div>
-          <div class="pte-bar-wrap"><div class="pte-bar" data-width="64"></div></div>
-        </div>
-        <div class="pte-score-row">
-          <div class="pte-skill-label"><span class="pte-skill-name">Speaking</span><span class="pte-skill-val">60</span></div>
-          <div class="pte-bar-wrap"><div class="pte-bar" data-width="60"></div></div>
-        </div>
-        <div class="pte-overall">
-          <span class="pte-overall-label">Overall</span>
-          <span class="pte-overall-val">68</span>
-        </div>
-      </div>
-      <div class="pte-card">
-        <div class="info-card-label" style="margin-bottom:20px;">Test Details</div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Test</span><span class="pte-detail-val">PTE Academic (Pearson)</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Date</span><span class="pte-detail-val">16 April 2026</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Valid Until</span><span class="pte-detail-val">16 April 2028</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Centre</span><span class="pte-detail-val">LA GRANDEE International College, Nepal</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Centre ID</span><span class="pte-detail-val">88209</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Score Code</span><span class="pte-detail-val">4519728AJB</span></div>
-        <div class="pte-detail-row"><span class="pte-detail-key">Taker ID</span><span class="pte-detail-val">PTE004528498</span></div>
-        <div class="pte-notice">✓ Score accepted for university applications in the UK, Australia, Canada, and other countries requiring proof of English proficiency.</div>
+      <div class="project-card fi d4">
+        <div class="proj-glow"></div>
+        <div class="proj-num">04</div>
+        <div class="proj-type">Personal Project · IoT Security</div>
+        <h3 class="proj-title">ESP32 RFID Access Control &amp; Security Analysis</h3>
+        <p class="proj-desc">Personal project extending home automation RFID work into a dedicated access control security study. ESP32-based RFID authentication system with real-time web dashboard — built to identify and document vulnerabilities: replay attacks, lack of mutual authentication, and cleartext credential exposure in low-cost deployments.</p>
+        <div class="proj-tech"><span>ESP32</span><span>RFID RC522</span><span>MicroPython</span><span>Firebase</span><span>WebSocket</span></div>
+        <div class="proj-footer"><span class="status prog">In Progress</span><span class="proj-year">Personal · 2025–ongoing</span></div>
       </div>
     </div>
   </div>
-</section>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#about" onclick="navigate('about',event)">About</a><a href="#contact" onclick="navigate('contact',event)">Contact</a></nav></footer>
+</div>
 
-<!-- ═══ CONTACT ═══ -->
-<section id="contact">
-  <div class="container">
-    <div class="kicker fade-up"><div class="kicker-line"></div><span>Contact</span></div>
-    <h2 class="section-title fade-up d1">Get in Touch</h2>
-    <p class="section-desc fade-up d2">Open to engineering roles, freelance projects, and graduate school conversations. I respond within a day.</p>
+<!-- ══════════════════════════════════════════════
+     PAGE: CERTIFICATIONS
+══════════════════════════════════════════════ -->
+<div id="page-certifications" class="page" style="background:var(--bg0);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>Certifications &amp; Recognition</span></div>
+    <h2 class="display lg fi d1">Verified Credentials</h2>
+    <p class="lead fi d2" style="margin-bottom:0;">Training certificates, competition recognitions, and academic awards earned at <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">KEC</a> and beyond.</p>
+    <div class="certs-grid">
+      <div class="cert-card fi d1"><div class="cert-icon">🎓</div><div><div class="cert-year">2025 · Tribhuvan University</div><div class="cert-title">B.E. Provisional Certificate — First Division</div><div class="cert-body">Issued by the Office of the Controller of Examinations, TU, Balkhu, Kathmandu. Electronics, Communication &amp; Information Engineering. Passed examination of 2082 B.S.</div></div></div>
+      <div class="cert-card fi d2"><div class="cert-icon">📜</div><div><div class="cert-year">2025 · Kantipur Engineering College</div><div class="cert-title">Character Certificate — Good Conduct</div><div class="cert-body">Issued by <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">Kantipur Engineering College</a>, Dhapakhel, Lalitpur. First Division, ECIE, 2077–2081 B.S.</div></div></div>
+      <div class="cert-card fi d3"><div class="cert-icon">🔌</div><div><div class="cert-year">June–July 2023 · KEC RTCD</div><div class="cert-title">Raspberry Pi with IoT — 60-Hour Training</div><div class="cert-body">Research, Training &amp; Consultancy Division, <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">Kantipur Engineering College</a>. Hands-on IoT system development with Raspberry Pi.</div></div></div>
+      <div class="cert-card fi d4"><div class="cert-icon">⚙️</div><div><div class="cert-year">June 2024 · KEC Automation Lab</div><div class="cert-title">Industrial Automation — 60-Hour Training</div><div class="cert-body">Siemens &amp; Delta PLC, HMI, SCADA, Industrial Switchgears &amp; Sensors. Erasmus+ eACCESS Project, <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">KEC</a>. Trainer: Mr. Krishna Keshav Chaudhary.</div></div></div>
+      <div class="cert-card fi d1"><div class="cert-icon">🤖</div><div><div class="cert-year">2023 · Himalaya College of Engineering</div><div class="cert-title">Certificate of Appreciation — HEX-2023 Robo Race</div><div class="cert-body">Awarded by Himalaya Robotics Club for participating in the autonomous Robo Race competition at HEX-2023.</div></div></div>
+      <div class="cert-card fi d2"><div class="cert-icon">🤖</div><div><div class="cert-year">January 2023 · NCE, YATRA 4.0</div><div class="cert-title">Certificate of Appreciation — Robo Sumo</div><div class="cert-body">YATRA 4.0 "Stage of Innovation", NCE Robotics Club, 20–21 January 2023.</div></div></div>
+      <div class="cert-card fi d3"><div class="cert-icon">🤖</div><div><div class="cert-year">December 2023 · ICT Mela 4.0</div><div class="cert-title">Certificate of Achievement — Robo Soccer 1.0</div><div class="cert-body">ICT Mela 4.0, Kumaripati, Lalitpur. Organized by Virinchi College. 30 December 2023.</div></div></div>
+      <div class="cert-card fi d4"><div class="cert-icon">🌐</div><div><div class="cert-year">16 April 2026 · Pearson</div><div class="cert-title">PTE Academic — Overall Score 68</div><div class="cert-body">LA GRANDEE International College, Nepal (Centre ID: 88209). Valid until 16 April 2028. Accepted for UK, Australia, Canada university applications.</div></div></div>
+    </div>
+  </div>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#projects" onclick="navigate('projects',event)">Projects</a><a href="#contact" onclick="navigate('contact',event)">Contact</a></nav></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE: EDUCATION
+══════════════════════════════════════════════ -->
+<div id="page-education" class="page" style="background:var(--bg1);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>Academic Background</span></div>
+    <h2 class="display lg fi d1">Four Years at <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">KEC</a></h2>
+    <p class="lead fi d2" style="margin-bottom:0;">A four-year Bachelor of Engineering at <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link ext">Kantipur Engineering College</a>, Tribhuvan University — covering electronics, communications, computing, and engineering fundamentals.</p>
+    <div class="edu-summary-grid">
+      <div class="fi d3">
+        <div class="edu-stats">
+          <div class="edu-stat"><div class="edu-stat-val">65.19%</div><div class="edu-stat-lbl">Final Aggregate</div></div>
+          <div class="edu-stat"><div class="edu-stat-val">First</div><div class="edu-stat-lbl">Division</div></div>
+          <div class="edu-stat"><div class="edu-stat-val">2025</div><div class="edu-stat-lbl">Year Passed (2082 B.S.)</div></div>
+          <div class="edu-stat"><div class="edu-stat-val">KEC · TU</div><div class="edu-stat-lbl">Institution</div></div>
+        </div>
+        <div class="edu-note">
+          <strong>Programme:</strong> B.E. in Electronics, Communication &amp; Information Engineering (ECIE)<br><br>
+          <strong>Institution:</strong> <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link ext">Kantipur Engineering College</a>, Dhapakhel, Lalitpur, Nepal<br><br>
+          <strong>University:</strong> Tribhuvan University, Nepal<br><br>
+          <strong>Duration:</strong> 2020–2025 · 4-year programme (2077–2082 B.S.)<br><br>
+          <strong>Department:</strong> Computer and Electronics Engineering<br><br>
+          For full academic transcripts or verification, please <a href="#contact" onclick="navigate('contact',event)" class="kec-link">contact me directly</a>.
+        </div>
+      </div>
+      <div class="fi d4">
+        <div class="edu-courses">
+          <div class="course-group"><div class="cg-title">Core Engineering</div><div class="course-tags"><span class="course-tag">Electrical Circuits</span><span class="course-tag">Digital Logic Design</span><span class="course-tag">Control Systems</span><span class="course-tag">Engineering Mathematics I–III</span><span class="course-tag">Applied Mechanics</span><span class="course-tag">Electronic Devices &amp; Circuits</span></div></div>
+          <div class="course-group"><div class="cg-title">Communications &amp; RF</div><div class="course-tags"><span class="course-tag">Propagation &amp; Antenna</span><span class="course-tag">Wireless Communication</span><span class="course-tag">RF &amp; Microwave Engineering</span><span class="course-tag">Satellite Communication</span><span class="course-tag">Telecommunications</span><span class="course-tag">Filter Design</span><span class="course-tag">Communication Systems</span></div></div>
+          <div class="course-group"><div class="cg-title">Computing &amp; Software</div><div class="course-tags"><span class="course-tag">Computer Networks</span><span class="course-tag">Database Management</span><span class="course-tag">Operating Systems</span><span class="course-tag">Embedded Systems</span><span class="course-tag">Artificial Intelligence</span><span class="course-tag">Big Data Technologies</span><span class="course-tag">Multimedia Systems</span><span class="course-tag">Comp. Organisation &amp; Architecture</span></div></div>
+          <div class="course-group"><div class="cg-title">Signal &amp; Systems</div><div class="course-tags"><span class="course-tag">Digital Signal Analysis</span><span class="course-tag">Information Systems</span><span class="course-tag">Probability &amp; Statistics</span><span class="course-tag">Microprocessor</span><span class="course-tag">Electromagnetics</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#projects" onclick="navigate('projects',event)">Projects</a><a href="#contact" onclick="navigate('contact',event)">Contact</a></nav></footer>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE: CONTACT
+══════════════════════════════════════════════ -->
+<div id="page-contact" class="page" style="background:var(--bg0);">
+  <div class="wrap section-pad">
+    <div class="eyebrow fi"><span>Contact</span></div>
+    <h2 class="display lg fi d1">Get in Touch</h2>
+    <p class="lead fi d2" style="margin-bottom:0;">Open to engineering roles, remote freelance, and graduate school conversations. I typically respond within 24 hours.</p>
     <div class="contact-grid">
-      <div class="contact-form-wrap fade-up d3">
-        <!-- Honeypot field — hidden from humans, catches bots -->
-        <div style="display:none;" aria-hidden="true">
-          <label>Do not fill this: <input name="bot-field" id="bot-field"></label>
+      <div class="form-wrap fi d3">
+        <div style="position:absolute;left:-9999px;" aria-hidden="true">
+          <input tabindex="-1" name="bot-field" id="botfield" autocomplete="off">
         </div>
-        <div class="form-row">
-          <div>
-            <label class="form-label">Name *</label>
-            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Your full name">
-          </div>
-          <div>
-            <label class="form-label">Email *</label>
-            <input type="email" id="cf-email" name="email" class="form-input" placeholder="your@email.com">
-          </div>
+        <div class="form-row-2">
+          <div class="form-field"><label class="form-label" for="cf-name">Name *</label><input class="form-input" type="text" id="cf-name" name="name" placeholder="Your full name" required autocomplete="name"></div>
+          <div class="form-field"><label class="form-label" for="cf-email">Email *</label><input class="form-input" type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Subject</label>
-          <input type="text" id="cf-subject" name="subject" class="form-input" placeholder="What's this about?">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Message *</label>
-          <textarea id="cf-message" name="message" class="form-textarea" placeholder="Describe your project, opportunity, or question..."></textarea>
-        </div>
-        <div class="form-status" id="form-status"></div>
-        <button class="btn-submit" id="submit-btn" onclick="submitForm()">Send Message</button>
+        <div class="form-field"><label class="form-label" for="cf-subject">Subject</label><input class="form-input" type="text" id="cf-subject" name="subject" placeholder="What is this about?"></div>
+        <div class="form-field"><label class="form-label" for="cf-msg">Message *</label><textarea class="form-textarea" id="cf-msg" name="message" placeholder="Describe your project, opportunity, or question..." required></textarea></div>
+        <div class="form-msg" id="form-msg" role="alert" aria-live="polite"></div>
+        <button class="btn-submit" id="submitBtn" type="button" onclick="handleSubmit()">Send Message</button>
       </div>
-      <div class="contact-info fade-up d4">
-        <div class="contact-info-item">
-          <div class="ci-icon">📍</div>
-          <div><div class="ci-label">Location</div><div class="ci-val">Pokhara, Gandaki Pradesh, Nepal</div></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="ci-icon">🎓</div>
-          <div><div class="ci-label">Education</div><div class="ci-val">B.E. ECIE · Kantipur Engineering College, TU</div></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="ci-icon">🌐</div>
-          <div><div class="ci-label">English</div><div class="ci-val">PTE Academic · Overall 68 · Valid Apr 2028</div></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="ci-icon">💼</div>
-          <div><div class="ci-label">Status</div><div class="ci-val">Open to remote work, freelance &amp; MSc applications</div></div>
-        </div>
-        <div class="social-links-wrap">
-          <div class="social-links-label">Find Me Online</div>
-          <div class="social-links">
-            <a href="#" class="social-link">LinkedIn</a>
-            <a href="#" class="social-link">GitHub</a>
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">Instagram</a>
+      <div class="contact-aside fi d4">
+        <div class="aside-item"><div class="aside-icon">📍</div><div><div class="aside-label">Location</div><div class="aside-val">Pokhara, Gandaki Pradesh, Nepal</div></div></div>
+        <div class="aside-item"><div class="aside-icon">✉️</div><div><div class="aside-label">Email</div><div class="aside-val"><a href="mailto:sabin7magar@gmail.com" class="kec-link">sabin7magar@gmail.com</a></div></div></div>
+        <div class="aside-item"><div class="aside-icon">🎓</div><div><div class="aside-label">Education</div><div class="aside-val">B.E. ECIE · <a href="https://kec.edu.np/" target="_blank" rel="noopener noreferrer" class="kec-link">KEC</a>, Tribhuvan University · First Division</div></div></div>
+        <div class="aside-item"><div class="aside-icon">💼</div><div><div class="aside-label">Open To</div><div class="aside-val">Remote roles · Freelance · MSc applications</div></div></div>
+        <div class="social-block">
+          <div class="social-label">Find Me Online</div>
+          <div class="social-links-row">
+            <a href="https://www.linkedin.com/in/sabin-thapa-magar-137a88391" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/_sabinmgr/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="mailto:sabin7magar@gmail.com" class="social-link">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  <div class="footer-logo">Sabin<span>.</span></div>
-  <div class="footer-copy">© 2026 Sabin Thapa Magar · sabinthapamagar.com.np</div>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</footer>
+  <footer><div class="footer-logo">Sabin<em>.</em></div><div class="footer-copy">© 2026 Sabin Thapa Magar · sabinthapamagar.com.np</div><nav class="footer-nav"><a href="#home" onclick="navigate('home',event)">Home</a><a href="#projects" onclick="navigate('projects',event)">Projects</a><a href="#about" onclick="navigate('about',event)">About</a></nav></footer>
+</div>
 
 <script>
-// ── NAV SCROLL ──
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  nav.classList.toggle('scrolled', window.scrollY > 20);
+/* ══════ PAGE TITLES ══════ */
+const PAGE_TITLES = {
+  home:           'Sabin Thapa Magar | Electronics & IoT Engineer',
+  about:          'About — Sabin Thapa Magar',
+  skills:         'Technical Skills — Sabin Thapa Magar',
+  projects:       'Projects — Sabin Thapa Magar',
+  certifications: 'Certifications — Sabin Thapa Magar',
+  education:      'Education — Sabin Thapa Magar',
+  contact:        'Contact — Sabin Thapa Magar',
+};
+
+/* ══════ PAGE NAVIGATION ══════ */
+let currentPage = 'home';
+let isTransitioning = false;
+
+function navigate(pageId, e) {
+  if (e) e.preventDefault();
+  if (pageId === currentPage || isTransitioning) return;
+  isTransitioning = true;
+
+  const currentEl = document.getElementById('page-' + currentPage);
+  const nextEl    = document.getElementById('page-' + pageId);
+  if (!nextEl) { isTransitioning = false; return; }
+
+  // Fade out current
+  currentEl.classList.remove('visible');
+  setTimeout(() => {
+    currentEl.classList.remove('active');
+    // Show next
+    nextEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    // Trigger reflow then fade in
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        nextEl.classList.add('visible');
+        // Animate inner .fi elements
+        nextEl.querySelectorAll('.fi').forEach(el => el.classList.remove('in'));
+        setTimeout(() => {
+          nextEl.querySelectorAll('.fi').forEach(el => el.classList.add('in'));
+        }, 60);
+        // Animate bars if about page
+        if (pageId === 'about') animateBars(nextEl);
+        isTransitioning = false;
+        currentPage = pageId;
+        // Update URL hash and title
+        history.pushState({ page: pageId }, '', '#' + pageId);
+        document.getElementById('pageTitle').textContent = PAGE_TITLES[pageId] || PAGE_TITLES.home;
+        document.title = PAGE_TITLES[pageId] || PAGE_TITLES.home;
+        updateNav(pageId);
+      });
+    });
+  }, 350);
+}
+
+function updateNav(pageId) {
+  document.querySelectorAll('.nav-links a, .mob-menu a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + pageId);
+  });
+}
+
+/* ══════ HANDLE BROWSER BACK/FORWARD ══════ */
+window.addEventListener('popstate', (e) => {
+  const page = (e.state && e.state.page) || 'home';
+  if (page !== currentPage) {
+    const tmp = currentPage;
+    currentPage = page;
+    const prevEl = document.getElementById('page-' + tmp);
+    const nextEl = document.getElementById('page-' + page);
+    if (prevEl && nextEl) {
+      prevEl.classList.remove('visible', 'active');
+      nextEl.classList.add('active');
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        nextEl.classList.add('visible');
+        nextEl.querySelectorAll('.fi').forEach(el => el.classList.add('in'));
+        if (page === 'about') animateBars(nextEl);
+        document.title = PAGE_TITLES[page] || PAGE_TITLES.home;
+        updateNav(page);
+      }));
+    }
+  }
 });
 
-// ── MOBILE NAV ──
-function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-  document.getElementById('hamburger').classList.toggle('open');
+/* ══════ INIT: show first page based on URL hash ══════ */
+function initPage() {
+  const hash = window.location.hash.replace('#', '') || 'home';
+  const validPages = ['home','about','skills','projects','certifications','education','contact'];
+  const startPage = validPages.includes(hash) ? hash : 'home';
+  currentPage = startPage;
+  const el = document.getElementById('page-' + startPage);
+  if (el) {
+    el.classList.add('active');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      el.classList.add('visible');
+      el.querySelectorAll('.fi').forEach(f => f.classList.add('in'));
+      if (startPage === 'about') animateBars(el);
+    }));
+  }
+  history.replaceState({ page: startPage }, '', '#' + startPage);
+  document.title = PAGE_TITLES[startPage] || PAGE_TITLES.home;
+  updateNav(startPage);
 }
-function closeMobileNav() {
-  document.getElementById('mobileNav').classList.remove('open');
-  document.getElementById('hamburger').classList.remove('open');
+
+/* ══════ PTE BARS ══════ */
+function animateBars(container) {
+  container.querySelectorAll('.bar-fill').forEach(b => {
+    b.style.width = '0%';
+    setTimeout(() => { b.style.width = (b.dataset.w || 0) + '%'; }, 400);
+  });
 }
 
-// ── ACTIVE NAV LINK ──
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(a => a.classList.remove('active'));
-      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-      if (active) active.classList.add('active');
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => observer.observe(s));
+/* ══════ MOBILE NAV ══════ */
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mobMenu');
+function toggleNav() {
+  const open = mob.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+}
+function closeNav() {
+  mob.classList.remove('open');
+  ham.classList.remove('open');
+  ham.setAttribute('aria-expanded', 'false');
+}
 
-// ── FADE UP ──
-const fadeObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
-
-// ── SCORE BARS (animate when visible) ──
-const barObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.score-bar, .pte-bar').forEach(bar => {
-        bar.style.width = (bar.dataset.width || 0) + '%';
-      });
-    }
-  });
-}, { threshold: 0.2 });
-document.querySelectorAll('#about, #pte').forEach(s => barObs.observe(s));
-// Set initial widths to 0
-document.querySelectorAll('.score-bar, .pte-bar').forEach(b => b.style.width = '0%');
-
-// ── TYPEWRITER ──
-const titles = ['B.E. Electronics Engineer', 'IoT Systems Builder', 'Embedded Systems Developer', 'Aspiring Cybersecurity Engineer'];
-let ti = 0, ci = 0, phase = 'type';
-const el = document.getElementById('typedText');
-function type() {
-  const t = titles[ti];
-  if (phase === 'type') {
-    if (ci < t.length) { el.textContent = t.slice(0, ++ci); setTimeout(type, 55); }
-    else { phase = 'hold'; setTimeout(type, 1800); }
-  } else if (phase === 'hold') {
-    phase = 'erase'; setTimeout(type, 400);
+/* ══════ TYPEWRITER ══════ */
+const roles = ['B.E. Electronics Engineer','IoT Systems Builder','Embedded Systems Developer','Computer Vision Engineer','Aspiring Cybersecurity Engineer'];
+let ri=0,ci=0,phase='type';
+const typedEl = document.getElementById('typedEl');
+function tick() {
+  const t = roles[ri];
+  if (phase==='type') {
+    if (ci<t.length){typedEl.textContent=t.slice(0,++ci);setTimeout(tick,52);}
+    else{phase='hold';setTimeout(tick,1900);}
+  } else if (phase==='hold') {
+    phase='erase';setTimeout(tick,300);
   } else {
-    if (ci > 0) { el.textContent = t.slice(0, --ci); setTimeout(type, 28); }
-    else { ti = (ti + 1) % titles.length; phase = 'type'; setTimeout(type, 200); }
+    if (ci>0){typedEl.textContent=t.slice(0,--ci);setTimeout(tick,26);}
+    else{ri=(ri+1)%roles.length;phase='type';setTimeout(tick,180);}
   }
 }
-type();
 
-// ── ACCORDION ──
-function toggleAccordion(btn) {
-  const body = btn.nextElementSibling;
-  const icon = btn.querySelector('.accordion-icon');
-  const isOpen = body.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
-  document.querySelectorAll('.accordion-icon').forEach(i => i.classList.remove('open'));
-  // Open clicked if it was closed
-  if (!isOpen) { body.classList.add('open'); icon.classList.add('open'); }
-}
-
-// ── CONTACT FORM → NETLIFY ──
-async function submitForm() {
+/* ══════ CONTACT FORM → NETLIFY ══════ */
+async function handleSubmit() {
   const name    = document.getElementById('cf-name').value.trim();
   const email   = document.getElementById('cf-email').value.trim();
   const subject = document.getElementById('cf-subject').value.trim();
-  const message = document.getElementById('cf-message').value.trim();
-  const bot     = document.getElementById('bot-field').value;
-  const status  = document.getElementById('form-status');
-  const btn     = document.getElementById('submit-btn');
+  const message = document.getElementById('cf-msg').value.trim();
+  const bot     = document.getElementById('botfield').value;
+  const msgEl   = document.getElementById('form-msg');
+  const btn     = document.getElementById('submitBtn');
 
-  // Validation
+  msgEl.className = 'form-msg';
+  msgEl.textContent = '';
+
   if (!name || !email || !message) {
-    status.textContent = 'Please fill in Name, Email, and Message.';
-    status.className = 'form-status error';
-    return;
+    msgEl.textContent = 'Please fill in Name, Email, and Message.';
+    msgEl.className = 'form-msg err'; return;
   }
-  // Honeypot — if filled, silently do nothing
-  if (bot) return;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msgEl.textContent = 'Please enter a valid email address.';
+    msgEl.className = 'form-msg err'; return;
+  }
+  if (bot) return; // honeypot
 
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-  status.className = 'form-status';
-
+  btn.disabled = true; btn.textContent = 'Sending…';
   try {
-    const body = new URLSearchParams({
-      'form-name': 'contact',
-      'bot-field': bot,
-      name, email, subject, message
-    });
     const res = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body.toString()
+      body: new URLSearchParams({ 'form-name':'contact','bot-field':'', name, email, subject, message }).toString()
     });
     if (res.ok) {
-      status.textContent = '✓ Message sent! Sabin will reply soon.';
-      status.className = 'form-status success';
-      ['cf-name','cf-email','cf-subject','cf-message'].forEach(id => document.getElementById(id).value = '');
-      setTimeout(() => { status.className = 'form-status'; }, 5000);
+      msgEl.textContent = '✓ Message sent! I will reply within 24 hours.';
+      msgEl.className = 'form-msg ok';
+      ['cf-name','cf-email','cf-subject','cf-msg'].forEach(id => document.getElementById(id).value = '');
+      setTimeout(() => { msgEl.className = 'form-msg'; }, 6000);
     } else {
-      status.textContent = `Submission failed (${res.status}). Please try again.`;
-      status.className = 'form-status error';
+      msgEl.textContent = `Failed (${res.status}). Please try again or email sabin7magar@gmail.com`;
+      msgEl.className = 'form-msg err';
     }
-  } catch(err) {
-    status.textContent = 'Network error. Please check your connection and try again.';
-    status.className = 'form-status error';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Send Message';
-  }
+  } catch {
+    msgEl.textContent = 'Network error. Please check your connection or email directly.';
+    msgEl.className = 'form-msg err';
+  } finally { btn.disabled=false; btn.textContent='Send Message'; }
 }
+
+/* ══════ START ══════ */
+initPage();
+tick();
 </script>
 </body>
 </html>
