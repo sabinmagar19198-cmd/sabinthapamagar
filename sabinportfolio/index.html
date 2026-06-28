@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sabin Thapa Magar — B.E. Electronics, Communication & Information Engineer from Kantipur Engineering College, Tribhuvan University, Nepal. Embedded Systems, IoT, PLC Automation.">
+  <meta name="keywords" content="Sabin Thapa Magar, Electronics Engineer, Nepal, KEC, TU, IoT, PLC, Automation, Embedded Systems">
+  <meta name="author" content="Sabin Thapa Magar">
+  <meta property="og:title" content="Sabin Thapa Magar | B.E. Electronics Engineer">
+  <meta property="og:description" content="B.E. graduate in Electronics, Communication & Information Engineering from KEC, TU, Nepal.">
+  <meta property="og:type" content="website">
+  <title>Sabin Thapa Magar | B.E. Electronics, Communication & Information Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Netlify identity (only needed if you use Netlify CMS later) -->
+  <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a href="#hero" class="nav-logo">Sabin<span>ThapaMagar</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about"        onclick="closeMobileNav()">About</a>
+  <a href="#education"    onclick="closeMobileNav()">Education</a>
+  <a href="#skills"       onclick="closeMobileNav()">Skills</a>
+  <a href="#achievements" onclick="closeMobileNav()">Achievements</a>
+  <a href="#projects"     onclick="closeMobileNav()">Projects</a>
+  <a href="#blog"         onclick="closeMobileNav()">Blog</a>
+  <a href="#contact"      onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-circuit"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <div class="hero-tag-dot"></div>
+        <span>Open to Opportunities &mdash; Based in Nepal</span>
+      </div>
+      <h1>
+        <span class="name-block">Sabin</span>
+        <span class="name-block name-accent" id="typewriter" data-text="Thapa Magar" style="border-right: 2px solid var(--accent);">Thapa Magar</span>
+      </h1>
+      <p class="hero-desc">
+        B.E. graduate in <strong style="color:var(--text)">Electronics, Communication &amp; Information Engineering</strong>
+        from Kantipur Engineering College, Tribhuvan University.
+        Passionate about embedded systems, IoT, automation, and building technology that solves real-world problems.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener" class="social-pill" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/_sabinmgr/" target="_blank" rel="noopener" class="social-pill" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo-frame">
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <!-- Replace with your actual photo filename -->
+        <img src="blue and white portrait.png" alt="Sabin Thapa Magar" loading="eager">
+        <div class="photo-glow"></div>
+      </div>
+      <div class="hero-stats-col">
+        <div class="stat-box">
+          <div class="num">First</div>
+          <div class="lbl">Division &mdash; TU 2025</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">65.19%</div>
+          <div class="lbl">Aggregate Score</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">68</div>
+          <div class="lbl">PTE English Score</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>About Me</span></div>
+    <h2>Engineer. Problem Solver.<br>Lifelong Learner.</h2>
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p>
+          I am <strong>Sabin Thapa Magar</strong>, an electronics engineer who completed my
+          <strong>Bachelor's Degree in Electronics, Communication &amp; Information Engineering</strong>
+          from Kantipur Engineering College (KEC), Dhapakhel, Lalitpur &mdash; affiliated to Tribhuvan University &mdash;
+          in 2025 with <strong>First Division</strong>.
+        </p>
+        <p>
+          My academic journey at KEC (2020–2025) built a solid foundation across digital systems,
+          communication engineering, embedded systems, antenna design, and industrial automation.
+        </p>
+        <p>
+          I completed hands-on training in <strong>Raspberry Pi with IoT</strong> and an intensive
+          <strong>Industrial Automation</strong> course covering PLC (Siemens &amp; Delta), HMI, and SCADA.
+          I competed in robotics events at HEX-2023, YATRA 4.0, and ICT Mela 4.0,
+          building real hardware and working in teams under pressure.
+        </p>
+        <p>
+          I am passionate about bridging academic electronics and practical real-world applications &mdash;
+          whether in embedded hardware, industrial control systems, wireless communication, or AI-assisted electronics.
+        </p>
+        <div class="about-highlights">
+          <div class="ah-item">
+            <div class="ah-icon">🎓</div>
+            <div>
+              <div class="ah-title">Kantipur Engineering College</div>
+              <div class="ah-sub">Tribhuvan University &mdash; B.E. Electronics, Communication &amp; Information Engineering</div>
+            </div>
+          </div>
+          <div class="ah-item">
+            <div class="ah-icon">🤖</div>
+            <div>
+              <div class="ah-title">Robotics &amp; IoT Competitions</div>
+              <div class="ah-sub">HEX-2023 Robo Race &mdash; YATRA 4.0 Robo Sumo &mdash; ICT Mela 4.0 Robo Soccer</div>
+            </div>
+          </div>
+          <div class="ah-item">
+            <div class="ah-icon">⚙️</div>
+            <div>
+              <div class="ah-title">Industrial Automation Certified</div>
+              <div class="ah-sub">60-hr course &mdash; PLC, HMI, SCADA &mdash; KEC Automation Lab (Erasmus+ eACCESS)</div>
+            </div>
+          </div>
+          <div class="ah-item">
+            <div class="ah-icon">🔌</div>
+            <div>
+              <div class="ah-title">IoT Training Certified</div>
+              <div class="ah-sub">60-hr Raspberry Pi with IoT &mdash; KEC Research, Training &amp; Consultancy Division (RTCD)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-sidebar">
+        <div class="info-card">
+          <div class="info-card-label">Education Summary</div>
+          <div class="edu-item">
+            <div class="edu-degree">B.E. — Electronics, Communication &amp; Information Engg.</div>
+            <a href="https://kec.edu.np" target="_blank" rel="noopener" style="text-decoration:none;">
+              <div class="edu-school" style="display:inline-flex;align-items:center;gap:6px;">
+                Kantipur Engineering College, TU
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </div>
+            </a>
+            <div class="edu-year">2020 – 2025 &nbsp;|&nbsp; First Division &nbsp;|&nbsp; 65.19%</div>
+            <div class="edu-note">Dhapakhel, Lalitpur</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">+2 Science (Grade XI &amp; XII)</div>
+            <a href="https://pss.edu.np" target="_blank" rel="noopener" style="text-decoration:none;">
+              <div class="edu-school" style="display:inline-flex;align-items:center;gap:6px;">
+                Pokhara Secondary School
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </div>
+            </a>
+            <div class="edu-year">2077 B.S. (2020 A.D.) &nbsp;|&nbsp; CGPA 3.03</div>
+            <div class="edu-note">Bagar, Pokhara, Kaski</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">SEE (Grade 10)</div>
+            <div class="edu-school">Shree Birethanti Secondary School</div>
+            <div class="edu-year">2074 B.S. (2018 A.D.) &nbsp;|&nbsp; GPA 3.25</div>
+            <div class="edu-note">Annapurna Rural Municipality-8, Birethanti, Kaski</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Academic Journey</span></div>
+    <h2>Education &amp; Qualifications</h2>
+    <p class="section-desc">A chronological record of my academic path — from school to engineering degree.</p>
+    <div class="edu-timeline fade-up">
+
+      <!-- KEC -->
+      <div class="edu-tl-item">
+        <div class="edu-tl-year">2020<br>—<br>2025</div>
+        <div class="edu-tl-dot"></div>
+        <div class="edu-tl-body">
+          <div class="edu-tl-degree">Bachelor of Engineering (B.E.)</div>
+          <div class="edu-tl-school">
+            <a href="https://kec.edu.np" target="_blank" rel="noopener">
+              Kantipur Engineering College (KEC)
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="edu-tl-meta">Tribhuvan University, Institute of Engineering &nbsp;&middot;&nbsp; Dhapakhel, Lalitpur</div>
+          <div class="edu-tl-tags">
+            <span class="edu-tl-badge">Electronics, Communication &amp; Information Engg.</span>
+            <span class="edu-tl-badge">First Division</span>
+            <span class="edu-tl-badge">65.19%</span>
+            <span class="edu-tl-badge">2082 B.S. (2025 A.D.)</span>
+          </div>
+          <div class="edu-tl-note">Kantipur Engineering College, Dhapakhel, Lalitpur &nbsp;&middot;&nbsp; Tribhuvan University, Institute of Engineering</div>
+        </div>
+      </div>
+
+      <!-- Pokhara Secondary School -->
+      <div class="edu-tl-item">
+        <div class="edu-tl-year">2018<br>—<br>2020</div>
+        <div class="edu-tl-dot"></div>
+        <div class="edu-tl-body">
+          <div class="edu-tl-degree">School Leaving Certificate — Grade XI &amp; XII (+2 Science)</div>
+          <div class="edu-tl-school">
+            <a href="https://pss.edu.np" target="_blank" rel="noopener">
+              Pokhara Secondary School (PSS)
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <div class="edu-tl-meta">National Examinations Board (NEB) &nbsp;&middot;&nbsp; Bagar, Pokhara, Kaski</div>
+          <div class="edu-tl-tags">
+            <span class="edu-tl-badge">Science Stream</span>
+            <span class="edu-tl-badge">CGPA 3.03</span>
+            <span class="edu-tl-badge">2077 B.S. (2020 A.D.)</span>
+          </div>
+          <div class="edu-tl-note">Core subjects: Physics, Chemistry, Biology, Mathematics, English</div>
+        </div>
+      </div>
+
+      <!-- SEE -->
+      <div class="edu-tl-item">
+        <div class="edu-tl-year">2069<br>—<br>2074</div>
+        <div class="edu-tl-dot"></div>
+        <div class="edu-tl-body">
+          <div class="edu-tl-degree">Secondary Education Examination (SEE) — Grade 10</div>
+          <div class="edu-tl-school">
+            <span style="font-size:13px;color:var(--accent);">Shree Birethanti Secondary School</span>
+          </div>
+          <div class="edu-tl-meta">National Examinations Board &nbsp;&middot;&nbsp; Annapurna Rural Municipality-8, Birethanti, Kaski</div>
+          <div class="edu-tl-tags">
+            <span class="edu-tl-badge">GPA 3.25</span>
+            <span class="edu-tl-badge">2074 B.S. (2018 A.D.)</span>
+          </div>
+          <div class="edu-tl-note">Completed Grade 1–10 from this school &nbsp;&middot;&nbsp; Annapurna Rural Municipality, Kaski</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Technical Skills</span></div>
+    <h2>What I Know &amp; Build With</h2>
+    <p class="section-desc">Four years of engineering education plus hands-on training across embedded systems, communication, automation, and programming.</p>
+    <div class="skills-grid fade-up">
+      <div class="skill-card">
+        <div class="skill-icon">📡</div>
+        <div class="skill-title">Communication &amp; Antenna Systems</div>
+        <div class="skill-desc">Wireless communication theory, antenna design, propagation analysis, satellite communication, and RF &amp; microwave engineering.</div>
+        <div class="skill-tags"><span class="tag">RF Engineering</span><span class="tag">Propagation & Antenna</span><span class="tag">Satellite Comms</span><span class="tag">Wireless Systems</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔌</div>
+        <div class="skill-title">Embedded Systems &amp; IoT</div>
+        <div class="skill-desc">Microprocessor and embedded system design, Raspberry Pi programming, IoT integration, sensor interfacing, and real-time control systems.</div>
+        <div class="skill-tags"><span class="tag">Raspberry Pi</span><span class="tag">IoT</span><span class="tag">Microprocessors</span><span class="tag">Embedded C</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <div class="skill-title">Industrial Automation</div>
+        <div class="skill-desc">PLC programming (Siemens &amp; Delta), HMI configuration, SCADA systems, industrial switchgears, and sensor-based automation design.</div>
+        <div class="skill-tags"><span class="tag">Siemens PLC</span><span class="tag">Delta PLC</span><span class="tag">HMI</span><span class="tag">SCADA</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">💻</div>
+        <div class="skill-title">Programming &amp; Algorithms</div>
+        <div class="skill-desc">Object-oriented programming, data structures &amp; algorithms, database management systems, and computer network fundamentals.</div>
+        <div class="skill-tags"><span class="tag">C / C++</span><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">SQL</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔋</div>
+        <div class="skill-title">Electronics &amp; Circuit Design</div>
+        <div class="skill-desc">Digital logic design, electronic devices &amp; circuits, control systems, signal processing, and advanced electronics engineering.</div>
+        <div class="skill-tags"><span class="tag">Digital Logic</span><span class="tag">Circuit Analysis</span><span class="tag">Control Systems</span><span class="tag">Signal Processing</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <div class="skill-title">Big Data &amp; Information Systems</div>
+        <div class="skill-desc">Information systems design, big data technologies, multimedia systems, telecommunication networks, and operating systems.</div>
+        <div class="skill-tags"><span class="tag">Big Data</span><span class="tag">Telecom Systems</span><span class="tag">OS</span><span class="tag">Multimedia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ACHIEVEMENTS ── -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Certifications &amp; Achievements</span></div>
+    <h2>Real Competitions. Real Training.</h2>
+    <p class="section-desc">Certificates and recognitions earned during my engineering journey at KEC and beyond.</p>
+    <div class="ach-grid fade-up">
+      <div class="ach-card">
+        <div class="ach-badge">🏛️</div>
+        <div>
+          <div class="ach-year">2025 &mdash; KEC &mdash; TU</div>
+          <div class="ach-title">B.E. Provisional Certificate &mdash; First Division</div>
+          <div class="ach-org">Issued by Tribhuvan University, Office of the Controller of Examinations, Balkhu, Kathmandu. Passed examination of 2082 B.S. (2025) in First Division.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">📜</div>
+        <div>
+          <div class="ach-year">2025 &mdash; KEC</div>
+          <div class="ach-title">Character Certificate &mdash; Good Conduct</div>
+          <div class="ach-org">Issued by Kantipur Engineering College, Dhapakhel, Lalitpur. Certified good moral character and First Division degree in Electronics, Communication &amp; Information Engineering (2077–2081 B.S.).</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">🔌</div>
+        <div>
+          <div class="ach-year">June – July 2023 &mdash; KEC RTCD</div>
+          <div class="ach-title">Certificate of Participation &mdash; Raspberry Pi with IoT</div>
+          <div class="ach-org">60-hour training organized by Research, Training &amp; Consultancy Division (RTCD), Kantipur Engineering College. Hands-on IoT system development with Raspberry Pi.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">⚙️</div>
+        <div>
+          <div class="ach-year">June 2024 &mdash; KEC Automation Lab</div>
+          <div class="ach-title">Certificate of Completion &mdash; Industrial Automation</div>
+          <div class="ach-org">60-hour hands-on training covering Industrial Switchgears, Sensors, Siemens &amp; Delta PLC, HMI, and SCADA. Organized by Automation Laboratory, KEC (Erasmus+ eACCESS Project). Trainer: Mr. Krishna Keshav Chaudhary.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">🤖</div>
+        <div>
+          <div class="ach-year">HEX-2023 &mdash; Himalaya College of Engineering</div>
+          <div class="ach-title">Certificate of Appreciation &mdash; HEX-2023 Robo Race</div>
+          <div class="ach-org">Awarded by Himalaya Robotics Club (HRC) for participating in the HEX-2023 Robo Race competition. Signed by HRC President, Principal of Himalaya COE, and HoD Computer &amp; Electronics.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">🏆</div>
+        <div>
+          <div class="ach-year">January 2023 &mdash; National College of Engineering</div>
+          <div class="ach-title">Certificate of Appreciation &mdash; YATRA 4.0 Robo Sumo</div>
+          <div class="ach-org">Participated in Robo Sumo at YATRA 4.0 "Stage of Innovation" organized by NCE Robotics Club, NCE IT Club, CESS-NCE, and Electrical Club-NCE, supervised by R&amp;D-NCE on 20–21 January 2023.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">⚽</div>
+        <div>
+          <div class="ach-year">December 2023 &mdash; ICT Mela 4.0 &mdash; Virinchi College</div>
+          <div class="ach-title">Certificate of Achievement &mdash; Robo Soccer 1.0</div>
+          <div class="ach-org">Awarded for participating in Robo Soccer 1.0 at ICT Mela 4.0, held on 30 December 2023, Taphalho, Kumaripati, Lalitpur. Organized by Virinchi College.</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <div class="ach-badge">🌐</div>
+        <div>
+          <div class="ach-year">16 April 2026 &mdash; Pearson</div>
+          <div class="ach-title">PTE Academic &mdash; Overall Score 68</div>
+          <div class="ach-org">Pearson Test of English Academic &mdash; Test Centre: LA GRANDEE International College, Nepal. Valid until 16 April 2028. Accepted for university applications in the UK, Australia, Canada, and more.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Projects</span></div>
+    <h2>What I Have Built</h2>
+    <p class="section-desc">Engineering projects from my degree and personal exploration, covering hardware, software, and systems design.</p>
+    <div class="projects-grid fade-up">
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-kicker">Final Year Major Project — Computer Vision &amp; AR</div>
+        <div class="project-title">Virtual Eyewear Try-On System</div>
+        <div class="project-desc">AR-based virtual eyewear try-on application using computer vision and face landmark detection. Users try on glasses virtually in real-time via webcam. Final year major project at KEC, supervised by Er. Sachin Shrestha. (Subject Code: EX755)</div>
+        <div class="project-tech"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Computer Vision</span><span>AR</span></div>
+        <span class="project-status done">Completed</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-kicker">Minor Project — Embedded &amp; IoT</div>
+        <div class="project-title">Home Automation System</div>
+        <div class="project-desc">Designed and implemented a home automation system enabling wireless remote control of household appliances via a mobile interface. Minor project at KEC, submitted February 2024. (Subject Code: EX 654)</div>
+        <div class="project-tech"><span>Microcontroller</span><span>Wireless Module</span><span>C/C++</span><span>IoT</span><span>Embedded</span></div>
+        <span class="project-status done">Completed — KEC, Feb 2024</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-kicker">PLC &amp; Industrial Automation</div>
+        <div class="project-title">Industrial Automation Control System</div>
+        <div class="project-desc">PLC-based industrial control system using Siemens and Delta PLCs with HMI panel programming and SCADA integration. Applied from 60-hour industrial automation training at KEC Automation Laboratory.</div>
+        <div class="project-tech"><span>Siemens PLC</span><span>Delta PLC</span><span>HMI</span><span>SCADA</span><span>Ladder Logic</span></div>
+        <span class="project-status done">Completed — KEC Lab</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-kicker">Communication Engineering — Coursework</div>
+        <div class="project-title">Antenna Design &amp; Propagation Study</div>
+        <div class="project-desc">Analysis of RF &amp; microwave engineering principles, antenna design parameters, and propagation characteristics for wireless communication systems as part of Year IV coursework (CT704, EX716 modules).</div>
+        <div class="project-tech"><span>Antenna Theory</span><span>RF Design</span><span>Microwave Engg.</span><span>Signal Analysis</span></div>
+        <span class="project-status done">Completed — Academic</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">05</div>
+        <div class="project-kicker">Personal Project — Web &amp; Tech</div>
+        <div class="project-title">TeachSync Learning Platform</div>
+        <div class="project-desc">A structured digital platform for organizing and synchronizing educational content across grade levels. Integrates session scheduling, student progress tracking, and a mindfulness-based learning framework.</div>
+        <div class="project-tech"><span>Web Dev</span><span>EdTech</span><span>UX Design</span></div>
+        <span class="project-status progress">In Progress</span>
+      </div>
+      <div class="project-card">
+        <div class="project-num">06</div>
+        <div class="project-kicker">Future Project — AI &amp; Engineering</div>
+        <div class="project-title">AI-Assisted Electronics Diagnostic Tool</div>
+        <div class="project-desc">Planning a tool combining embedded sensor data with AI models to perform real-time diagnostics on electronic components and circuits, reducing manual fault-finding time in engineering labs and industry.</div>
+        <div class="project-tech"><span>AI / ML</span><span>Embedded</span><span>Python</span><span>Signal Processing</span></div>
+        <span class="project-status planned">Planned</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG ── -->
+<section id="blog">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Blog &amp; Articles</span></div>
+    <h2>Engineering Thoughts</h2>
+    <p class="section-desc">Articles on electronics engineering, IoT, automation, and technology in Nepal &mdash; written when inspiration strikes.</p>
+    <div class="blog-grid fade-up">
+      <div class="blog-card">
+        <div class="blog-card-cat">IoT &amp; Embedded</div>
+        <div class="blog-card-title">Getting Started with Raspberry Pi and IoT Sensors in Nepal</div>
+        <div class="blog-card-excerpt">A practical guide for electronics engineering students in Nepal to set up their first Raspberry Pi IoT project, including where to source components locally and how to avoid common pitfalls.</div>
+        <div class="blog-card-meta">Coming Soon &mdash; Engineering</div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-cat">Industrial Automation</div>
+        <div class="blog-card-title">PLC Programming 101: Siemens vs Delta &mdash; Which Should You Learn First?</div>
+        <div class="blog-card-excerpt">My experience from the 60-hour industrial automation training at KEC comparing Siemens and Delta PLC platforms, and what I think is the better starting point for aspiring automation engineers.</div>
+        <div class="blog-card-meta">Coming Soon &mdash; Automation</div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-card-cat">Engineering Career</div>
+        <div class="blog-card-title">What It Takes to Pass B.E. ECIE at Tribhuvan University &mdash; Honest Reflections</div>
+        <div class="blog-card-excerpt">A candid look at four years of electronics engineering at KEC &mdash; the toughest subjects, the most rewarding projects, and what I wish I had known as a first-year student.</div>
+        <div class="blog-card-meta">Coming Soon &mdash; Career</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-kicker"><div class="section-kicker-line"></div><span>Contact</span></div>
+    <h2>Let's Work Together</h2>
+    <p class="section-desc">Available for engineering roles, freelance projects, research collaboration, or just a good conversation about electronics.</p>
+    <div class="contact-grid fade-up">
+      <div>
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:sabin7magar@gmail.com">sabin7magar@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Kathmandu / Pokhara, Nepal</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🎓</div>
+          <div>
+            <div class="contact-label">Education</div>
+            <div class="contact-val">B.E. ECIE &mdash; Kantipur Engineering College, TU</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-label">Open To</div>
+            <div class="contact-val">Engineering roles &mdash; Embedded systems &mdash; IoT projects &mdash; Research &mdash; Further studies abroad</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.facebook.com/SabinTMgr7" target="_blank" rel="noopener" class="social-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+
+      <!-- Netlify Form — works automatically when deployed to Netlify -->
+      <div class="contact-form">
+        <form id="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onsubmit="submitContactForm(event)">
+          <!-- Hidden fields for Netlify -->
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><input name="bot-field"></p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" name="email" placeholder="email@example.com" required>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:14px;">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What is this about?">
+          </div>
+          <div class="form-group" style="margin-bottom:16px;">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Your message to Sabin..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+          </div>
+        </form>
+        <div class="form-success" id="form-success">
+          ✓ Message sent successfully! Sabin will get back to you within 24 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Sabin<span>ThapaMagar</span></div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Sabin Thapa Magar &middot; sabinmgr.com.np</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<!-- ── CHAT BUBBLE ── -->
+<button id="chat-bubble-btn" onclick="toggleChat()" aria-label="Chat with Sabin">
+  <div class="chat-notif" id="chat-notif"></div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+  </svg>
+</button>
+
+<div id="chat-widget">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar">S</div>
+      <div>
+        <div class="chat-name">Sabin Thapa Magar</div>
+        <div class="chat-status"><div class="chat-status-dot"></div> Usually replies within 24 hrs</div>
+      </div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()" aria-label="Close chat">&#x2715;</button>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-msg bot">
+      <div class="chat-bubble-msg">👋 Hi! I'm Sabin's assistant. I can answer common questions or connect you directly with Sabin.</div>
+    </div>
+    <div class="chat-msg bot">
+      <div class="chat-bubble-msg">
+        Choose a question below or type your own:
+        <div class="chat-quick-btns" id="quick-btns">
+          <button class="chat-qbtn" onclick="chatAnswer('education')">🎓 Educational background?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('skills')">💻 Core skills?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('projects')">🔧 Projects done?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('available')">📅 Open to work?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('pte')">🌐 English proficiency?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('nec')">📋 NEC licensed?</button>
+          <button class="chat-qbtn" onclick="chatAnswer('contact')">📬 How to contact?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <div class="chat-contact-btns">
+      <a href="mailto:sabin7magar@gmail.com" class="chat-contact-btn email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email Sabin
+      </a>
+      <a href="https://wa.me/977984077145?text=Hi%20Sabin%2C%20I%20found%20your%20portfolio%20and%20wanted%20to%20connect!" target="_blank" rel="noopener" class="chat-contact-btn whatsapp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" class="chat-input" id="chat-input" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendChatMsg()">
+      <button class="chat-send" onclick="sendChatMsg()" aria-label="Send">
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
