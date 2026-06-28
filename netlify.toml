@@ -1,39 +1,40 @@
-# ══════════════════════════════════════════════════════════
-# Netlify configuration for sabinthapamagar.com.np
-# ══════════════════════════════════════════════════════════
+# netlify.toml — Sabin Thapa Magar Portfolio
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  publish = "."
+  publish = "."       # root of the repo is the site root
 
-# ── Redirect HTTP → HTTPS (forces secure connection) ──
-[[redirects]]
-  from   = "http://sabinthapamagar.com.np/*"
-  to     = "https://sabinthapamagar.com.np/:splat"
-  status = 301
-  force  = true
-
-# ── Security headers for all pages ──
 [[headers]]
   for = "/*"
   [headers.values]
-    # Prevents clickjacking (embedding your site in iframes on other domains)
-    X-Frame-Options = "DENY"
-
-    # Prevents MIME type sniffing
+    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-
-    # Controls referrer info sent to other sites
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-    # Force HTTPS for 1 year (HSTS)
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+# Cache fonts and assets aggressively
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-    # Disables browser features you don't need
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-    # Content Security Policy — restricts what can load on your page
-    # fonts.googleapis.com and fonts.gstatic.com are allowed for Google Fonts
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self';"
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-    # Stops browsers from making guesses about your page type
-    X-XSS-Protection = "1; mode=block"
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Pretty 404 page (create a 404.html if you want a custom one)
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
